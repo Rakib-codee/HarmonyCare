@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.harmonycare.app.R;
 import com.harmonycare.app.data.model.Emergency;
 import com.harmonycare.app.data.repository.EmergencyRepository;
+import com.harmonycare.app.util.AnalyticsHelper;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 
 import java.text.DecimalFormat;
@@ -24,6 +25,7 @@ public class VolunteerStatsActivity extends BaseActivity {
     
     private AuthViewModel authViewModel;
     private EmergencyRepository emergencyRepository;
+    private AnalyticsHelper analyticsHelper;
     private int currentUserId;
     
     @Override
@@ -33,6 +35,7 @@ public class VolunteerStatsActivity extends BaseActivity {
         
         authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
         emergencyRepository = new EmergencyRepository(this);
+        analyticsHelper = new AnalyticsHelper(this);
         
         currentUserId = authViewModel.getCurrentUserId();
         if (currentUserId == -1) {
@@ -137,13 +140,17 @@ public class VolunteerStatsActivity extends BaseActivity {
         DecimalFormat df = new DecimalFormat("#.#");
         tvSuccessRate.setText(df.format(successRate) + "%");
         
-        // Average response time (simplified - would need acceptance timestamp in real implementation)
-        if (responseTimeCount > 0) {
-            // For now, show placeholder
-            tvAvgResponseTime.setText("~5 min");
+        // Average response time using AnalyticsHelper
+        double avgResponseTime = analyticsHelper.getAverageResponseTime(currentUserId, emergencies);
+        if (avgResponseTime > 0) {
+            tvAvgResponseTime.setText(df.format(avgResponseTime) + " min");
         } else {
             tvAvgResponseTime.setText("N/A");
         }
+        
+        // Additional analytics (can be displayed in expanded stats view)
+        String mostActivePeriod = analyticsHelper.getMostActivePeriod(emergencies);
+        android.util.Log.d("VolunteerStats", "Most active period: " + mostActivePeriod);
     }
 }
 

@@ -18,10 +18,95 @@ public class HarmonyCareApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        
+        // Initialize AMap privacy compliance FIRST (before any AMap SDK calls)
+        initializeAMapPrivacy();
+        
         database = AppDatabase.getInstance(this);
+        
+        // Apply language before any UI is created
+        com.harmonycare.app.util.LanguageHelper.applyLanguage(this);
+        
+        // Apply theme before any UI is created
+        com.harmonycare.app.util.ThemeHelper.applyTheme(this);
         
         // Initialize osmdroid configuration
         initializeOsmdroid();
+    }
+    
+    /**
+     * Initialize AMap privacy compliance settings
+     * Must be called before any AMap SDK initialization
+     */
+    private void initializeAMapPrivacy() {
+        try {
+            // Method 1: Try AMapLocationClient static methods (most common)
+            try {
+                Class<?> locationClientClass = Class.forName("com.amap.api.location.AMapLocationClient");
+                java.lang.reflect.Method updatePrivacyShow = locationClientClass.getMethod("updatePrivacyShow", Context.class, boolean.class, boolean.class);
+                updatePrivacyShow.invoke(null, this, true, true);
+                
+                java.lang.reflect.Method updatePrivacyAgree = locationClientClass.getMethod("updatePrivacyAgree", Context.class, boolean.class);
+                updatePrivacyAgree.invoke(null, this, true);
+                
+                android.util.Log.d("HarmonyCareApplication", "AMap Location SDK privacy compliance initialized");
+            } catch (Exception e1) {
+                android.util.Log.d("HarmonyCareApplication", "AMapLocationClient method not found, trying alternatives", e1);
+            }
+            
+            // Method 2: Try PrivacyUtils class
+            try {
+                Class<?> privacyUtilsClass = Class.forName("com.amap.api.location.PrivacyUtils");
+                java.lang.reflect.Method updatePrivacyShow = privacyUtilsClass.getMethod("updatePrivacyShow", Context.class, boolean.class, boolean.class);
+                updatePrivacyShow.invoke(null, this, true, true);
+                
+                java.lang.reflect.Method updatePrivacyAgree = privacyUtilsClass.getMethod("updatePrivacyAgree", Context.class, boolean.class);
+                updatePrivacyAgree.invoke(null, this, true);
+                
+                android.util.Log.d("HarmonyCareApplication", "AMap privacy compliance initialized via PrivacyUtils");
+            } catch (Exception e2) {
+                android.util.Log.d("HarmonyCareApplication", "PrivacyUtils method not found, trying alternatives", e2);
+            }
+            
+            // Method 3: Try MapsInitializer (for 3D map SDK)
+            try {
+                Class<?> mapsInitClass = Class.forName("com.amap.api.maps.MapsInitializer");
+                java.lang.reflect.Method updatePrivacyShow = mapsInitClass.getMethod("updatePrivacyShow", Context.class, boolean.class, boolean.class);
+                updatePrivacyShow.invoke(null, this, true, true);
+                
+                java.lang.reflect.Method updatePrivacyAgree = mapsInitClass.getMethod("updatePrivacyAgree", Context.class, boolean.class);
+                updatePrivacyAgree.invoke(null, this, true);
+                
+                android.util.Log.d("HarmonyCareApplication", "AMap Maps SDK privacy compliance initialized");
+            } catch (Exception e3) {
+                android.util.Log.d("HarmonyCareApplication", "MapsInitializer method not found", e3);
+            }
+            
+            // Method 4: Try AMapNavi (for Navigation SDK)
+            try {
+                Class<?> naviClass = Class.forName("com.amap.api.navi.AMapNavi");
+                java.lang.reflect.Method updatePrivacyShow = naviClass.getMethod("updatePrivacyShow", Context.class, boolean.class, boolean.class);
+                updatePrivacyShow.invoke(null, this, true, true);
+                
+                java.lang.reflect.Method updatePrivacyAgree = naviClass.getMethod("updatePrivacyAgree", Context.class, boolean.class);
+                updatePrivacyAgree.invoke(null, this, true);
+                
+                android.util.Log.d("HarmonyCareApplication", "AMap Navigation SDK privacy compliance initialized");
+            } catch (Exception e4) {
+                android.util.Log.d("HarmonyCareApplication", "AMapNavi privacy method not found", e4);
+            }
+            
+        } catch (Exception e) {
+            android.util.Log.e("HarmonyCareApplication", "All AMap privacy initialization methods failed", e);
+            // Even if initialization fails, app should continue (privacy might be set elsewhere)
+        }
+    }
+    
+    @Override
+    public void onConfigurationChanged(android.content.res.Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Reapply language when configuration changes
+        com.harmonycare.app.util.LanguageHelper.applyLanguage(this);
     }
     
     private void initializeOsmdroid() {

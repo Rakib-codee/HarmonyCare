@@ -6,34 +6,45 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.harmonycare.app.service.FallDetectionService;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
+import com.harmonycare.app.util.BackupHelper;
+import com.harmonycare.app.util.Constants;
+import com.harmonycare.app.util.SnackbarHelper;
+import com.harmonycare.app.util.ThemeHelper;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 
 /**
  * Settings Activity
  */
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends BaseActivity {
     private static final String PREFS_NAME = "HarmonyCarePrefs";
     private static final String KEY_LARGE_TEXT = "large_text_mode";
     private static final int ACTIVITY_RECOGNITION_PERMISSION_REQUEST = 2001;
     
+    private Spinner spinnerTheme;
     private Switch switchLargeText;
     private Switch switchVoiceCommands;
     private Switch switchFallDetection;
+    private Switch switchNotificationSound;
+    private Switch switchNotificationVibration;
     private Button btnLogout;
     private Button btnProfile;
+    private Button btnBackup;
     private TextView tvTitle;
     private AuthViewModel authViewModel;
     private SharedPreferences sharedPreferences;
@@ -51,12 +62,34 @@ public class SettingsActivity extends AppCompatActivity {
     }
     
     private void initViews() {
+        spinnerTheme = findViewById(R.id.spinnerTheme);
         switchLargeText = findViewById(R.id.switchLargeText);
         switchVoiceCommands = findViewById(R.id.switchVoiceCommands);
         switchFallDetection = findViewById(R.id.switchFallDetection);
+        switchNotificationSound = findViewById(R.id.switchNotificationSound);
+        switchNotificationVibration = findViewById(R.id.switchNotificationVibration);
         btnLogout = findViewById(R.id.btnLogout);
         btnProfile = findViewById(R.id.btnProfile);
+        btnBackup = findViewById(R.id.btnBackup);
         tvTitle = findViewById(R.id.tvTitle);
+        
+        setupThemeSpinner();
+        
+        if (switchNotificationSound != null) {
+            switchNotificationSound.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                saveNotificationSoundEnabled(isChecked);
+            });
+        }
+        
+        if (switchNotificationVibration != null) {
+            switchNotificationVibration.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                saveNotificationVibrationEnabled(isChecked);
+            });
+        }
+        
+        if (btnBackup != null) {
+            btnBackup.setOnClickListener(v -> performBackup());
+        }
         
         switchLargeText.setOnCheckedChangeListener((buttonView, isChecked) -> {
             saveLargeTextMode(isChecked);
@@ -75,7 +108,41 @@ public class SettingsActivity extends AppCompatActivity {
                     toggleFallDetectionService(true);
                 } else {
                     // Permission not granted, uncheck the switch
+                    // Temporarily remove listener to avoid recursive calls
+                    switchFallDetection.setOnCheckedChangeListener(null);
                     switchFallDetection.setChecked(false);
+                    // Re-add listener after state change
+                    switchFallDetection.post(() -> {
+                        switchFallDetection.setOnCheckedChangeListener((b, checked) -> {
+                            if (checked) {
+                                if (checkActivityRecognitionPermission()) {
+                                    saveFallDetectionEnabled(true);
+                                    toggleFallDetectionService(true);
+                                } else {
+                                    switchFallDetection.setOnCheckedChangeListener(null);
+                                    switchFallDetection.setChecked(false);
+                                    switchFallDetection.post(() -> switchFallDetection.setOnCheckedChangeListener((btn, chk) -> {
+                                        if (chk) {
+                                            if (checkActivityRecognitionPermission()) {
+                                                saveFallDetectionEnabled(true);
+                                                toggleFallDetectionService(true);
+                                            } else {
+                                                switchFallDetection.setOnCheckedChangeListener(null);
+                                                switchFallDetection.setChecked(false);
+                                                switchFallDetection.post(() -> initFallDetectionListener());
+                                            }
+                                        } else {
+                                            saveFallDetectionEnabled(false);
+                                            toggleFallDetectionService(false);
+                                        }
+                                    }));
+                                }
+                            } else {
+                                saveFallDetectionEnabled(false);
+                                toggleFallDetectionService(false);
+                            }
+                        });
+                    });
                 }
             } else {
                 saveFallDetectionEnabled(false);
@@ -93,6 +160,66 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
     
+    private void setupThemeSpinner() {
+        String[] themeOptions = {
+            getString(R.string.theme_light),
+            getString(R.string.theme_dark),
+            getString(R.string.theme_system)
+        };
+        
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, 
+            android.R.layout.simple_spinner_item, themeOptions);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerTheme.setAdapter(adapter);
+        
+        // Set current theme selection
+        String currentTheme = ThemeHelper.getThemeMode(this);
+        int position = 0;
+        if (ThemeHelper.THEME_DARK.equals(currentTheme)) {
+            position = 1;
+        } else if (ThemeHelper.THEME_SYSTEM.equals(currentTheme)) {
+            position = 2;
+        }
+        spinnerTheme.setSelection(position, false); // false to prevent triggering listener on initial set
+        
+        // Store initial position to prevent unnecessary recreates
+        final int[] previousPosition = {position};
+        
+        spinnerTheme.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Only process if selection actually changed
+                if (position != previousPosition[0]) {
+                    previousPosition[0] = position;
+                    String selectedTheme;
+                    switch (position) {
+                        case 0:
+                            selectedTheme = ThemeHelper.THEME_LIGHT;
+                            break;
+                        case 1:
+                            selectedTheme = ThemeHelper.THEME_DARK;
+                            break;
+                        case 2:
+                        default:
+                            selectedTheme = ThemeHelper.THEME_SYSTEM;
+                            break;
+                    }
+                    String currentThemeMode = ThemeHelper.getThemeMode(SettingsActivity.this);
+                    if (!selectedTheme.equals(currentThemeMode)) {
+                        ThemeHelper.saveThemeMode(SettingsActivity.this, selectedTheme);
+                        // Restart activity to apply theme
+                        recreate();
+                    }
+                }
+            }
+            
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
+    }
+    
     private void loadSettings() {
         boolean largeTextMode = sharedPreferences.getBoolean(KEY_LARGE_TEXT, false);
         switchLargeText.setChecked(largeTextMode);
@@ -107,6 +234,75 @@ public class SettingsActivity extends AppCompatActivity {
         if (switchFallDetection != null) {
             switchFallDetection.setChecked(fallDetectionEnabled);
         }
+        
+        boolean notificationSoundEnabled = sharedPreferences.getBoolean("notification_sound_enabled", true);
+        if (switchNotificationSound != null) {
+            switchNotificationSound.setChecked(notificationSoundEnabled);
+        }
+        
+        boolean notificationVibrationEnabled = sharedPreferences.getBoolean("notification_vibration_enabled", true);
+        if (switchNotificationVibration != null) {
+            switchNotificationVibration.setChecked(notificationVibrationEnabled);
+        }
+    }
+    
+    private void saveNotificationSoundEnabled(boolean enabled) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("notification_sound_enabled", enabled);
+        editor.apply();
+    }
+    
+    private void saveNotificationVibrationEnabled(boolean enabled) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("notification_vibration_enabled", enabled);
+        editor.apply();
+    }
+    
+    private void performBackup() {
+        int userId = authViewModel.getCurrentUserId();
+        if (userId == -1) {
+            SnackbarHelper.showError(findViewById(android.R.id.content), "User not logged in");
+            return;
+        }
+        
+        showProgressDialog("Creating backup...");
+        BackupHelper backupHelper = new BackupHelper(this);
+        backupHelper.exportData(userId, new BackupHelper.BackupCallback() {
+            @Override
+            public void onSuccess(String filePath) {
+                hideProgressDialog();
+                SnackbarHelper.showSuccess(findViewById(android.R.id.content), 
+                    "Backup created successfully: " + new java.io.File(filePath).getName());
+            }
+            
+            @Override
+            public void onError(String error) {
+                hideProgressDialog();
+                SnackbarHelper.showError(findViewById(android.R.id.content), "Backup failed: " + error);
+            }
+        });
+    }
+    
+    private void initFallDetectionListener() {
+        switchFallDetection.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                // Check for required permissions before enabling
+                if (checkActivityRecognitionPermission()) {
+                    saveFallDetectionEnabled(true);
+                    toggleFallDetectionService(true);
+                } else {
+                    // Permission not granted, uncheck the switch
+                    // Temporarily remove listener to avoid recursive calls
+                    switchFallDetection.setOnCheckedChangeListener(null);
+                    switchFallDetection.setChecked(false);
+                    // Re-add listener after state change
+                    switchFallDetection.post(() -> initFallDetectionListener());
+                }
+            } else {
+                saveFallDetectionEnabled(false);
+                toggleFallDetectionService(false);
+            }
+        });
     }
     
     private void saveFallDetectionEnabled(boolean enabled) {

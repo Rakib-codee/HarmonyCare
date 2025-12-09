@@ -11,6 +11,8 @@ public class Constants {
     public static final String KEY_USER_ROLE = "user_role";
     public static final String KEY_IS_LOGGED_IN = "is_logged_in";
     public static final String KEY_LARGE_TEXT = "large_text_mode";
+    public static final String KEY_DARK_MODE = "dark_mode";
+    public static final String KEY_THEME_MODE = "theme_mode"; // "light", "dark", "system"
     
     // Emergency statuses
     public static final String STATUS_ACTIVE = "active";

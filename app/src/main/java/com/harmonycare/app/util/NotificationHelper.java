@@ -29,8 +29,12 @@ import java.util.List;
  */
 public class NotificationHelper {
     private static final String TAG = "NotificationHelper";
-    private static final String CHANNEL_ID = "harmonycare_emergency_channel";
-    private static final String CHANNEL_NAME = "Emergency Notifications";
+    private static final String CHANNEL_ID_EMERGENCY = "harmonycare_emergency_channel";
+    private static final String CHANNEL_ID_REMINDER = "harmonycare_reminder_channel";
+    private static final String CHANNEL_ID_CHAT = "harmonycare_chat_channel";
+    private static final String CHANNEL_NAME_EMERGENCY = "Emergency Notifications";
+    private static final String CHANNEL_NAME_REMINDER = "Reminder Notifications";
+    private static final String CHANNEL_NAME_CHAT = "Chat Notifications";
     private Context context;
     private NotificationManager notificationManager;
     
@@ -67,15 +71,55 @@ public class NotificationHelper {
     
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    CHANNEL_ID,
-                    CHANNEL_NAME,
+            // Emergency channel
+            NotificationChannel emergencyChannel = new NotificationChannel(
+                    CHANNEL_ID_EMERGENCY,
+                    CHANNEL_NAME_EMERGENCY,
                     NotificationManager.IMPORTANCE_HIGH
             );
-            channel.setDescription("Emergency alerts and notifications");
-            channel.enableVibration(true);
-            channel.setVibrationPattern(new long[]{0, 500, 250, 500});
-            notificationManager.createNotificationChannel(channel);
+            emergencyChannel.setDescription("Emergency alerts and notifications");
+            emergencyChannel.enableVibration(true);
+            emergencyChannel.setVibrationPattern(new long[]{0, 500, 250, 500});
+            emergencyChannel.setSound(android.provider.Settings.System.DEFAULT_NOTIFICATION_URI, null);
+            notificationManager.createNotificationChannel(emergencyChannel);
+            
+            // Reminder channel
+            NotificationChannel reminderChannel = new NotificationChannel(
+                    CHANNEL_ID_REMINDER,
+                    CHANNEL_NAME_REMINDER,
+                    NotificationManager.IMPORTANCE_DEFAULT
+            );
+            reminderChannel.setDescription("Reminder notifications");
+            reminderChannel.enableVibration(true);
+            reminderChannel.setVibrationPattern(new long[]{0, 300});
+            notificationManager.createNotificationChannel(reminderChannel);
+            
+            // Chat channel
+            NotificationChannel chatChannel = new NotificationChannel(
+                    CHANNEL_ID_CHAT,
+                    CHANNEL_NAME_CHAT,
+                    NotificationManager.IMPORTANCE_DEFAULT
+            );
+            chatChannel.setDescription("Chat message notifications");
+            chatChannel.enableVibration(true);
+            chatChannel.setVibrationPattern(new long[]{0, 200});
+            notificationManager.createNotificationChannel(chatChannel);
+        }
+    }
+    
+    /**
+     * Get channel ID for notification type
+     */
+    private String getChannelId(String type) {
+        switch (type) {
+            case "emergency":
+                return CHANNEL_ID_EMERGENCY;
+            case "reminder":
+                return CHANNEL_ID_REMINDER;
+            case "chat":
+                return CHANNEL_ID_CHAT;
+            default:
+                return CHANNEL_ID_EMERGENCY;
         }
     }
     
@@ -100,7 +144,7 @@ public class NotificationHelper {
                     PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
             );
             
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, getChannelId("emergency"))
                     .setSmallIcon(R.drawable.ic_notification)
                     .setContentTitle(title)
                     .setContentText(message)
@@ -117,7 +161,7 @@ public class NotificationHelper {
     }
     
     public void showSOSNotification(String message) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, getChannelId("emergency"))
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle("Emergency Request Sent")
                 .setContentText(message)
@@ -211,7 +255,18 @@ public class NotificationHelper {
                     PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
             );
             
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+            // Add action buttons for quick accept
+            Intent acceptIntent = new Intent(context, VolunteerEmergencyListActivity.class);
+            acceptIntent.putExtra("action", "accept");
+            acceptIntent.putExtra("volunteer_id", volunteerId);
+            PendingIntent acceptPendingIntent = PendingIntent.getActivity(
+                    context,
+                    notificationId + 1,
+                    acceptIntent,
+                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+            );
+            
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, getChannelId("emergency"))
                     .setSmallIcon(R.drawable.ic_notification)
                     .setContentTitle(title)
                     .setContentText(message)
@@ -219,7 +274,8 @@ public class NotificationHelper {
                     .setDefaults(NotificationCompat.DEFAULT_ALL)
                     .setAutoCancel(true)
                     .setContentIntent(pendingIntent)
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(message));
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
+                    .addAction(R.drawable.ic_emergency, "View", pendingIntent);
             
             notificationManager.notify(notificationId, builder.build());
             Log.d(TAG, "Notification sent to volunteer ID: " + volunteerId);
@@ -248,12 +304,12 @@ public class NotificationHelper {
         String title = "New Message from " + senderName;
         String preview = messageText.length() > 50 ? messageText.substring(0, 50) + "..." : messageText;
         
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, getChannelId("chat"))
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(title)
                 .setContentText(preview)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(messageText))
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent);
@@ -279,7 +335,7 @@ public class NotificationHelper {
         String title = "Emergency Accepted!";
         String message = volunteerName + " is on the way. You can now chat with them.";
         
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, getChannelId("emergency"))
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(title)
                 .setContentText(message)
@@ -307,7 +363,7 @@ public class NotificationHelper {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
         
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, getChannelId("reminder"))
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(title)
                 .setContentText(description)

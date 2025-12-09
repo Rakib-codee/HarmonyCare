@@ -56,6 +56,20 @@
     <!-- Settings -->
     <string name="settings_title">Settings</string>
     <string name="large_text_mode">Large Text Mode</string>
+    <string name="theme_mode">Theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System Default</string>
+    <string name="language">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_bengali">বাংলা (Bengali)</string>
+    <string name="sos_countdown">SOS Countdown (seconds)</string>
+    <string name="sos_auto_send">Auto-send SOS</string>
+    <string name="notification_sound">Notification Sound</string>
+    <string name="notification_vibration">Notification Vibration</string>
+    <string name="location_accuracy">Location Accuracy</string>
+    <string name="backup_data">Backup Data</string>
+    <string name="restore_data">Restore Data</string>
     <string name="logout">Logout</string>
     
     <!-- Common -->

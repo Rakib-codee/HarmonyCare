@@ -95,7 +95,7 @@ public class ChatActivity extends BaseActivity {
             startPolling();
         }, 500);
     }
-    
+
     @Override
     protected void onResume() {
         super.onResume();

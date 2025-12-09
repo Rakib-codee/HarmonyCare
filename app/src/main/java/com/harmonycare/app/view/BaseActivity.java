@@ -123,7 +123,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void showLongToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
-    
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

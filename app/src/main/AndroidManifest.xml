@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".HarmonyCareApplication"
@@ -99,7 +100,9 @@
         
         <activity
             android:name=".view.VolunteerMapActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
         
         <activity
             android:name=".view.RatingActivity"
@@ -120,8 +123,10 @@
             android:exported="false"
             android:foregroundServiceType="health" />
         
-        <!-- Google Maps API Key removed - Using OpenStreetMap (OSM) instead -->
-        <!-- OSM works in China and doesn't require an API key -->
+        <!-- AMap (高德地图) API Key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="23a959db2562029719293a9d2561d9c7" />
 
     </application>
 

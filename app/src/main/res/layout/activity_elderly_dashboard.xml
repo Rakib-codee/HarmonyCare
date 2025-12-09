@@ -313,33 +313,37 @@
                 android:clickable="true"
                 android:focusable="true">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/card_padding_small"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/card_background_modern"
                     android:foreground="?android:attr/selectableItemBackground">
 
-                    <ImageView
-                        android:layout_width="@dimen/elderly_icon_size_medium"
-                        android:layout_height="@dimen/elderly_icon_size_medium"
-                        android:src="@drawable/ic_history"
-                        android:tint="#FF000000"
-                        android:layout_marginEnd="@dimen/elderly_spacing_small" />
-
-                    <TextView
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/history"
-                        android:textSize="@dimen/elderly_text_size_title"
-                        android:textStyle="bold"
-                        android:textColor="#FF000000"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding_small"
                         android:gravity="center_vertical"
-                        android:elevation="2dp" />
-                </LinearLayout>
+                        android:background="@drawable/card_background_modern">
+
+                        <ImageView
+                            android:layout_width="@dimen/elderly_icon_size_medium"
+                            android:layout_height="@dimen/elderly_icon_size_medium"
+                            android:src="@drawable/ic_history"
+                            android:tint="#FF000000"
+                            android:layout_marginEnd="@dimen/elderly_spacing_small" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/history"
+                            android:textSize="@dimen/elderly_text_size_title"
+                            android:textStyle="bold"
+                            android:textColor="#FF000000"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+                </FrameLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Emergency Contacts Card - Gradient Background -->
@@ -354,33 +358,37 @@
                 android:clickable="true"
                 android:focusable="true">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card_background"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/card_padding_small"
                     android:foreground="?android:attr/selectableItemBackground">
 
-                    <ImageView
-                        android:layout_width="@dimen/elderly_icon_size_medium"
-                        android:layout_height="@dimen/elderly_icon_size_medium"
-                        android:layout_marginEnd="@dimen/elderly_spacing_small"
-                        android:src="@drawable/ic_emergency"
-                        android:tint="#FF000000" />
-
-                    <TextView
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:background="@drawable/card_background"
                         android:gravity="center_vertical"
-                        android:text="Emergency Contacts"
-                        android:textColor="#FF000000"
-                        android:textSize="@dimen/elderly_text_size_title"
-                        android:textStyle="bold"
-                        android:elevation="2dp" />
-                </LinearLayout>
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/elderly_icon_size_medium"
+                            android:layout_height="@dimen/elderly_icon_size_medium"
+                            android:layout_marginEnd="@dimen/elderly_spacing_small"
+                            android:src="@drawable/ic_emergency"
+                            android:tint="#FF000000" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Emergency Contacts"
+                            android:textColor="#FF000000"
+                            android:textSize="@dimen/elderly_text_size_title"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </FrameLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Settings Card - Gradient Background -->
@@ -394,33 +402,37 @@
                 android:clickable="true"
                 android:focusable="true">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/card_padding_small"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/card_background_modern"
                     android:foreground="?android:attr/selectableItemBackground">
 
-                    <ImageView
-                        android:layout_width="@dimen/elderly_icon_size_medium"
-                        android:layout_height="@dimen/elderly_icon_size_medium"
-                        android:src="@drawable/ic_settings"
-                        android:tint="#FF000000"
-                        android:layout_marginEnd="@dimen/elderly_spacing_small" />
-
-                    <TextView
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/settings"
-                        android:textSize="@dimen/elderly_text_size_title"
-                        android:textStyle="bold"
-                        android:textColor="#FF000000"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding_small"
                         android:gravity="center_vertical"
-                        android:elevation="2dp" />
-                </LinearLayout>
+                        android:background="@drawable/card_background_modern">
+
+                        <ImageView
+                            android:layout_width="@dimen/elderly_icon_size_medium"
+                            android:layout_height="@dimen/elderly_icon_size_medium"
+                            android:src="@drawable/ic_settings"
+                            android:tint="#FF000000"
+                            android:layout_marginEnd="@dimen/elderly_spacing_small" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/settings"
+                            android:textSize="@dimen/elderly_text_size_title"
+                            android:textStyle="bold"
+                            android:textColor="#FF000000"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+                </FrameLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 

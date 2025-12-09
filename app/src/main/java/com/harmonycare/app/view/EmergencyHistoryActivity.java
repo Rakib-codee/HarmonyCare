@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.harmonycare.app.R;
 import com.harmonycare.app.data.model.Emergency;
@@ -29,6 +30,7 @@ import java.util.Locale;
  */
 public class EmergencyHistoryActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
+    private SwipeRefreshLayout swipeRefreshLayout;
     private TextView tvEmptyState;
     private EmergencyAdapter adapter;
     private EmergencyViewModel emergencyViewModel;
@@ -59,10 +61,24 @@ public class EmergencyHistoryActivity extends AppCompatActivity {
     
     private void initViews() {
         recyclerView = findViewById(R.id.recyclerView);
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         tvEmptyState = findViewById(R.id.tvEmptyState);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new EmergencyAdapter();
         recyclerView.setAdapter(adapter);
+        
+        // Setup pull-to-refresh
+        if (swipeRefreshLayout != null) {
+            swipeRefreshLayout.setOnRefreshListener(() -> {
+                loadHistory();
+                // Stop refreshing after a delay
+                recyclerView.postDelayed(() -> {
+                    if (swipeRefreshLayout != null) {
+                        swipeRefreshLayout.setRefreshing(false);
+                    }
+                }, 1000);
+            });
+        }
     }
     
     private void loadHistory() {
@@ -88,6 +104,10 @@ public class EmergencyHistoryActivity extends AppCompatActivity {
                 }
                 adapter.notifyDataSetChanged();
                 updateEmptyState();
+                // Stop refreshing if active
+                if (swipeRefreshLayout != null) {
+                    swipeRefreshLayout.setRefreshing(false);
+                }
             }
         });
     }

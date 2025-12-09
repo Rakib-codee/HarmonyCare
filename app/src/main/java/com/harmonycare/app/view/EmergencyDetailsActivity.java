@@ -164,29 +164,69 @@ public class EmergencyDetailsActivity extends AppCompatActivity {
         }
     
     private void openNavigation() {
+        if (emergency == null) {
+            Toast.makeText(this, "Emergency information not available", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
+        // Open VolunteerMapActivity which has AMap integration
+        // This will show the map with the emergency location and allow navigation
+        try {
+            Intent intent = new Intent(EmergencyDetailsActivity.this, VolunteerMapActivity.class);
+            // Pass emergency ID so map can focus on this emergency
+            intent.putExtra("emergency_id", emergencyId);
+            intent.putExtra("focus_emergency", true);
+            startActivity(intent);
+        } catch (Exception e) {
+            android.util.Log.e("EmergencyDetailsActivity", "Error opening map", e);
+            // Fallback to external map app if VolunteerMapActivity fails
+            openExternalMap();
+        }
+    }
+    
+    /**
+     * Fallback method to open external map application
+     */
+    private void openExternalMap() {
         if (emergency == null) return;
         
-        // Use generic geo URI that works with any map app (OSM, Baidu, Amap, etc.)
-        String uri = String.format(Locale.getDefault(), "geo:%f,%f?q=%f,%f",
+        // Try multiple map app options
+        // Option 1: Generic geo URI
+        String geoUri = String.format(Locale.getDefault(), "geo:%f,%f?q=%f,%f",
                 emergency.getLatitude(), emergency.getLongitude(),
                 emergency.getLatitude(), emergency.getLongitude());
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+        Intent geoIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(geoUri));
         
-        // Try to open with any available map app
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            // Fallback to OpenStreetMap web navigation (works in China)
-            String webUri = String.format(Locale.getDefault(),
-                    "https://www.openstreetmap.org/?mlat=%f&mlon=%f&zoom=15",
-                    emergency.getLatitude(), emergency.getLongitude());
-            Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(webUri));
-            if (webIntent.resolveActivity(getPackageManager()) != null) {
-                startActivity(webIntent);
-            } else {
-                Toast.makeText(this, "No map application available", Toast.LENGTH_SHORT).show();
-            }
+        if (geoIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(geoIntent);
+            return;
         }
+        
+        // Option 2: Google Maps web (if available)
+        String googleMapsUri = String.format(Locale.getDefault(),
+                "https://www.google.com/maps/search/?api=1&query=%f,%f",
+                emergency.getLatitude(), emergency.getLongitude());
+        Intent googleIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(googleMapsUri));
+        if (googleIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(googleIntent);
+            return;
+        }
+        
+        // Option 3: OpenStreetMap web (works everywhere)
+        String osmUri = String.format(Locale.getDefault(),
+                "https://www.openstreetmap.org/?mlat=%f&mlon=%f&zoom=15",
+                emergency.getLatitude(), emergency.getLongitude());
+        Intent osmIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(osmUri));
+        if (osmIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(osmIntent);
+            return;
+        }
+        
+        // Last resort: Show coordinates
+        Toast.makeText(this, 
+            String.format(Locale.getDefault(), "Location: %.6f, %.6f", 
+                emergency.getLatitude(), emergency.getLongitude()), 
+            Toast.LENGTH_LONG).show();
     }
     
     private void markAsCompleted() {

@@ -52,7 +52,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
         loadAvailabilityStatus();
         setupObservers();
     }
-    
+
     private void initViews() {
         tvWelcome = findViewById(R.id.tvWelcome);
         tvAvailabilityStatus = findViewById(R.id.tvAvailabilityStatus);

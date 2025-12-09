@@ -27,8 +27,10 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
 import com.harmonycare.app.data.model.Emergency;
+import com.harmonycare.app.util.AnimationHelper;
 import com.harmonycare.app.util.Constants;
 import com.harmonycare.app.util.ErrorHandler;
+import com.harmonycare.app.util.HapticHelper;
 import com.harmonycare.app.util.LocationHelper;
 import com.harmonycare.app.util.NetworkHelper;
 import com.harmonycare.app.util.NotificationHelper;
@@ -257,10 +259,25 @@ public class ElderlyDashboardActivity extends BaseActivity {
             
             btnSOS.setOnLongClickListener(v -> {
                 if (!isSOSPressed && btnSOS.isEnabled()) {
+                    // Vibration feedback on press
+                    HapticHelper.vibrateSOSPress(this);
                     startSOSCountdown();
                     return true;
                 }
                 return false;
+            });
+            
+            // Add touch feedback for better UX
+            btnSOS.setOnTouchListener((v, event) -> {
+                if (event.getAction() == android.view.MotionEvent.ACTION_DOWN && !isSOSPressed) {
+                    // Scale animation on press
+                    v.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100).start();
+                    HapticHelper.vibrateShort(this);
+                } else if (event.getAction() == android.view.MotionEvent.ACTION_UP || 
+                          event.getAction() == android.view.MotionEvent.ACTION_CANCEL) {
+                    v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(100).start();
+                }
+                return false; // Let long click listener handle it
             });
             
             btnSOS.setOnClickListener(v -> {
@@ -272,21 +289,33 @@ public class ElderlyDashboardActivity extends BaseActivity {
         }
         
         if (cardHistory != null) {
+            // Animate card on appear
+            AnimationHelper.cardSlideIn(cardHistory, 100);
             cardHistory.setOnClickListener(v -> {
+                AnimationHelper.buttonPress(cardHistory);
+                AnimationHelper.buttonRelease(cardHistory);
                 Intent intent = new Intent(ElderlyDashboardActivity.this, EmergencyHistoryActivity.class);
                 startActivity(intent);
             });
         }
         
         if (cardSettings != null) {
+            // Animate card on appear
+            AnimationHelper.cardSlideIn(cardSettings, 200);
             cardSettings.setOnClickListener(v -> {
+                AnimationHelper.buttonPress(cardSettings);
+                AnimationHelper.buttonRelease(cardSettings);
                 Intent intent = new Intent(ElderlyDashboardActivity.this, SettingsActivity.class);
                 startActivity(intent);
             });
         }
         
         if (cardEmergencyContacts != null) {
+            // Animate card on appear
+            AnimationHelper.cardSlideIn(cardEmergencyContacts, 150);
             cardEmergencyContacts.setOnClickListener(v -> {
+                AnimationHelper.buttonPress(cardEmergencyContacts);
+                AnimationHelper.buttonRelease(cardEmergencyContacts);
                 Intent intent = new Intent(ElderlyDashboardActivity.this, EmergencyContactsActivity.class);
                 startActivity(intent);
             });
@@ -533,7 +562,7 @@ public class ElderlyDashboardActivity extends BaseActivity {
             }
         }
     }
-    
+
     private void startSOSCountdown() {
         try {
             if (isSOSPressed) return;
@@ -550,18 +579,46 @@ public class ElderlyDashboardActivity extends BaseActivity {
                 tvCountdown.setShadowLayer(8f, 0f, 4f, 0xFF000000);
             }
             
-            countDownTimer = new CountDownTimer(3000, 1000) {
+            countDownTimer = new CountDownTimer(3000, 100) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     try {
                         int seconds = (int) (millisUntilFinished / 1000);
+                        int milliseconds = (int) (millisUntilFinished % 1000);
+                        
+                        // Update countdown display
                         if (tvCountdown != null) {
-                            tvCountdown.setText(String.valueOf(seconds));
+                            tvCountdown.setText(String.valueOf(seconds + 1));
+                            // Pulse animation for countdown
+                            float scale = 1.0f + (milliseconds / 1000.0f) * 0.1f;
+                            tvCountdown.setScaleX(scale);
+                            tvCountdown.setScaleY(scale);
                         }
                         if (btnSOS != null) {
-                            btnSOS.setText(String.valueOf(seconds));
-                            // Ensure shadow is maintained during countdown
+                            btnSOS.setText(String.valueOf(seconds + 1));
                             btnSOS.setShadowLayer(8f, 0f, 4f, 0xFF000000);
+                        }
+                        
+                        // Vibration and animation on each second
+                        if (milliseconds < 100) {
+                            HapticHelper.vibrateSOSTick(ElderlyDashboardActivity.this);
+                            // Scale animation
+                            if (btnSOS != null) {
+                                btnSOS.animate()
+                                    .scaleX(1.1f)
+                                    .scaleY(1.1f)
+                                    .setDuration(100)
+                                    .withEndAction(() -> {
+                                        if (btnSOS != null) {
+                                            btnSOS.animate()
+                                                .scaleX(1.0f)
+                                                .scaleY(1.0f)
+                                                .setDuration(200)
+                                                .start();
+                                        }
+                                    })
+                                    .start();
+                            }
                         }
                     } catch (Exception e) {
                         android.util.Log.e("ElderlyDashboard", "Error in countdown tick", e);
@@ -571,8 +628,30 @@ public class ElderlyDashboardActivity extends BaseActivity {
                 @Override
                 public void onFinish() {
                     try {
+                        // Final vibration and animation
+                        HapticHelper.vibrateSOSComplete(ElderlyDashboardActivity.this);
+                        
+                        if (btnSOS != null) {
+                            btnSOS.animate()
+                                .scaleX(1.2f)
+                                .scaleY(1.2f)
+                                .setDuration(200)
+                                .withEndAction(() -> {
+                                    if (btnSOS != null) {
+                                        btnSOS.animate()
+                                            .scaleX(1.0f)
+                                            .scaleY(1.0f)
+                                            .setDuration(200)
+                                            .start();
+                                    }
+                                })
+                                .start();
+                        }
+                        
                         if (tvCountdown != null) {
                             tvCountdown.setVisibility(View.GONE);
+                            tvCountdown.setScaleX(1.0f);
+                            tvCountdown.setScaleY(1.0f);
                         }
                         sendSOS();
                         resetSOSButton();
