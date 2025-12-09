@@ -244,8 +244,11 @@ public class ElderlyDashboardActivity extends BaseActivity {
             tvWelcome.setText("Welcome, " + userName);
         }
         
-        // Add pulse animation to SOS button
+        // Add pulse animation to SOS button and text shadow for visibility
         if (btnSOS != null) {
+            // Add text shadow for better visibility on red background
+            btnSOS.setShadowLayer(8f, 0f, 4f, 0xFF000000);
+            
             Animation pulseAnimation = new AlphaAnimation(1.0f, 0.5f);
             pulseAnimation.setDuration(1000);
             pulseAnimation.setRepeatCount(Animation.INFINITE);
@@ -543,6 +546,8 @@ public class ElderlyDashboardActivity extends BaseActivity {
             btnSOS.setEnabled(false);
             if (tvCountdown != null) {
                 tvCountdown.setVisibility(View.VISIBLE);
+                // Add text shadow for better visibility
+                tvCountdown.setShadowLayer(8f, 0f, 4f, 0xFF000000);
             }
             
             countDownTimer = new CountDownTimer(3000, 1000) {
@@ -555,6 +560,8 @@ public class ElderlyDashboardActivity extends BaseActivity {
                         }
                         if (btnSOS != null) {
                             btnSOS.setText(String.valueOf(seconds));
+                            // Ensure shadow is maintained during countdown
+                            btnSOS.setShadowLayer(8f, 0f, 4f, 0xFF000000);
                         }
                     } catch (Exception e) {
                         android.util.Log.e("ElderlyDashboard", "Error in countdown tick", e);

@@ -139,7 +139,6 @@
                 android:layout_marginBottom="@dimen/spacing_small"
                 android:elevation="@dimen/elevation_medium"
                 app:cardCornerRadius="@dimen/card_corner_radius"
-                android:foreground="@drawable/ripple_primary"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -149,7 +148,8 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="@dimen/card_padding"
-                    android:background="@drawable/gradient_primary">
+                    android:background="@drawable/gradient_primary"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_large"
@@ -170,7 +170,8 @@
                             android:text="@string/view_emergencies"
                             android:textSize="@dimen/text_size_title"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:elevation="2dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -178,7 +179,8 @@
                             android:text="View active emergency requests"
                             android:textSize="@dimen/text_size_body"
                             android:textColor="@android:color/white"
-                            android:alpha="0.9" />
+                            android:alpha="0.9"
+                            android:elevation="2dp" />
                     </LinearLayout>
 
                     <TextView
@@ -203,7 +205,6 @@
                 android:layout_marginBottom="@dimen/spacing_small"
                 android:elevation="@dimen/elevation_medium"
                 app:cardCornerRadius="@dimen/card_corner_radius"
-                android:foreground="@drawable/ripple_primary"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -213,7 +214,8 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="@dimen/card_padding"
-                    android:background="@drawable/gradient_info">
+                    android:background="@drawable/gradient_info"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_large"
@@ -234,7 +236,8 @@
                             android:text="Map View"
                             android:textSize="@dimen/text_size_title"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:elevation="2dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -242,7 +245,8 @@
                             android:text="See emergencies on map"
                             android:textSize="@dimen/text_size_body"
                             android:textColor="@android:color/white"
-                            android:alpha="0.9" />
+                            android:alpha="0.9"
+                            android:elevation="2dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -255,7 +259,6 @@
                 android:layout_marginBottom="@dimen/spacing_small"
                 android:elevation="@dimen/elevation_medium"
                 app:cardCornerRadius="@dimen/card_corner_radius"
-                android:foreground="@drawable/ripple_primary"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -265,7 +268,8 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="@dimen/card_padding"
-                    android:background="@drawable/gradient_success">
+                    android:background="@drawable/gradient_success"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_large"
@@ -286,7 +290,8 @@
                             android:text="My Statistics"
                             android:textSize="@dimen/text_size_title"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:elevation="2dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -294,7 +299,8 @@
                             android:text="View your volunteer stats"
                             android:textSize="@dimen/text_size_body"
                             android:textColor="@android:color/white"
-                            android:alpha="0.9" />
+                            android:alpha="0.9"
+                            android:elevation="2dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -307,7 +313,6 @@
                 android:layout_marginBottom="@dimen/spacing_small"
                 android:elevation="@dimen/elevation_medium"
                 app:cardCornerRadius="@dimen/card_corner_radius"
-                android:foreground="@drawable/ripple_primary"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -317,7 +322,8 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="@dimen/card_padding"
-                    android:background="@drawable/card_background_modern">
+                    android:background="@drawable/card_background_modern"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_large"
@@ -338,14 +344,16 @@
                             android:text="@string/my_history"
                             android:textSize="@dimen/text_size_title"
                             android:textStyle="bold"
-                            android:textColor="@color/text_primary" />
+                            android:textColor="@color/text_primary"
+                            android:elevation="2dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="View past emergencies"
                             android:textSize="@dimen/text_size_body"
-                            android:textColor="@color/text_secondary" />
+                            android:textColor="@color/text_secondary"
+                            android:elevation="2dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -357,7 +365,6 @@
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/elevation_medium"
                 app:cardCornerRadius="@dimen/card_corner_radius"
-                android:foreground="@drawable/ripple_primary"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -367,7 +374,8 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="@dimen/card_padding"
-                    android:background="@drawable/card_background_modern">
+                    android:background="@drawable/card_background_modern"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_large"
@@ -388,14 +396,16 @@
                             android:text="@string/settings"
                             android:textSize="@dimen/text_size_title"
                             android:textStyle="bold"
-                            android:textColor="@color/text_primary" />
+                            android:textColor="@color/text_primary"
+                            android:elevation="2dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="App settings and preferences"
                             android:textSize="@dimen/text_size_body"
-                            android:textColor="@color/text_secondary" />
+                            android:textColor="@color/text_secondary"
+                            android:elevation="2dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

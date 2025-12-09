@@ -102,10 +102,10 @@
     <dimen name="elderly_icon_size_xxlarge">112dp</dimen>
     
     <!-- Larger SOS Button for Elderly -->
-    <dimen name="elderly_sos_button_size">320dp</dimen>
-    <dimen name="elderly_sos_button_corner_radius">160dp</dimen>
-    <dimen name="elderly_sos_text_size">72sp</dimen>
-    <dimen name="elderly_sos_button_elevation">12dp</dimen>
+    <dimen name="elderly_sos_button_size">240dp</dimen>
+    <dimen name="elderly_sos_button_corner_radius">120dp</dimen>
+    <dimen name="elderly_sos_text_size">56sp</dimen>
+    <dimen name="elderly_sos_button_elevation">8dp</dimen>
     
     <!-- Larger Card Padding for Elderly -->
     <dimen name="elderly_card_padding">28dp</dimen>

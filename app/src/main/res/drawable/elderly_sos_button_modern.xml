@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Outer shadow -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/elderly_sos_shadow" />
+                </shape>
+            </item>
+            <!-- Button pressed state -->
+            <item
+                android:left="8dp"
+                android:top="8dp"
+                android:right="8dp"
+                android:bottom="8dp">
+                <shape android:shape="oval">
+                    <gradient
+                        android:type="radial"
+                        android:centerX="50%"
+                        android:centerY="50%"
+                        android:startColor="@color/elderly_sos_red_bright"
+                        android:endColor="@color/elderly_sos_red_dark" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- Light shadow (top-left) for neumorphism -->
+            <item
+                android:left="6dp"
+                android:top="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="#40FFFFFF" />
+                </shape>
+            </item>
+            <!-- Dark shadow (bottom-right) for neumorphism -->
+            <item
+                android:right="6dp"
+                android:bottom="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/elderly_sos_shadow" />
+                </shape>
+            </item>
+            <!-- Button normal state -->
+            <item
+                android:left="4dp"
+                android:top="4dp"
+                android:right="4dp"
+                android:bottom="4dp">
+                <shape android:shape="oval">
+                    <gradient
+                        android:type="radial"
+                        android:centerX="50%"
+                        android:centerY="50%"
+                        android:startColor="@color/elderly_sos_gradient_start"
+                        android:endColor="@color/elderly_sos_gradient_end" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Shadow (inner) -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/neumorphism_shadow_dark" />
+                    <corners android:radius="@dimen/elderly_card_corner_radius" />
+                </shape>
+            </item>
+            <!-- Button (inner) -->
+            <item
+                android:left="2dp"
+                android:top="2dp"
+                android:right="2dp"
+                android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/neumorphism_bg" />
+                    <corners android:radius="@dimen/elderly_card_corner_radius" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- Light shadow (top-left) -->
+            <item
+                android:left="4dp"
+                android:top="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/neumorphism_shadow_light" />
+                    <corners android:radius="@dimen/elderly_card_corner_radius" />
+                </shape>
+            </item>
+            <!-- Dark shadow (bottom-right) -->
+            <item
+                android:right="4dp"
+                android:bottom="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/neumorphism_shadow_dark" />
+                    <corners android:radius="@dimen/elderly_card_corner_radius" />
+                </shape>
+            </item>
+            <!-- Button (center) -->
+            <item
+                android:left="2dp"
+                android:top="2dp"
+                android:right="2dp"
+                android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/neumorphism_bg" />
+                    <corners android:radius="@dimen/elderly_card_corner_radius" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
+

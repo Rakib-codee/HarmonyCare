@@ -139,4 +139,37 @@
     <color name="elderly_gradient_primary_end">#2E6B7A</color>
     <color name="elderly_gradient_calm_start">#64B5F6</color>
     <color name="elderly_gradient_calm_end">#42A5F5</color>
+    
+    <!-- Modern Design Colors -->
+    <!-- Glassmorphism Colors (Semi-transparent) -->
+    <color name="glassmorphism_bg">#80FFFFFF</color>
+    <color name="glassmorphism_bg_light">#B3FFFFFF</color>
+    <color name="glassmorphism_bg_dark">#66FFFFFF</color>
+    <color name="glassmorphism_border">#33FFFFFF</color>
+    <color name="glassmorphism_shadow">#1A000000</color>
+    
+    <!-- Neumorphism Colors -->
+    <color name="neumorphism_light">#FFFFFF</color>
+    <color name="neumorphism_dark">#E0E0E0</color>
+    <color name="neumorphism_shadow_light">#80FFFFFF</color>
+    <color name="neumorphism_shadow_dark">#40000000</color>
+    <color name="neumorphism_bg">#F5F5F5</color>
+    
+    <!-- Modern Gradient Colors for Cards - More Vibrant and Darker for Better Text Visibility -->
+    <color name="gradient_card_primary_start">#5A67D8</color>
+    <color name="gradient_card_primary_end">#6B46C1</color>
+    <color name="gradient_card_secondary_start">#E91E63</color>
+    <color name="gradient_card_secondary_end">#C2185B</color>
+    <color name="gradient_card_accent_start">#2196F3</color>
+    <color name="gradient_card_accent_end">#1565C0</color>
+    <color name="gradient_card_success_start">#43E97B</color>
+    <color name="gradient_card_success_end">#38F9D7</color>
+    <color name="gradient_card_warm_start">#FA709A</color>
+    <color name="gradient_card_warm_end">#FEE140</color>
+    
+    <!-- Modern Shadow Colors -->
+    <color name="modern_shadow_light">#0D000000</color>
+    <color name="modern_shadow_medium">#1A000000</color>
+    <color name="modern_shadow_dark">#33000000</color>
+    <color name="modern_shadow_colored">#1A667EEA</color>
 </resources>
