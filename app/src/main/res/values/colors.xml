@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Base Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- HarmonyCare Primary Colors (Material Design 3) -->
+    <color name="primary">#6750A4</color>
+    <color name="primary_dark">#4F378B</color>
+    <color name="primary_light">#EADDFF</color>
+    <color name="on_primary">#FFFFFF</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#625B71</color>
+    <color name="secondary_dark">#463E52</color>
+    <color name="secondary_light">#E8DEF8</color>
+    <color name="on_secondary">#FFFFFF</color>
+    
+    <!-- Accent/Error Colors -->
+    <color name="accent">#FF5722</color>
+    <color name="error">#BA1A1A</color>
+    <color name="error_light">#FFDAD6</color>
+    <color name="on_error">#FFFFFF</color>
+    
+    <!-- SOS Emergency Colors -->
+    <color name="sos_red">#F44336</color>
+    <color name="sos_red_dark">#D32F2F</color>
+    <color name="sos_red_light">#FFCDD2</color>
+    <color name="sos_gradient_start">#F44336</color>
+    <color name="sos_gradient_end">#D32F2F</color>
+    
+    <!-- Semantic Colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="success_light">#C8E6C9</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="warning_light">#FFE0B2</color>
+    <color name="info_blue">#2196F3</color>
+    <color name="info_light">#BBDEFB</color>
+    
+    <!-- Background Colors -->
+    <color name="background_light">#FFFBFE</color>
+    <color name="background_dark">#1C1B1F</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="on_surface_variant">#49454F</color>
+    
+    <!-- Card Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_background_elevated">#F7F2FA</color>
+    <color name="card_shadow">#1F000000</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#1C1B1F</color>
+    <color name="text_secondary">#49454F</color>
+    <color name="text_disabled">#79747E</color>
+    <color name="text_hint">#B0B0B0</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_surface">#1C1B1F</color>
+    
+    <!-- Gradient Colors for Cards -->
+    <color name="gradient_primary_start">#6750A4</color>
+    <color name="gradient_primary_end">#4F378B</color>
+    <color name="gradient_secondary_start">#625B71</color>
+    <color name="gradient_secondary_end">#463E52</color>
+    <color name="gradient_success_start">#4CAF50</color>
+    <color name="gradient_success_end">#388E3C</color>
+    <color name="gradient_info_start">#2196F3</color>
+    <color name="gradient_info_end">#1976D2</color>
+    
+    <!-- Status Colors -->
+    <color name="status_available">#4CAF50</color>
+    <color name="status_unavailable">#9E9E9E</color>
+    <color name="status_active">#FF9800</color>
+    <color name="status_accepted">#2196F3</color>
+    <color name="status_completed">#4CAF50</color>
+    
+    <!-- Divider and Border Colors -->
+    <color name="divider">#79747E</color>
+    <color name="divider_light">#E7E0EC</color>
+    <color name="border">#CAC4D0</color>
+    
+    <!-- Ripple Colors -->
+    <color name="ripple_primary">#1F6750A4</color>
+    <color name="ripple_secondary">#1F625B71</color>
+    
+    <!-- Shadow Colors -->
+    <color name="shadow_low">#0D000000</color>
+    <color name="shadow_medium">#1A000000</color>
+    <color name="shadow_high">#26000000</color>
+    
+    <!-- Elderly-Friendly Colors -->
+    <!-- Softer, warmer primary colors (calming blues/teals) -->
+    <color name="elderly_primary">#4A90A4</color>
+    <color name="elderly_primary_dark">#2E6B7A</color>
+    <color name="elderly_primary_light">#E0F4F8</color>
+    <color name="elderly_primary_warm">#5BA3B8</color>
+    
+    <!-- High contrast text colors for better readability -->
+    <color name="elderly_text_primary">#1A1A1A</color>
+    <color name="elderly_text_secondary">#4A4A4A</color>
+    <color name="elderly_text_on_primary">#FFFFFF</color>
+    <color name="elderly_text_high_contrast">#000000</color>
+    
+    <!-- Softer background colors (warm whites, light beiges) -->
+    <color name="elderly_background">#FFF8F3</color>
+    <color name="elderly_background_warm">#FFF5ED</color>
+    <color name="elderly_surface">#FFFFFF</color>
+    <color name="elderly_surface_soft">#FEF9F5</color>
+    <color name="elderly_card_background">#FFFFFF</color>
+    <color name="elderly_card_background_soft">#FFFBF7</color>
+    
+    <!-- Enhanced SOS button colors (more vibrant, attention-grabbing) -->
+    <color name="elderly_sos_red">#E53935</color>
+    <color name="elderly_sos_red_dark">#C62828</color>
+    <color name="elderly_sos_red_bright">#FF5252</color>
+    <color name="elderly_sos_gradient_start">#FF5252</color>
+    <color name="elderly_sos_gradient_end">#E53935</color>
+    <color name="elderly_sos_shadow">#4A000000</color>
+    
+    <!-- Better status indicator colors -->
+    <color name="elderly_status_safe">#66BB6A</color>
+    <color name="elderly_status_warning">#FFA726</color>
+    <color name="elderly_status_emergency">#E53935</color>
+    <color name="elderly_status_info">#42A5F5</color>
+    
+    <!-- Calming accent colors -->
+    <color name="elderly_accent_soft">#81C784</color>
+    <color name="elderly_accent_warm">#FFB74D</color>
+    <color name="elderly_accent_calm">#64B5F6</color>
+    
+    <!-- Gradient colors for elderly dashboard -->
+    <color name="elderly_gradient_primary_start">#4A90A4</color>
+    <color name="elderly_gradient_primary_end">#2E6B7A</color>
+    <color name="elderly_gradient_calm_start">#64B5F6</color>
+    <color name="elderly_gradient_calm_end">#42A5F5</color>
+</resources>

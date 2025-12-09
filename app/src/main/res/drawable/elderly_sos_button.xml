@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:startColor="@color/elderly_sos_red_bright"
+                android:endColor="@color/elderly_sos_red_dark" />
+            <size
+                android:width="@dimen/elderly_sos_button_size"
+                android:height="@dimen/elderly_sos_button_size" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:startColor="@color/elderly_sos_gradient_start"
+                android:endColor="@color/elderly_sos_gradient_end" />
+            <size
+                android:width="@dimen/elderly_sos_button_size"
+                android:height="@dimen/elderly_sos_button_size" />
+        </shape>
+    </item>
+</selector>
+
