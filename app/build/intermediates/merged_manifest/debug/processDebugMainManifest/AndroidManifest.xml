@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.harmonycare.app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:name="com.harmonycare.app.HarmonyCareApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.HarmonyCare" >
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.harmonycare.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.harmonycare.app.view.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HarmonyCare.Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.harmonycare.app.view.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HarmonyCare" />
+        <activity
+            android:name="com.harmonycare.app.view.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.ElderlyDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.VolunteerDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.EmergencyHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.VolunteerEmergencyListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.EmergencyDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.VolunteerStatsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.EmergencyContactsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.VolunteerMapActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.harmonycare.app.view.RatingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.harmonycare.app.view.RemindersActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.harmonycare.app.util.ReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="com.harmonycare.app.service.FallDetectionService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="health" />
+
+        <!-- AMap (高德地图) API Key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="23a959db2562029719293a9d2561d9c7" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.harmonycare.app.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

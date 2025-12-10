@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/elderly_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/elderly_screen_margin">
+
+        <!-- Header Section with Profile - Modern Gradient Background -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/elderly_spacing_medium"
+            android:elevation="@dimen/elevation_high"
+            app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+            app:cardBackgroundColor="@android:color/transparent">
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_card_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/elderly_card_padding"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvWelcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/elderly_spacing_small"
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="0"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:text="Welcome"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/elderly_text_size_headline"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stay safe, help is always available"
+                        android:textSize="@dimen/elderly_text_size_body"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.95"
+                        android:lineSpacingMultiplier="1.4"
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="0"
+                        android:shadowDy="1"
+                        android:shadowRadius="2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/elderly_avatar_size_medium"
+                    android:layout_height="@dimen/elderly_avatar_size_medium"
+                    android:background="@drawable/icon_background_circle"
+                    android:gravity="center"
+                    android:padding="@dimen/elderly_spacing_small" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Offline Status Indicator - Larger -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardOfflineStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/elderly_spacing_medium"
+            android:elevation="@dimen/elevation_low"
+            app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+            app:cardBackgroundColor="@color/warning_light"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/elderly_card_padding"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/status_indicator_unavailable"
+                    android:layout_marginEnd="@dimen/elderly_spacing_small" />
+
+                <TextView
+                    android:id="@+id/tvOfflineStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Offline Mode"
+                    android:textSize="@dimen/elderly_text_size_body"
+                    android:textColor="@color/elderly_text_primary" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Emergency Status Card - Larger -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardEmergencyStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/elderly_spacing_medium"
+            android:elevation="@dimen/elevation_medium"
+            app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+            app:cardBackgroundColor="@color/elderly_accent_calm"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/elderly_card_padding_large"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvEmergencyStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Status"
+                    android:textSize="@dimen/elderly_text_size_title"
+                    android:textStyle="bold"
+                    android:textColor="@color/elderly_text_on_primary"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SOS Button Card - Much Larger and More Prominent -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/elderly_spacing_medium"
+            android:elevation="@dimen/elderly_sos_button_elevation"
+            app:cardCornerRadius="@dimen/elderly_card_corner_radius_large"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/elderly_sos_button_size"
+                android:minHeight="180dp">
+
+                <Button
+                    android:id="@+id/btnSOS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/sos_button"
+                    android:textSize="@dimen/elderly_sos_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/elderly_sos_button_modern"
+                    android:padding="@dimen/elderly_spacing_xlarge"
+                    android:stateListAnimator="@null"
+                    android:elevation="@dimen/elderly_sos_button_elevation"
+                    android:letterSpacing="0.1"
+                    android:shadowColor="#FF000000"
+                    android:shadowDx="0"
+                    android:shadowDy="4"
+                    android:shadowRadius="8" />
+
+                <TextView
+                    android:id="@+id/tvCountdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="100sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone"
+                    android:alpha="0.95"
+                    android:shadowColor="#FF000000"
+                    android:shadowDx="0"
+                    android:shadowDy="4"
+                    android:shadowRadius="8" />
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Instruction Text - Larger and Clearer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hold the SOS button for 3 seconds to send emergency"
+            android:textSize="@dimen/elderly_text_size_body"
+            android:textColor="@color/elderly_text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/elderly_spacing_small"
+            android:lineSpacingMultiplier="1.5"
+            android:paddingHorizontal="@dimen/elderly_spacing_medium" />
+
+        <!-- Chat Button - Larger -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardChatButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/elderly_spacing_small"
+            android:elevation="@dimen/elevation_medium"
+            app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+            android:foreground="@drawable/ripple_primary"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="@dimen/elderly_touch_target_min"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/elderly_card_padding"
+                android:gravity="center_vertical"
+                android:background="@drawable/gradient_primary">
+
+                <ImageView
+                    android:layout_width="@dimen/elderly_icon_size_medium"
+                    android:layout_height="@dimen/elderly_icon_size_medium"
+                    android:src="@drawable/ic_notification"
+                    android:tint="@android:color/white"
+                    android:layout_marginEnd="@dimen/elderly_spacing_medium" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💬 Chat with Volunteer"
+                        android:textSize="@dimen/elderly_text_size_title"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Communicate with your helper"
+                        android:textSize="@dimen/elderly_text_size_body"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.9"
+                        android:lineSpacingMultiplier="1.4" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvUnreadCount"
+                    android:layout_width="@dimen/badge_size_large"
+                    android:layout_height="@dimen/badge_size_large"
+                    android:text=""
+                    android:textSize="@dimen/elderly_text_size_small"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/badge_background"
+                    android:gravity="center"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Cancel Emergency Button - Larger -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/elderly_spacing_medium"
+            android:elevation="@dimen/elevation_medium"
+            app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+            app:cardBackgroundColor="@color/elderly_card_background_soft"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnCancelEmergency"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/elderly_button_height"
+                android:text="Cancel Emergency"
+                android:textSize="@dimen/elderly_text_size_title"
+                android:textColor="@color/elderly_text_primary"
+                android:background="@color/elderly_card_background_soft"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingHorizontal="@dimen/elderly_button_padding_horizontal"
+                android:paddingVertical="@dimen/elderly_button_padding_vertical" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu Buttons Grid - Vertical Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/elderly_spacing_small">
+
+            <!-- History Card - Gradient Background -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:elevation="@dimen/elevation_medium"
+                app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding_small"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/card_background_modern">
+
+                        <ImageView
+                            android:layout_width="@dimen/elderly_icon_size_medium"
+                            android:layout_height="@dimen/elderly_icon_size_medium"
+                            android:src="@drawable/ic_history"
+                            android:tint="#FF000000"
+                            android:layout_marginEnd="@dimen/elderly_spacing_small" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/history"
+                            android:textSize="@dimen/elderly_text_size_title"
+                            android:textStyle="bold"
+                            android:textColor="#FF000000"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Emergency Contacts Card - Gradient Background -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEmergencyContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:elevation="@dimen/elevation_medium"
+                app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_background"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/elderly_icon_size_medium"
+                            android:layout_height="@dimen/elderly_icon_size_medium"
+                            android:layout_marginEnd="@dimen/elderly_spacing_small"
+                            android:src="@drawable/ic_emergency"
+                            android:tint="#FF000000" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Emergency Contacts"
+                            android:textColor="#FF000000"
+                            android:textSize="@dimen/elderly_text_size_title"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Settings Card - Gradient Background -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/elevation_medium"
+                app:cardCornerRadius="@dimen/elderly_card_corner_radius"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding_small"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/card_background_modern">
+
+                        <ImageView
+                            android:layout_width="@dimen/elderly_icon_size_medium"
+                            android:layout_height="@dimen/elderly_icon_size_medium"
+                            android:src="@drawable/ic_settings"
+                            android:tint="#FF000000"
+                            android:layout_marginEnd="@dimen/elderly_spacing_small" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/settings"
+                            android:textSize="@dimen/elderly_text_size_title"
+                            android:textStyle="bold"
+                            android:textColor="#FF000000"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -27,8 +27,15 @@ import com.harmonycare.app.data.model.User;
 import com.harmonycare.app.data.repository.UserRepository;
 import com.harmonycare.app.util.DistanceCalculator;
 import com.harmonycare.app.util.LocationHelper;
+import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
+import com.harmonycare.app.util.NetworkHelper;
+import com.harmonycare.app.util.Constants;
+import com.harmonycare.app.data.model.Emergency;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 import com.harmonycare.app.viewmodel.EmergencyViewModel;
+
+import android.os.Handler;
+import android.os.Looper;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -52,6 +59,10 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
     private LocationHelper locationHelper;
     private Location currentLocation;
     private List<Emergency> emergencyList = new ArrayList<>();
+    private LocalNetworkBroadcastHelper networkBroadcastHelper;
+    private NetworkHelper networkHelper;
+    private Handler pollHandler;
+    private Runnable pollRunnable;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +77,62 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
         initViews();
         checkLocationPermission();
         loadEmergencies();
+        setupNetworkBroadcast();
+        startPollingForEmergencies();
+    }
+    
+    private void setupNetworkBroadcast() {
+        networkHelper = new NetworkHelper(this);
+        networkBroadcastHelper = new LocalNetworkBroadcastHelper(this);
+        
+        networkBroadcastHelper.setListener(new LocalNetworkBroadcastHelper.EmergencyListener() {
+            @Override
+            public void onEmergencyReceived(Emergency emergency) {
+                // Reload emergencies when new one received
+                loadEmergencies();
+            }
+        });
+        
+        if (networkHelper.isWifiConnected()) {
+            networkBroadcastHelper.startListening();
+        }
+    }
+    
+    /**
+     * Start polling for new emergencies from API (if enabled)
+     */
+    private void startPollingForEmergencies() {
+        if (!Constants.API_ENABLED) {
+            return; // API disabled, no polling needed
+        }
+        
+        pollHandler = new Handler(Looper.getMainLooper());
+        pollRunnable = new Runnable() {
+            @Override
+            public void run() {
+                // Only poll if online
+                if (networkHelper != null && networkHelper.isConnected()) {
+                    loadEmergencies(); // This will use API if available
+                }
+                
+                // Schedule next poll
+                if (pollHandler != null && pollRunnable != null) {
+                    pollHandler.postDelayed(this, Constants.API_POLL_INTERVAL);
+                }
+            }
+        };
+        
+        // Start polling after initial delay
+        pollHandler.postDelayed(pollRunnable, Constants.API_POLL_INTERVAL);
+    }
+    
+    /**
+     * Stop polling for emergencies
+     */
+    private void stopPollingForEmergencies() {
+        if (pollHandler != null && pollRunnable != null) {
+            pollHandler.removeCallbacks(pollRunnable);
+        }
     }
     
     @Override
@@ -74,6 +141,16 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
         // Reload emergencies when returning from chat or details screen
         // This ensures the list is updated (e.g., if emergency was completed)
         loadEmergencies();
+        
+        // Restart listening if on WiFi
+        if (networkBroadcastHelper != null && networkHelper != null && networkHelper.isWifiConnected()) {
+            if (!networkBroadcastHelper.isListening()) {
+                networkBroadcastHelper.startListening();
+            }
+        }
+        
+        // Restart polling when activity resumes
+        startPollingForEmergencies();
     }
     
     private void initViews() {
@@ -274,10 +351,21 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
     }
     
     @Override
+    protected void onPause() {
+        super.onPause();
+        // Stop polling when activity is paused to save battery
+        stopPollingForEmergencies();
+    }
+    
+    @Override
     protected void onDestroy() {
         super.onDestroy();
+        stopPollingForEmergencies();
         if (locationHelper != null) {
             locationHelper.stopLocationUpdates();
+        }
+        if (networkBroadcastHelper != null) {
+            networkBroadcastHelper.cleanup();
         }
     }
 }

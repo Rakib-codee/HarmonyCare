@@ -54,5 +54,13 @@ public class Constants {
     public static final int MIN_PASSWORD_LENGTH = 6;
     public static final int MAX_NAME_LENGTH = 50;
     public static final int MIN_NAME_LENGTH = 2;
+    
+    // API Configuration
+    // Production Server: Deployed on Vercel
+    // Server URL: https://harmony-server-two.vercel.app
+    // API Base URL: https://harmony-server-two.vercel.app/api
+    public static final String API_BASE_URL = "https://harmony-server-two.vercel.app/api";
+    public static final long API_POLL_INTERVAL = 30000; // 30 seconds - Poll for new emergencies
+    public static final boolean API_ENABLED = true; // API enabled - Unlimited range when online
 }
 

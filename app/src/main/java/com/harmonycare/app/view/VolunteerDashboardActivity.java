@@ -2,6 +2,7 @@ package com.harmonycare.app.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -13,6 +14,10 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
+import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
+import com.harmonycare.app.util.OfflineSyncHelper;
+import com.harmonycare.app.util.NetworkHelper;
+import com.harmonycare.app.data.model.Emergency;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 import com.harmonycare.app.viewmodel.VolunteerViewModel;
 
@@ -33,6 +38,9 @@ public class VolunteerDashboardActivity extends BaseActivity {
     private AuthViewModel authViewModel;
     private VolunteerViewModel volunteerViewModel;
     private int currentUserId;
+    private LocalNetworkBroadcastHelper networkBroadcastHelper;
+    private OfflineSyncHelper offlineSyncHelper;
+    private NetworkHelper networkHelper;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +59,41 @@ public class VolunteerDashboardActivity extends BaseActivity {
         initViews();
         loadAvailabilityStatus();
         setupObservers();
+        setupSyncAndBroadcast();
+    }
+    
+    private void setupSyncAndBroadcast() {
+        // Initialize helpers
+        networkHelper = new NetworkHelper(this);
+        offlineSyncHelper = new OfflineSyncHelper(this);
+        networkBroadcastHelper = new LocalNetworkBroadcastHelper(this);
+        
+        // Start listening for local network broadcasts
+        networkBroadcastHelper.setListener(new LocalNetworkBroadcastHelper.EmergencyListener() {
+            @Override
+            public void onEmergencyReceived(Emergency emergency) {
+                // Refresh emergency list when new emergency received
+                showToast("New emergency received from local network!");
+            }
+        });
+        
+        if (networkHelper.isWifiConnected()) {
+            networkBroadcastHelper.startListening();
+        }
+        
+        // Auto-sync pending operations when online
+        if (networkHelper.isConnected()) {
+            syncPendingOperations();
+        }
+    }
+    
+    private void syncPendingOperations() {
+        offlineSyncHelper.syncAllPendingOperations((successCount, failureCount, message) -> {
+            if (successCount > 0) {
+                Log.d("VolunteerDashboard", "Synced " + successCount + " pending operations");
+                showToast("Synced " + successCount + " pending emergencies");
+            }
+        });
     }
 
     private void initViews() {
@@ -129,6 +172,37 @@ public class VolunteerDashboardActivity extends BaseActivity {
             switchAvailability.setChecked(isAvailable);
             updateAvailabilityStatus(isAvailable);
         });
+    }
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Restart listening when activity resumes
+        if (networkBroadcastHelper != null && networkHelper != null && networkHelper.isWifiConnected()) {
+            if (!networkBroadcastHelper.isListening()) {
+                networkBroadcastHelper.startListening();
+            }
+        }
+        
+        // Sync pending operations when coming back online
+        if (networkHelper != null && networkHelper.isConnected()) {
+            syncPendingOperations();
+        }
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Keep listening in background (optional - can stop if needed)
+    }
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Cleanup
+        if (networkBroadcastHelper != null) {
+            networkBroadcastHelper.cleanup();
+        }
     }
 }
 
