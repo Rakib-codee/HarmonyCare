@@ -204,7 +204,8 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
     private void loadEmergencies() {
         // Load both active and accepted emergencies for volunteers
         // This allows volunteers to see new emergencies and complete their accepted ones
-        emergencyViewModel.loadActiveAndAcceptedEmergencies();
+        int volunteerId = authViewModel.getCurrentUserId();
+        emergencyViewModel.loadActiveAndAcceptedEmergencies(volunteerId);
         emergencyViewModel.getActiveEmergencies().observe(this, emergencies -> {
             swipeRefreshLayout.setRefreshing(false);
             if (emergencies != null) {

@@ -142,6 +142,13 @@ public class EmergencyApiHelper {
      * Get active emergencies from server
      */
     public void getActiveEmergencies(ApiCallback<List<Emergency>> callback) {
+        getActiveEmergencies(null, callback);
+    }
+
+    /**
+     * Get active emergencies from server (optionally include volunteer's accepted emergencies)
+     */
+    public void getActiveEmergencies(Integer volunteerId, ApiCallback<List<Emergency>> callback) {
         if (!isApiAvailable()) {
             if (callback != null) {
                 callback.onError(new Exception("Device is offline"));
@@ -152,7 +159,11 @@ public class EmergencyApiHelper {
         new Thread(() -> {
             try {
                 String baseUrl = Constants.API_BASE_URL;
-                URL url = new URL(baseUrl + API_GET_ACTIVE_EMERGENCIES);
+                String urlStr = baseUrl + API_GET_ACTIVE_EMERGENCIES;
+                if (volunteerId != null && volunteerId > 0) {
+                    urlStr = urlStr + "?volunteer_id=" + volunteerId;
+                }
+                URL url = new URL(urlStr);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 connection.setRequestProperty("Accept", "application/json");
@@ -263,6 +274,18 @@ public class EmergencyApiHelper {
                     Log.d(TAG, "Emergency status updated on server");
                     if (callback != null) {
                         callback.onSuccess(null);
+                    }
+                } else if (responseCode == HttpURLConnection.HTTP_CONFLICT) {
+                    String errorMessage = "Emergency already accepted";
+                    Log.w(TAG, errorMessage);
+                    if (callback != null) {
+                        callback.onError(new Exception(errorMessage));
+                    }
+                } else if (responseCode == HttpURLConnection.HTTP_NOT_FOUND) {
+                    String errorMessage = "Emergency not found";
+                    Log.w(TAG, errorMessage);
+                    if (callback != null) {
+                        callback.onError(new Exception(errorMessage));
                     }
                 } else {
                     String errorMessage = "Server returned error code: " + responseCode;

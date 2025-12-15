@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
 import com.harmonycare.app.util.ErrorHandler;
+import com.harmonycare.app.util.FcmTokenRegistrar;
 import com.harmonycare.app.util.ValidationHelper;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 
@@ -35,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         // Check if already logged in
         authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
         if (authViewModel.isLoggedIn()) {
+            FcmTokenRegistrar.registerCurrentDevice(getApplicationContext());
             navigateToDashboard();
             return;
         }
@@ -62,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             hideLoading();
             if (success) {
                 Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+                FcmTokenRegistrar.registerCurrentDevice(getApplicationContext());
                 navigateToDashboard();
             }
         });

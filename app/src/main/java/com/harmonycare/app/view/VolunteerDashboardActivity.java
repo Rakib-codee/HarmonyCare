@@ -14,9 +14,11 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
+import com.harmonycare.app.util.FcmTokenRegistrar;
 import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
 import com.harmonycare.app.util.OfflineSyncHelper;
 import com.harmonycare.app.util.NetworkHelper;
+import com.harmonycare.app.util.LocationHelper;
 import com.harmonycare.app.data.model.Emergency;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 import com.harmonycare.app.viewmodel.VolunteerViewModel;
@@ -41,6 +43,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
     private LocalNetworkBroadcastHelper networkBroadcastHelper;
     private OfflineSyncHelper offlineSyncHelper;
     private NetworkHelper networkHelper;
+    private LocationHelper locationHelper;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
         networkHelper = new NetworkHelper(this);
         offlineSyncHelper = new OfflineSyncHelper(this);
         networkBroadcastHelper = new LocalNetworkBroadcastHelper(this);
+        locationHelper = new LocationHelper(this);
         
         // Start listening for local network broadcasts
         networkBroadcastHelper.setListener(new LocalNetworkBroadcastHelper.EmergencyListener() {
@@ -113,6 +117,8 @@ public class VolunteerDashboardActivity extends BaseActivity {
         switchAvailability.setOnCheckedChangeListener((buttonView, isChecked) -> {
             volunteerViewModel.setAvailability(currentUserId, isChecked);
             updateAvailabilityStatus(isChecked);
+            android.location.Location loc = locationHelper != null ? locationHelper.getLastKnownLocation() : null;
+            FcmTokenRegistrar.updateVolunteerAvailability(getApplicationContext(), currentUserId, isChecked, loc);
             if (isChecked) {
                 showToast("You are now available");
             } else {

@@ -11,13 +11,15 @@ import com.harmonycare.app.data.model.Emergency;
 import com.harmonycare.app.data.model.User;
 import com.harmonycare.app.data.repository.EmergencyRepository;
 import com.harmonycare.app.data.repository.UserRepository;
+import com.harmonycare.app.data.repository.VolunteerStatusRepository;
+import com.harmonycare.app.util.Constants;
+import com.harmonycare.app.util.DistanceCalculator;
+import com.harmonycare.app.util.EmergencyApiHelper;
 import com.harmonycare.app.util.ErrorHandler;
 import com.harmonycare.app.util.FamilyNotificationHelper;
+import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
 import com.harmonycare.app.util.NotificationHelper;
 import com.harmonycare.app.util.OfflineSyncHelper;
-import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
-import com.harmonycare.app.util.EmergencyApiHelper;
-import com.harmonycare.app.util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,15 +32,15 @@ public class EmergencyViewModel extends AndroidViewModel {
     private MutableLiveData<List<Emergency>> activeEmergencies = new MutableLiveData<>();
     private MutableLiveData<Boolean> emergencyCreated = new MutableLiveData<>();
     private MutableLiveData<String> errorMessage = new MutableLiveData<>();
-    
+
     public EmergencyViewModel(Application application) {
         super(application);
         emergencyRepository = new EmergencyRepository(application);
     }
-    
+
     public void createEmergency(int elderlyId, double latitude, double longitude) {
         Emergency emergency = new Emergency(elderlyId, latitude, longitude, "active");
-        
+
         // Try HTTP API first (if enabled and online)
         EmergencyApiHelper apiHelper = new EmergencyApiHelper(getApplication());
         if (Constants.API_ENABLED && apiHelper.isApiAvailable()) {
@@ -48,25 +50,24 @@ public class EmergencyViewModel extends AndroidViewModel {
                 public void onSuccess(Long emergencyId) {
                     if (emergencyId != null && emergencyId > 0) {
                         emergency.setId(emergencyId.intValue());
-                        
+
                         // Save to local database as well
                         emergencyRepository.createEmergency(emergency, new EmergencyRepository.RepositoryCallback<Long>() {
                             @Override
                             public void onSuccess(Long localId) {
                                 emergencyCreated.postValue(true);
-                                
+
                                 // Also broadcast to local network (fallback for nearby devices)
                                 LocalNetworkBroadcastHelper broadcastHelper = new LocalNetworkBroadcastHelper(getApplication());
                                 broadcastHelper.broadcastEmergency(emergency);
-                                
-                                // Notify available volunteers
-                                notifyVolunteersAboutEmergency(elderlyId);
-                                
+
+                                // Volunteers are notified via backend push when API is enabled
+
                                 // Notify emergency contacts
                                 FamilyNotificationHelper familyNotificationHelper = new FamilyNotificationHelper(getApplication());
                                 familyNotificationHelper.notifyEmergencyContacts(elderlyId, emergency);
                             }
-                            
+
                             @Override
                             public void onError(Exception error) {
                                 // API succeeded but local save failed - still consider it success
@@ -76,7 +77,7 @@ public class EmergencyViewModel extends AndroidViewModel {
                         });
                     }
                 }
-                
+
                 @Override
                 public void onError(Exception error) {
                     // API failed, fall back to local sync
@@ -89,13 +90,13 @@ public class EmergencyViewModel extends AndroidViewModel {
             createEmergencyLocal(emergency, elderlyId);
         }
     }
-    
+
     /**
      * Create emergency using local sync (offline or API disabled)
      */
     private void createEmergencyLocal(Emergency emergency, int elderlyId) {
         OfflineSyncHelper offlineSyncHelper = new OfflineSyncHelper(getApplication());
-        
+
         offlineSyncHelper.queueEmergencyForSync(emergency, new OfflineSyncHelper.SyncCallback() {
             @Override
             public void onSynced(Long emergencyId) {
@@ -103,14 +104,14 @@ public class EmergencyViewModel extends AndroidViewModel {
                 if (emergencyId != null && emergencyId > 0) {
                     emergency.setId(emergencyId.intValue());
                     emergencyCreated.postValue(true);
-                    
+
                     // Broadcast to local network (same WiFi)
                     LocalNetworkBroadcastHelper broadcastHelper = new LocalNetworkBroadcastHelper(getApplication());
                     broadcastHelper.broadcastEmergency(emergency);
-                    
+
                     // Notify available volunteers
                     notifyVolunteersAboutEmergency(elderlyId);
-                    
+
                     // Notify emergency contacts
                     FamilyNotificationHelper familyNotificationHelper = new FamilyNotificationHelper(getApplication());
                     familyNotificationHelper.notifyEmergencyContacts(elderlyId, emergency);
@@ -119,7 +120,7 @@ public class EmergencyViewModel extends AndroidViewModel {
                     emergencyCreated.postValue(false);
                 }
             }
-            
+
             @Override
             public void onQueued(Long operationId) {
                 // Emergency queued for later sync (offline)
@@ -130,22 +131,22 @@ public class EmergencyViewModel extends AndroidViewModel {
                         if (emergencyId != null && emergencyId > 0) {
                             emergency.setId(emergencyId.intValue());
                             emergencyCreated.postValue(true);
-                            
+
                             // Try to broadcast to local network even if offline
                             LocalNetworkBroadcastHelper broadcastHelper = new LocalNetworkBroadcastHelper(getApplication());
                             broadcastHelper.broadcastEmergency(emergency);
-                            
+
                             Log.d("EmergencyViewModel", "Emergency queued for sync. Operation ID: " + operationId);
                         }
                     }
-                    
+
                     @Override
                     public void onError(Exception error) {
                         Log.e("EmergencyViewModel", "Error saving emergency locally", error);
                     }
                 });
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error creating emergency", error);
@@ -154,14 +155,14 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     /**
      * Notify all available volunteers about a new emergency
      */
     private void notifyVolunteersAboutEmergency(int elderlyId) {
         UserRepository userRepository = new UserRepository(getApplication());
         NotificationHelper notificationHelper = new NotificationHelper(getApplication());
-        
+
         // Get elderly user details
         userRepository.getUserById(elderlyId, new UserRepository.RepositoryCallback<User>() {
             @Override
@@ -172,7 +173,7 @@ public class EmergencyViewModel extends AndroidViewModel {
                     notificationHelper.notifyAvailableVolunteers(elderlyName, null);
                 }
             }
-            
+
             @Override
             public void onError(Exception error) {
                 // If we can't get user details, still try to notify with generic message
@@ -180,14 +181,14 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     public void loadActiveEmergencies() {
         emergencyRepository.getActiveEmergencies(new EmergencyRepository.RepositoryCallback<List<Emergency>>() {
             @Override
             public void onSuccess(List<Emergency> emergencies) {
                 activeEmergencies.postValue(emergencies != null ? emergencies : new ArrayList<>());
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error loading active emergencies", error);
@@ -196,17 +197,21 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     /**
      * Load active and accepted emergencies for volunteers
      * This shows both new emergencies (active) and emergencies they accepted (accepted)
      * Tries API first, then falls back to local database
      */
     public void loadActiveAndAcceptedEmergencies() {
+        loadActiveAndAcceptedEmergencies(null);
+    }
+
+    public void loadActiveAndAcceptedEmergencies(Integer volunteerId) {
         // Try HTTP API first (if enabled and online)
         EmergencyApiHelper apiHelper = new EmergencyApiHelper(getApplication());
         if (Constants.API_ENABLED && apiHelper.isApiAvailable()) {
-            apiHelper.getActiveEmergencies(new EmergencyApiHelper.ApiCallback<List<Emergency>>() {
+            apiHelper.getActiveEmergencies(volunteerId, new EmergencyApiHelper.ApiCallback<List<Emergency>>() {
                 @Override
                 public void onSuccess(List<Emergency> emergencies) {
                     if (emergencies != null && !emergencies.isEmpty()) {
@@ -217,7 +222,7 @@ public class EmergencyViewModel extends AndroidViewModel {
                         loadFromLocalDatabase();
                     }
                 }
-                
+
                 @Override
                 public void onError(Exception error) {
                     // API failed, fall back to local database
@@ -230,7 +235,7 @@ public class EmergencyViewModel extends AndroidViewModel {
             loadFromLocalDatabase();
         }
     }
-    
+
     /**
      * Load emergencies from local database
      */
@@ -240,7 +245,7 @@ public class EmergencyViewModel extends AndroidViewModel {
             public void onSuccess(List<Emergency> emergencies) {
                 activeEmergencies.postValue(emergencies != null ? emergencies : new ArrayList<>());
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error loading active and accepted emergencies", error);
@@ -249,7 +254,7 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     /**
      * Save emergencies from API to local database
      */
@@ -259,7 +264,7 @@ public class EmergencyViewModel extends AndroidViewModel {
             activeEmergencies.postValue(emergencies);
             return;
         }
-        
+
         Emergency emergency = emergencies.get(index);
         emergencyRepository.createEmergency(emergency, new EmergencyRepository.RepositoryCallback<Long>() {
             @Override
@@ -270,7 +275,7 @@ public class EmergencyViewModel extends AndroidViewModel {
                 // Continue with next emergency
                 saveEmergenciesToLocal(emergencies, index + 1);
             }
-            
+
             @Override
             public void onError(Exception error) {
                 // Continue even if one fails
@@ -278,14 +283,14 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     public void loadEmergenciesByElderly(int elderlyId) {
         emergencyRepository.getEmergenciesByElderly(elderlyId, new EmergencyRepository.RepositoryCallback<List<Emergency>>() {
             @Override
             public void onSuccess(List<Emergency> emergencies) {
                 activeEmergencies.postValue(emergencies != null ? emergencies : new ArrayList<>());
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error loading emergencies by elderly", error);
@@ -294,14 +299,14 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     public void loadEmergenciesByVolunteer(int volunteerId) {
         emergencyRepository.getEmergenciesByVolunteer(volunteerId, new EmergencyRepository.RepositoryCallback<List<Emergency>>() {
             @Override
             public void onSuccess(List<Emergency> emergencies) {
                 activeEmergencies.postValue(emergencies != null ? emergencies : new ArrayList<>());
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error loading emergencies by volunteer", error);
@@ -310,8 +315,33 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     public void acceptEmergency(int emergencyId, int volunteerId) {
+        EmergencyApiHelper apiHelper = new EmergencyApiHelper(getApplication());
+        if (Constants.API_ENABLED && apiHelper.isApiAvailable()) {
+            apiHelper.updateEmergencyStatus(emergencyId, Constants.STATUS_ACCEPTED, volunteerId, new EmergencyApiHelper.ApiCallback<Void>() {
+                @Override
+                public void onSuccess(Void result) {
+                    acceptEmergencyLocally(emergencyId, volunteerId);
+                }
+
+                @Override
+                public void onError(Exception error) {
+                    String msg = error != null ? error.getMessage() : null;
+                    if (msg != null && msg.toLowerCase().contains("already accepted")) {
+                        errorMessage.postValue("This emergency was already accepted by someone else.");
+                        loadActiveAndAcceptedEmergencies(volunteerId);
+                    } else {
+                        errorMessage.postValue(ErrorHandler.getErrorMessage(error));
+                    }
+                }
+            });
+        } else {
+            acceptEmergencyLocally(emergencyId, volunteerId);
+        }
+    }
+
+    private void acceptEmergencyLocally(int emergencyId, int volunteerId) {
         emergencyRepository.getEmergencyById(emergencyId, new EmergencyRepository.RepositoryCallback<Emergency>() {
             @Override
             public void onSuccess(Emergency emergency) {
@@ -321,16 +351,11 @@ public class EmergencyViewModel extends AndroidViewModel {
                     emergencyRepository.updateEmergency(emergency, new EmergencyRepository.RepositoryCallback<Void>() {
                         @Override
                         public void onSuccess(Void result) {
-                            // Reload active emergencies for the list
-                            loadActiveEmergencies();
-                            
-                            // Also reload volunteer's emergencies for history/stats
+                            loadActiveAndAcceptedEmergencies(volunteerId);
                             loadEmergenciesByVolunteer(volunteerId);
-                            
-                            // Notify elderly that volunteer accepted
                             notifyElderlyEmergencyAccepted(emergency, volunteerId);
                         }
-                        
+
                         @Override
                         public void onError(Exception error) {
                             Log.e("EmergencyViewModel", "Error updating emergency", error);
@@ -341,7 +366,7 @@ public class EmergencyViewModel extends AndroidViewModel {
                     errorMessage.postValue("Emergency not found");
                 }
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error accepting emergency", error);
@@ -349,14 +374,14 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
     /**
      * Notify elderly when volunteer accepts their emergency
      */
     private void notifyElderlyEmergencyAccepted(Emergency emergency, int volunteerId) {
         UserRepository userRepository = new UserRepository(getApplication());
         NotificationHelper notificationHelper = new NotificationHelper(getApplication());
-        
+
         // Get volunteer name
         userRepository.getUserById(volunteerId, new UserRepository.RepositoryCallback<User>() {
             @Override
@@ -368,14 +393,14 @@ public class EmergencyViewModel extends AndroidViewModel {
                     );
                 }
             }
-            
+
             @Override
             public void onError(Exception error) {
                 // Silently fail
             }
         });
     }
-    
+
     public void completeEmergency(int emergencyId) {
         emergencyRepository.getEmergencyById(emergencyId, new EmergencyRepository.RepositoryCallback<Emergency>() {
             @Override
@@ -387,32 +412,28 @@ public class EmergencyViewModel extends AndroidViewModel {
                         errorMessage.postValue("Cannot complete: Volunteer not assigned");
                         return;
                     }
-                    
-                    emergency.setStatus("completed");
-                    // Preserve volunteerId when completing
-                    emergencyRepository.updateEmergency(emergency, new EmergencyRepository.RepositoryCallback<Void>() {
-                        @Override
-                        public void onSuccess(Void result) {
-                            // Reload active emergencies for the list
-                            loadActiveEmergencies();
-                            
-                            // Also reload volunteer's emergencies for history/stats
-                            if (emergency.getVolunteerId() != null) {
-                                loadEmergenciesByVolunteer(emergency.getVolunteerId());
+
+                    EmergencyApiHelper apiHelper = new EmergencyApiHelper(getApplication());
+                    if (Constants.API_ENABLED && apiHelper.isApiAvailable()) {
+                        apiHelper.updateEmergencyStatus(emergencyId, Constants.STATUS_COMPLETED, emergency.getVolunteerId(), new EmergencyApiHelper.ApiCallback<Void>() {
+                            @Override
+                            public void onSuccess(Void result) {
+                                completeEmergencyLocally(emergency);
                             }
-                        }
-                        
-                        @Override
-                        public void onError(Exception error) {
-                            Log.e("EmergencyViewModel", "Error updating emergency", error);
-                            errorMessage.postValue(ErrorHandler.getErrorMessage(error));
-                        }
-                    });
+
+                            @Override
+                            public void onError(Exception error) {
+                                errorMessage.postValue(ErrorHandler.getErrorMessage(error));
+                            }
+                        });
+                    } else {
+                        completeEmergencyLocally(emergency);
+                    }
                 } else {
                     errorMessage.postValue("Emergency not found");
                 }
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error completing emergency", error);
@@ -420,30 +441,55 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
+    private void completeEmergencyLocally(Emergency emergency) {
+        emergency.setStatus(Constants.STATUS_COMPLETED);
+        // Preserve volunteerId when completing
+        emergencyRepository.updateEmergency(emergency, new EmergencyRepository.RepositoryCallback<Void>() {
+            @Override
+            public void onSuccess(Void result) {
+                loadActiveEmergencies();
+
+                // Also reload volunteer's emergencies for history/stats
+                if (emergency.getVolunteerId() != null) {
+                    loadEmergenciesByVolunteer(emergency.getVolunteerId());
+                }
+            }
+
+            @Override
+            public void onError(Exception error) {
+                Log.e("EmergencyViewModel", "Error updating emergency", error);
+                errorMessage.postValue(ErrorHandler.getErrorMessage(error));
+            }
+        });
+    }
+
     public void cancelEmergency(int emergencyId) {
         emergencyRepository.getEmergencyById(emergencyId, new EmergencyRepository.RepositoryCallback<Emergency>() {
             @Override
             public void onSuccess(Emergency emergency) {
                 if (emergency != null) {
-                    emergency.setStatus("cancelled");
-                    emergencyRepository.updateEmergency(emergency, new EmergencyRepository.RepositoryCallback<Void>() {
-                        @Override
-                        public void onSuccess(Void result) {
-                            loadActiveEmergencies();
-                        }
-                        
-                        @Override
-                        public void onError(Exception error) {
-                            Log.e("EmergencyViewModel", "Error updating emergency", error);
-                            errorMessage.postValue(ErrorHandler.getErrorMessage(error));
-                        }
-                    });
+                    EmergencyApiHelper apiHelper = new EmergencyApiHelper(getApplication());
+                    if (Constants.API_ENABLED && apiHelper.isApiAvailable()) {
+                        apiHelper.updateEmergencyStatus(emergencyId, Constants.STATUS_CANCELLED, emergency.getVolunteerId(), new EmergencyApiHelper.ApiCallback<Void>() {
+                            @Override
+                            public void onSuccess(Void result) {
+                                cancelEmergencyLocally(emergency);
+                            }
+
+                            @Override
+                            public void onError(Exception error) {
+                                errorMessage.postValue(ErrorHandler.getErrorMessage(error));
+                            }
+                        });
+                    } else {
+                        cancelEmergencyLocally(emergency);
+                    }
                 } else {
                     errorMessage.postValue("Emergency not found");
                 }
             }
-            
+
             @Override
             public void onError(Exception error) {
                 Log.e("EmergencyViewModel", "Error cancelling emergency", error);
@@ -451,7 +497,23 @@ public class EmergencyViewModel extends AndroidViewModel {
             }
         });
     }
-    
+
+    private void cancelEmergencyLocally(Emergency emergency) {
+        emergency.setStatus(Constants.STATUS_CANCELLED);
+        emergencyRepository.updateEmergency(emergency, new EmergencyRepository.RepositoryCallback<Void>() {
+            @Override
+            public void onSuccess(Void result) {
+                loadActiveEmergencies();
+            }
+
+            @Override
+            public void onError(Exception error) {
+                Log.e("EmergencyViewModel", "Error updating emergency", error);
+                errorMessage.postValue(ErrorHandler.getErrorMessage(error));
+            }
+        });
+    }
+
     public void getEmergencyById(int id, EmergencyCallback callback) {
         emergencyRepository.getEmergencyById(id, new EmergencyRepository.RepositoryCallback<Emergency>() {
             @Override

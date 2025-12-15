@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
 import com.harmonycare.app.util.Constants;
+import com.harmonycare.app.util.FcmTokenRegistrar;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 
 /**
@@ -34,6 +35,7 @@ public class SplashActivity extends AppCompatActivity {
         
         // Check if user is already logged in
         if (authViewModel.isLoggedIn()) {
+            FcmTokenRegistrar.registerCurrentDevice(getApplicationContext());
             // User is logged in, navigate to appropriate dashboard
             String userRole = authViewModel.getCurrentUserRole();
             Intent intent;

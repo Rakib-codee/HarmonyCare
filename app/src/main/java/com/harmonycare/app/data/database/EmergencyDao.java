@@ -2,6 +2,7 @@ package com.harmonycare.app.data.database;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -14,7 +15,7 @@ import java.util.List;
  */
 @Dao
 public interface EmergencyDao {
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     long insertEmergency(Emergency emergency);
     
     @Query("SELECT * FROM emergencies WHERE status = :status ORDER BY timestamp DESC")
