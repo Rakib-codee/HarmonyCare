@@ -40,6 +40,10 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 
+app.get('/', (req, res) => {
+  res.json({ ok: true, message: 'HarmonyCare API', health: '/api/health' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ ok: true });
 });
