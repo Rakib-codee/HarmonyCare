@@ -13,8 +13,8 @@ import java.nio.charset.StandardCharsets;
 public class DeviceApiHelper {
     private static final String TAG = "DeviceApiHelper";
 
-    private static final int CONNECTION_TIMEOUT = 30000;
-    private static final int READ_TIMEOUT = 30000;
+    private static final int CONNECTION_TIMEOUT = 7000;
+    private static final int READ_TIMEOUT = 7000;
 
     private final Context context;
     private final NetworkHelper networkHelper;

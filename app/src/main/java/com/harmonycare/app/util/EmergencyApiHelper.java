@@ -30,8 +30,8 @@ public class EmergencyApiHelper {
     // Update Constants.API_BASE_URL with your server URL
     private static final String API_CREATE_EMERGENCY = "/emergencies";
     private static final String API_GET_ACTIVE_EMERGENCIES = "/emergencies/active";
-    private static final int CONNECTION_TIMEOUT = 30000; // 30 seconds (increased for Vercel cold start)
-    private static final int READ_TIMEOUT = 30000; // 30 seconds (increased for slow connections)
+    private static final int CONNECTION_TIMEOUT = 7000;
+    private static final int READ_TIMEOUT = 7000;
     
     private Context context;
     private NetworkHelper networkHelper;

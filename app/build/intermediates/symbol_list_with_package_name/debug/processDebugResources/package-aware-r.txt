@@ -4301,6 +4301,7 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -4386,6 +4387,7 @@ string completed
 string contact
 string copy
 string cyclemap
+string default_web_client_id
 string distance
 string elderly_contact
 string elderly_dashboard
@@ -4402,7 +4404,9 @@ string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fcm_fallback_notification_channel_label
 string fiets_nl
+string firebase_database_url
 string first_fix_message
 string format_distance_feet
 string format_distance_kilometers
@@ -4415,6 +4419,11 @@ string format_distance_only_meter
 string format_distance_only_mile
 string format_distance_only_nautical_mile
 string format_distance_value_unit
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string hills
 string history
@@ -4556,6 +4565,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string preference_copied
+string project_id
 string public_transport
 string register_button
 string register_link

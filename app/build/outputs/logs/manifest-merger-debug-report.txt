@@ -11,70 +11,85 @@ INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:3
 	android:name
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:33:13-62
 manifest
-ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-133:12
-INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-133:12
-INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-133:12
-INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-133:12
-MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7a7221c630dc03914c389f1b598b0daf/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.preference:preference:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/043dd15505088d162cf7de87d5e08f16/transformed/preference-1.2.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/93eb31938604c6bfc0c48caacef0cea6/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/233e603e2cacb9781d3454f1b710f1a9/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/2af5be9144f02791ac53f512d6de8853/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d78175c9b3c65ab23c8401a05b757d86/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/ac1cb122c13b0c021ae1981e72b90f57/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c59a40f6ce5ff68bbc53880c54c27259/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/90a777a63d775540307104ab36e1cdbb/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a824036d57cc159050b06ff9cc9b1ee/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e89fb234922c3002cb5595e433dc2548/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4c06af4d08da3de9598bbcb2b02f15dd/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.activity:activity:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/83731b73da2449bd6dd5a5fe5f1711c3/transformed/jetified-activity-1.8.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/24120c131dcb9fabd900a0dc896657f2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/655763cd8f49e968821ed065bcf9ef48/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3f39b3910022168ec3886c52a9701831/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a29d6d4bca57b45864a41cfe88b99a14/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6bdd3dc633317b9f933604ddc8a3efdc/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/040c50a0de6d64b9cb94595f6f5e9eda/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c32f6362e7f9a782af7af068e44a5d6e/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/efe21f0a92431f4442ccc662518d2b58/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/590c1cae1ea52d63e3e2ebd7289d1e31/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a43fce13350d943180f16cf930fc0609/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/44a41fc365b8db5efad4453b2b13434e/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/086b6a73b64c3abb697e6ceaf18247d8/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4e665c846c29050d0be5772d499a0e09/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1f0e9f932e57bdf4c9c91f5f86493573/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/98031c7faea50f1661e0f05ecbe9a0ec/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a8a715f66b03b3d153460ea1b567dcb5/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/506c7e73b047b15c979d955af71c6eb8/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14a4c13ed7e2533af9557f165b51cdd/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/252ac3e3ed6b6680144ca891a6f8df2d/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.transition:transition:1.4.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/091ba2902c585c4e75d3f1abbae38545/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/2548ba8f39da6baf33d02e2b9ea45f59/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/986a888f0ca318ca63d97977a4aff0ca/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/45ba13684555423c05001469950ee653/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
-MERGED from [org.osmdroid:osmdroid-wms:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/eea77181efba7b5ee25f9b88b2654318/transformed/jetified-osmdroid-wms-6.1.16/AndroidManifest.xml:2:1-9:12
-MERGED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:2:1-27:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7eabef97a3895ecc76d8a63f6efd324c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/332e141e8966c5af06115647d77ca4c6/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5bf7869b716bf900e6cda67cae9b832a/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c725ff0b04e36281c4b65d8867d4b3a0/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/496bd35508862ac0c97e15076ea28889/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dac6875d041297231a028a948b68ab80/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/27f6944badce93ff4bc12240b2dcc4b0/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/138499a96e5ee46608bfd6679b11bb78/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64f648ad1d116087db0b6462b2e881bd/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/260af36d2fd8580ac795620109a5d2e2/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/503a26afb1ac4ae6d67795c06b71bb70/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0bdd1f51e537972eef14ea09c305aeb6/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f46779e9bdfb493ed404f217b4809828/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-141:12
+INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-141:12
+INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-141:12
+INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:1-141:12
+MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/70c57a255360c632d9000a673905af48/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8b3026257e7454d8918331cdd2e34158/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.preference:preference:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d3b2e434a4656836b945d21c75b4cbea/transformed/preference-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a50ca6b31392a89b0f3c143b02369918/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f7b23e2390b0efcd2cd3770c8ab6d8b6/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a4809132afecb19ff5101ba1a98e42c/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1dce266aa495c91fbf74798b793fe226/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6b3c3a2d20be50947bc035f3e7a8d10e/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/257035c9fd5225161805c8411a0b3c01/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:17:1-66:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0c0b6191c3652bb460561503e665e998/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/12ec7ae993eb89fcaaed048b43b543b0/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fb7665a26e4d245e6dd48d88465530ef/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b6a046765c82bda4e5008c1f07c5b57d/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c2ceb4afdabf506e9c67447950fed93c/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/88f3ffd3860ee132aae9f10c12d2a1ef/transformed/jetified-activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/56e25a763facd57088cbdfb6076e8445/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/43664767d5dfe128969b962f5bd8631f/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3f9f31c8edcbc1dd0bc4b424fa360c2b/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3a7610a2134a45b2e4af5d52c6e146d6/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e64e2467b83afb5eeca5830a36a67841/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a42a87a48dd99c9736b0490731b614ac/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/34c552ae1d89b0fde6bb294143ffefc0/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/eb56b3f75bebdf7aff5bca667237f475/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/976774ce82365b0db43e091d2a2ad965/transformed/jetified-firebase-installations-interop-17.1.1/AndroidManifest.xml:15:1-19:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e885cb9e72f8818241069f0b20093d06/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/af7fe9cfa5dedf63ee8ad6256d6ef6b5/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5d42db517bd8bbd546ddb862dd503f16/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3028311bb327cde095bfdd7d90c73d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8265c62429c4c8880cbe1ec8c6d96296/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e79684ad27fae6a36e3e6efc6c033876/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4cde7e7c900b3370db587202d38c56b0/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c4bc9cd42f048cf7c1990164d12a0ac0/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d72c46360b5a7b0e934cb99243ef873c/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5bb10136eea7e5cc8423dbec529aa222/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a1b264258ff087e0a008405279365fcf/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5f1233fd5e2e230243d575514645504f/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fdda007056b98a828ed0b0e21967cd6a/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a041b39c3e00b7b327a8cedd2afeb9bd/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4683da20e869b3f0952afa7ab8eb6b12/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/33ff87fa5f48ca41167f16fa4a4c6477/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8022f7719aa3b979f7f57263d417b6c0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [org.osmdroid:osmdroid-wms:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/9c5b5570b9672b691f81123d4f957585/transformed/jetified-osmdroid-wms-6.1.16/AndroidManifest.xml:2:1-9:12
+MERGED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:2:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8c9d00d3a24da8a78b29faeabbe6dc8e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/390e4689e7c162d6d83c7e770d01c0bb/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/06cf70a03e09c1fa037b26e8989c736d/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6e7b09f42c1479a1138576b18637bb1b/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4238879768590b76ae059b85725523cf/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4adde2ad43026a0f92cf2d61dd3c72ed/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/693af4aec758ea4f5b810502cba0c7a9/transformed/jetified-firebase-components-18.0.0/AndroidManifest.xml:15:1-20:12
+MERGED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:15:1-31:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f4e29552d9c76d28ca1b29d94465dacb/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/39c0c8b8a431de0b71e39924c818a940/transformed/jetified-transport-api-3.1.0/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14167f420feecccb9c6dcf8b86f6ad2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f5e35b7cb3473512a36c08d0fdad77dd/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/519c4f14886d4c40c1148995a90496b1/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e32c0dd4ecdc41140c5a039e5a901ab8/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fc60a6978b3388921dadd8304f2ea225/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4262d44e496a3f039321677b18c551c7/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/be75a95c75286f1d5e7213c81d472990/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
 	package
 		INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -87,10 +102,26 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/rakib/Dow
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:25:5-67
 	android:name
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_FINE_LOCATION
@@ -103,6 +134,8 @@ ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:8:5-
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:8:22-78
 uses-permission#android.permission.POST_NOTIFICATIONS
 ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:9:5-77
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:23:5-77
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:23:5-77
 	android:name
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:9:22-74
 uses-permission#android.permission.FOREGROUND_SERVICE
@@ -152,40 +185,60 @@ ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:20:5
 	android:name
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:20:22-63
 application
-ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:22:5-131:19
-INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:22:5-131:19
-MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7a7221c630dc03914c389f1b598b0daf/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7a7221c630dc03914c389f1b598b0daf/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/90a777a63d775540307104ab36e1cdbb/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/90a777a63d775540307104ab36e1cdbb/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a824036d57cc159050b06ff9cc9b1ee/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a824036d57cc159050b06ff9cc9b1ee/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
-MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/27f6944badce93ff4bc12240b2dcc4b0/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/27f6944badce93ff4bc12240b2dcc4b0/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/138499a96e5ee46608bfd6679b11bb78/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/138499a96e5ee46608bfd6679b11bb78/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:22:5-139:19
+INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:22:5-139:19
+MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/70c57a255360c632d9000a673905af48/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/70c57a255360c632d9000a673905af48/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8b3026257e7454d8918331cdd2e34158/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8b3026257e7454d8918331cdd2e34158/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:28:5-64:19
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:28:5-64:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0c0b6191c3652bb460561503e665e998/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0c0b6191c3652bb460561503e665e998/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/12ec7ae993eb89fcaaed048b43b543b0/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/12ec7ae993eb89fcaaed048b43b543b0/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fb7665a26e4d245e6dd48d88465530ef/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fb7665a26e4d245e6dd48d88465530ef/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b6a046765c82bda4e5008c1f07c5b57d/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b6a046765c82bda4e5008c1f07c5b57d/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e885cb9e72f8818241069f0b20093d06/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e885cb9e72f8818241069f0b20093d06/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:21:5-29:19
+MERGED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:21:5-29:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:25:5-39:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14167f420feecccb9c6dcf8b86f6ad2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14167f420feecccb9c6dcf8b86f6ad2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f5e35b7cb3473512a36c08d0fdad77dd/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f5e35b7cb3473512a36c08d0fdad77dd/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
 		INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:28:9-35
 	android:label
@@ -334,12 +387,24 @@ ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:120:
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:124:13-51
 	android:name
 		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:121:13-57
-meta-data#com.amap.api.v2.apikey
-ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:127:9-129:64
-	android:value
-		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:129:13-61
+service#com.harmonycare.app.service.HarmonyFirebaseMessagingService
+ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:126:9-132:19
+	android:exported
+		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:128:13-37
 	android:name
-		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:128:13-50
+		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:127:13-68
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:129:13-131:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:130:17-78
+	android:name
+		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:130:25-75
+meta-data#com.amap.api.v2.apikey
+ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:135:9-137:64
+	android:value
+		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:137:13-61
+	android:name
+		ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:136:13-50
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:37:13-39:63
 	android:resource
@@ -350,285 +415,455 @@ uses-sdk
 INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml
 INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7a7221c630dc03914c389f1b598b0daf/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7a7221c630dc03914c389f1b598b0daf/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.preference:preference:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/043dd15505088d162cf7de87d5e08f16/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.preference:preference:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/043dd15505088d162cf7de87d5e08f16/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/93eb31938604c6bfc0c48caacef0cea6/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/93eb31938604c6bfc0c48caacef0cea6/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/233e603e2cacb9781d3454f1b710f1a9/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/233e603e2cacb9781d3454f1b710f1a9/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/2af5be9144f02791ac53f512d6de8853/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/2af5be9144f02791ac53f512d6de8853/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d78175c9b3c65ab23c8401a05b757d86/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d78175c9b3c65ab23c8401a05b757d86/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/ac1cb122c13b0c021ae1981e72b90f57/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/ac1cb122c13b0c021ae1981e72b90f57/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c59a40f6ce5ff68bbc53880c54c27259/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c59a40f6ce5ff68bbc53880c54c27259/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/90a777a63d775540307104ab36e1cdbb/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/90a777a63d775540307104ab36e1cdbb/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a824036d57cc159050b06ff9cc9b1ee/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a824036d57cc159050b06ff9cc9b1ee/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e89fb234922c3002cb5595e433dc2548/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e89fb234922c3002cb5595e433dc2548/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4c06af4d08da3de9598bbcb2b02f15dd/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4c06af4d08da3de9598bbcb2b02f15dd/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/83731b73da2449bd6dd5a5fe5f1711c3/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/83731b73da2449bd6dd5a5fe5f1711c3/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/24120c131dcb9fabd900a0dc896657f2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/24120c131dcb9fabd900a0dc896657f2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/655763cd8f49e968821ed065bcf9ef48/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/655763cd8f49e968821ed065bcf9ef48/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3f39b3910022168ec3886c52a9701831/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3f39b3910022168ec3886c52a9701831/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a29d6d4bca57b45864a41cfe88b99a14/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a29d6d4bca57b45864a41cfe88b99a14/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6bdd3dc633317b9f933604ddc8a3efdc/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6bdd3dc633317b9f933604ddc8a3efdc/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/040c50a0de6d64b9cb94595f6f5e9eda/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/040c50a0de6d64b9cb94595f6f5e9eda/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c32f6362e7f9a782af7af068e44a5d6e/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c32f6362e7f9a782af7af068e44a5d6e/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/efe21f0a92431f4442ccc662518d2b58/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/efe21f0a92431f4442ccc662518d2b58/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/590c1cae1ea52d63e3e2ebd7289d1e31/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/590c1cae1ea52d63e3e2ebd7289d1e31/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a43fce13350d943180f16cf930fc0609/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a43fce13350d943180f16cf930fc0609/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/44a41fc365b8db5efad4453b2b13434e/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/44a41fc365b8db5efad4453b2b13434e/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/086b6a73b64c3abb697e6ceaf18247d8/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/086b6a73b64c3abb697e6ceaf18247d8/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4e665c846c29050d0be5772d499a0e09/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4e665c846c29050d0be5772d499a0e09/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1f0e9f932e57bdf4c9c91f5f86493573/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1f0e9f932e57bdf4c9c91f5f86493573/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/98031c7faea50f1661e0f05ecbe9a0ec/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/98031c7faea50f1661e0f05ecbe9a0ec/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a8a715f66b03b3d153460ea1b567dcb5/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a8a715f66b03b3d153460ea1b567dcb5/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/506c7e73b047b15c979d955af71c6eb8/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/506c7e73b047b15c979d955af71c6eb8/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14a4c13ed7e2533af9557f165b51cdd/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14a4c13ed7e2533af9557f165b51cdd/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/252ac3e3ed6b6680144ca891a6f8df2d/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/252ac3e3ed6b6680144ca891a6f8df2d/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.4.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/091ba2902c585c4e75d3f1abbae38545/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.4.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/091ba2902c585c4e75d3f1abbae38545/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/2548ba8f39da6baf33d02e2b9ea45f59/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/2548ba8f39da6baf33d02e2b9ea45f59/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/986a888f0ca318ca63d97977a4aff0ca/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/986a888f0ca318ca63d97977a4aff0ca/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/45ba13684555423c05001469950ee653/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/45ba13684555423c05001469950ee653/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
-MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
-MERGED from [org.osmdroid:osmdroid-wms:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/eea77181efba7b5ee25f9b88b2654318/transformed/jetified-osmdroid-wms-6.1.16/AndroidManifest.xml:5:5-7:40
-MERGED from [org.osmdroid:osmdroid-wms:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/eea77181efba7b5ee25f9b88b2654318/transformed/jetified-osmdroid-wms-6.1.16/AndroidManifest.xml:5:5-7:40
-MERGED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:5:5-7:41
-MERGED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7eabef97a3895ecc76d8a63f6efd324c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/7eabef97a3895ecc76d8a63f6efd324c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/332e141e8966c5af06115647d77ca4c6/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/332e141e8966c5af06115647d77ca4c6/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5bf7869b716bf900e6cda67cae9b832a/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5bf7869b716bf900e6cda67cae9b832a/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c725ff0b04e36281c4b65d8867d4b3a0/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c725ff0b04e36281c4b65d8867d4b3a0/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/496bd35508862ac0c97e15076ea28889/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/496bd35508862ac0c97e15076ea28889/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dac6875d041297231a028a948b68ab80/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dac6875d041297231a028a948b68ab80/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/27f6944badce93ff4bc12240b2dcc4b0/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/27f6944badce93ff4bc12240b2dcc4b0/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/138499a96e5ee46608bfd6679b11bb78/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/138499a96e5ee46608bfd6679b11bb78/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64f648ad1d116087db0b6462b2e881bd/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64f648ad1d116087db0b6462b2e881bd/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/260af36d2fd8580ac795620109a5d2e2/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/260af36d2fd8580ac795620109a5d2e2/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/503a26afb1ac4ae6d67795c06b71bb70/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/503a26afb1ac4ae6d67795c06b71bb70/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0bdd1f51e537972eef14ea09c305aeb6/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0bdd1f51e537972eef14ea09c305aeb6/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f46779e9bdfb493ed404f217b4809828/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f46779e9bdfb493ed404f217b4809828/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/70c57a255360c632d9000a673905af48/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.10.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/70c57a255360c632d9000a673905af48/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8b3026257e7454d8918331cdd2e34158/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8b3026257e7454d8918331cdd2e34158/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.preference:preference:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d3b2e434a4656836b945d21c75b4cbea/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d3b2e434a4656836b945d21c75b4cbea/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a50ca6b31392a89b0f3c143b02369918/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a50ca6b31392a89b0f3c143b02369918/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f7b23e2390b0efcd2cd3770c8ab6d8b6/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f7b23e2390b0efcd2cd3770c8ab6d8b6/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a4809132afecb19ff5101ba1a98e42c/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5a4809132afecb19ff5101ba1a98e42c/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1dce266aa495c91fbf74798b793fe226/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1dce266aa495c91fbf74798b793fe226/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6b3c3a2d20be50947bc035f3e7a8d10e/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6b3c3a2d20be50947bc035f3e7a8d10e/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/257035c9fd5225161805c8411a0b3c01/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/257035c9fd5225161805c8411a0b3c01/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0c0b6191c3652bb460561503e665e998/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/0c0b6191c3652bb460561503e665e998/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/12ec7ae993eb89fcaaed048b43b543b0/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/12ec7ae993eb89fcaaed048b43b543b0/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fb7665a26e4d245e6dd48d88465530ef/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fb7665a26e4d245e6dd48d88465530ef/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b6a046765c82bda4e5008c1f07c5b57d/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b6a046765c82bda4e5008c1f07c5b57d/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c2ceb4afdabf506e9c67447950fed93c/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c2ceb4afdabf506e9c67447950fed93c/transformed/jetified-activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/88f3ffd3860ee132aae9f10c12d2a1ef/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/88f3ffd3860ee132aae9f10c12d2a1ef/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/56e25a763facd57088cbdfb6076e8445/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/56e25a763facd57088cbdfb6076e8445/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/43664767d5dfe128969b962f5bd8631f/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/43664767d5dfe128969b962f5bd8631f/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3f9f31c8edcbc1dd0bc4b424fa360c2b/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3f9f31c8edcbc1dd0bc4b424fa360c2b/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3a7610a2134a45b2e4af5d52c6e146d6/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3a7610a2134a45b2e4af5d52c6e146d6/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e64e2467b83afb5eeca5830a36a67841/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e64e2467b83afb5eeca5830a36a67841/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a42a87a48dd99c9736b0490731b614ac/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a42a87a48dd99c9736b0490731b614ac/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/34c552ae1d89b0fde6bb294143ffefc0/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/34c552ae1d89b0fde6bb294143ffefc0/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/eb56b3f75bebdf7aff5bca667237f475/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/eb56b3f75bebdf7aff5bca667237f475/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/976774ce82365b0db43e091d2a2ad965/transformed/jetified-firebase-installations-interop-17.1.1/AndroidManifest.xml:17:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/976774ce82365b0db43e091d2a2ad965/transformed/jetified-firebase-installations-interop-17.1.1/AndroidManifest.xml:17:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e885cb9e72f8818241069f0b20093d06/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e885cb9e72f8818241069f0b20093d06/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/af7fe9cfa5dedf63ee8ad6256d6ef6b5/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/af7fe9cfa5dedf63ee8ad6256d6ef6b5/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5d42db517bd8bbd546ddb862dd503f16/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5d42db517bd8bbd546ddb862dd503f16/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3028311bb327cde095bfdd7d90c73d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3028311bb327cde095bfdd7d90c73d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8265c62429c4c8880cbe1ec8c6d96296/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8265c62429c4c8880cbe1ec8c6d96296/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e79684ad27fae6a36e3e6efc6c033876/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e79684ad27fae6a36e3e6efc6c033876/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4cde7e7c900b3370db587202d38c56b0/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4cde7e7c900b3370db587202d38c56b0/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c4bc9cd42f048cf7c1990164d12a0ac0/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c4bc9cd42f048cf7c1990164d12a0ac0/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d72c46360b5a7b0e934cb99243ef873c/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d72c46360b5a7b0e934cb99243ef873c/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5bb10136eea7e5cc8423dbec529aa222/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5bb10136eea7e5cc8423dbec529aa222/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a1b264258ff087e0a008405279365fcf/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a1b264258ff087e0a008405279365fcf/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5f1233fd5e2e230243d575514645504f/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/5f1233fd5e2e230243d575514645504f/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fdda007056b98a828ed0b0e21967cd6a/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fdda007056b98a828ed0b0e21967cd6a/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a041b39c3e00b7b327a8cedd2afeb9bd/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/a041b39c3e00b7b327a8cedd2afeb9bd/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4683da20e869b3f0952afa7ab8eb6b12/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4683da20e869b3f0952afa7ab8eb6b12/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/33ff87fa5f48ca41167f16fa4a4c6477/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/33ff87fa5f48ca41167f16fa4a4c6477/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8022f7719aa3b979f7f57263d417b6c0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8022f7719aa3b979f7f57263d417b6c0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [org.osmdroid:osmdroid-wms:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/9c5b5570b9672b691f81123d4f957585/transformed/jetified-osmdroid-wms-6.1.16/AndroidManifest.xml:5:5-7:40
+MERGED from [org.osmdroid:osmdroid-wms:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/9c5b5570b9672b691f81123d4f957585/transformed/jetified-osmdroid-wms-6.1.16/AndroidManifest.xml:5:5-7:40
+MERGED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:5:5-7:41
+MERGED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8c9d00d3a24da8a78b29faeabbe6dc8e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/8c9d00d3a24da8a78b29faeabbe6dc8e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/390e4689e7c162d6d83c7e770d01c0bb/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/390e4689e7c162d6d83c7e770d01c0bb/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/06cf70a03e09c1fa037b26e8989c736d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/06cf70a03e09c1fa037b26e8989c736d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6e7b09f42c1479a1138576b18637bb1b/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6e7b09f42c1479a1138576b18637bb1b/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4238879768590b76ae059b85725523cf/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4238879768590b76ae059b85725523cf/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4adde2ad43026a0f92cf2d61dd3c72ed/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4adde2ad43026a0f92cf2d61dd3c72ed/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/693af4aec758ea4f5b810502cba0c7a9/transformed/jetified-firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/693af4aec758ea4f5b810502cba0c7a9/transformed/jetified-firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f4e29552d9c76d28ca1b29d94465dacb/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f4e29552d9c76d28ca1b29d94465dacb/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/39c0c8b8a431de0b71e39924c818a940/transformed/jetified-transport-api-3.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/39c0c8b8a431de0b71e39924c818a940/transformed/jetified-transport-api-3.1.0/AndroidManifest.xml:18:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14167f420feecccb9c6dcf8b86f6ad2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f14167f420feecccb9c6dcf8b86f6ad2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f5e35b7cb3473512a36c08d0fdad77dd/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f5e35b7cb3473512a36c08d0fdad77dd/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/519c4f14886d4c40c1148995a90496b1/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/519c4f14886d4c40c1148995a90496b1/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e32c0dd4ecdc41140c5a039e5a901ab8/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e32c0dd4ecdc41140c5a039e5a901ab8/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fc60a6978b3388921dadd8304f2ea225/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fc60a6978b3388921dadd8304f2ea225/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4262d44e496a3f039321677b18c551c7/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4262d44e496a3f039321677b18c551c7/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/be75a95c75286f1d5e7213c81d472990/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/be75a95c75286f1d5e7213c81d472990/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
 		INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/138499a96e5ee46608bfd6679b11bb78/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/138499a96e5ee46608bfd6679b11bb78/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f5e35b7cb3473512a36c08d0fdad77dd/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f5e35b7cb3473512a36c08d0fdad77dd/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:24:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:26:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/3c3d0db78bfd296b4f8d766359ec2ec2/transformed/jetified-play-services-cloud-messaging-17.2.0/AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:26:22-79
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:29:9-40:20
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-uses-library#androidx.window.extensions
-ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
-	android:required
-		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
-uses-library#androidx.window.sidecar
-ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
-	android:required
-		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
-	android:name
-		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-permission#com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-uses-permission#com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-service#androidx.room.MultiInstanceInvalidationService
-ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
-	android:exported
-		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
-	tools:ignore
-		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
-	android:directBootAware
-		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
-	android:name
-		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
-supports-screens
-ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:9:5-12:40
-	android:largeScreens
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:11:9-36
-	android:normalScreens
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:12:9-37
-	android:anyDensity
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:10:9-34
-uses-feature#android.hardware.location.network
-ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:14:5-16:36
-	android:required
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:16:9-33
-	android:name
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:15:9-57
-uses-feature#android.hardware.location.gps
-ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:17:5-19:36
-	android:required
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:19:9-33
-	android:name
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:18:9-53
-uses-feature#android.hardware.telephony
-ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:20:5-22:36
-	android:required
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:22:9-33
-	android:name
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:21:9-50
-uses-feature#android.hardware.wifi
-ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:23:5-25:36
-	android:required
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:25:9-33
-	android:name
-		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:24:9-45
-meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:31:13-36
 	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:32:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:30:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:33:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:34:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:34:25-78
+meta-data#com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:37:13-39:40
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:39:17-37
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:38:17-92
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:46:9-53:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:49:13-37
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:48:13-43
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:47:13-82
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:54:9-63:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:22:9-28:19
+MERGED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:22:9-28:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:56:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:55:13-84
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:57:13-59:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:59:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:58:17-122
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
+ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:60:13-62:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:62:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:61:17-119
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:16:17-130
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:19:17-127
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+supports-screens
+ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:9:5-12:40
+	android:largeScreens
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:11:9-36
+	android:normalScreens
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:12:9-37
+	android:anyDensity
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:10:9-34
+uses-feature#android.hardware.location.network
+ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:14:5-16:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:16:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:15:9-57
+uses-feature#android.hardware.location.gps
+ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:17:5-19:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:19:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:18:9-53
+uses-feature#android.hardware.telephony
+ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:20:5-22:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:22:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:21:9-50
+uses-feature#android.hardware.wifi
+ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:23:5-25:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:25:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:24:9-45
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:26:17-115
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92

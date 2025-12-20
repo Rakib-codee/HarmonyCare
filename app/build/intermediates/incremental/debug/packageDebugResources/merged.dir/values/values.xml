@@ -223,6 +223,7 @@
     <string name="cancel">Cancel</string>
     <string name="completed">Completed</string>
     <string name="contact">Contact Number</string>
+    <string name="default_web_client_id" translatable="false">479101900894-rg2nc27aos0dq31cpth5pm949fs3gjb2.apps.googleusercontent.com</string>
     <string name="distance">Distance</string>
     <string name="elderly_contact">Contact</string>
     <string name="elderly_dashboard">Elderly Dashboard</string>
@@ -233,6 +234,12 @@
     <string name="emergency_list">Emergency Requests</string>
     <string name="emergency_sent">Emergency Request Sent!</string>
     <string name="error">Error</string>
+    <string name="firebase_database_url" translatable="false">https://harmonycare-92e80-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">479101900894</string>
+    <string name="google_api_key" translatable="false">AIzaSyCYMDLUxpmLLBrSlS84Xj-RQAc5DKoaKwk</string>
+    <string name="google_app_id" translatable="false">1:479101900894:android:6e5e5cfbe598edfded7ccf</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCYMDLUxpmLLBrSlS84Xj-RQAc5DKoaKwk</string>
+    <string name="google_storage_bucket" translatable="false">harmonycare-92e80.firebasestorage.app</string>
     <string name="history">History</string>
     <string name="language">Language</string>
     <string name="language_bengali">বাংলা (Bengali)</string>
@@ -256,6 +263,7 @@
     <string name="notification_vibration">Notification Vibration</string>
     <string name="ok">OK</string>
     <string name="password">Password</string>
+    <string name="project_id" translatable="false">harmonycare-92e80</string>
     <string name="register_button">Register</string>
     <string name="register_link">Don\'t have an account? Register</string>
     <string name="register_title">Register</string>

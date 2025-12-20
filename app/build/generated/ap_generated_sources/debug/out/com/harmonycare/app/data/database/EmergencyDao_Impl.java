@@ -33,7 +33,7 @@ public final class EmergencyDao_Impl implements EmergencyDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR ABORT INTO `emergencies` (`id`,`elderly_id`,`latitude`,`longitude`,`status`,`volunteer_id`,`timestamp`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `emergencies` (`id`,`elderly_id`,`latitude`,`longitude`,`status`,`volunteer_id`,`timestamp`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
       }
 
       @Override
