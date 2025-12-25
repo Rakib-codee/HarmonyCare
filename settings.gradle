@@ -1,11 +1,4 @@
 pluginManagement {
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.id == "com.google.gms.google-services") {
-                useModule("com.google.gms:google-services:${requested.version}")
-            }
-        }
-    }
     repositories {
         // Mirrors (useful in mainland China networks)
         maven { url = uri("https://maven.aliyun.com/repository/google") }

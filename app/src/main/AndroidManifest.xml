@@ -28,6 +28,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HarmonyCare"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="${JPUSH_APPKEY}" />
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="${JPUSH_CHANNEL}" />
         
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -123,13 +131,15 @@
             android:exported="false"
             android:foregroundServiceType="health" />
 
-        <service
+        <receiver
             android:name=".service.HarmonyFirebaseMessagingService"
+            android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="cn.jpush.android.intent.RECEIVER_MESSAGE" />
+                <category android:name="${applicationId}" />
             </intent-filter>
-        </service>
+        </receiver>
         
         <!-- AMap (高德地图) API Key -->
         <meta-data

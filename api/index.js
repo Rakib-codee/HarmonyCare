@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const admin = require('firebase-admin');
+const https = require('https');
 
 function initFirebase() {
   if (admin.apps.length) return;
@@ -36,6 +37,83 @@ function haversineKm(aLat, aLon, bLat, bLon) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
+function chunkArray(arr, size) {
+  const out = [];
+  for (let i = 0; i < arr.length; i += size) {
+    out.push(arr.slice(i, i + size));
+  }
+  return out;
+}
+
+function jpushRequest(path, payload) {
+  const appKey = process.env.JPUSH_APP_KEY;
+  const masterSecret = process.env.JPUSH_MASTER_SECRET;
+  if (!appKey || !masterSecret) {
+    throw new Error('Missing JPUSH_APP_KEY or JPUSH_MASTER_SECRET');
+  }
+
+  const auth = Buffer.from(`${appKey}:${masterSecret}`).toString('base64');
+  const body = JSON.stringify(payload);
+
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      {
+        method: 'POST',
+        hostname: 'api.jpush.cn',
+        path,
+        headers: {
+          Authorization: `Basic ${auth}`,
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(body),
+        },
+        timeout: 8000,
+      },
+      (res) => {
+        let data = '';
+        res.setEncoding('utf8');
+        res.on('data', (c) => (data += c));
+        res.on('end', () => {
+          const ok = res.statusCode >= 200 && res.statusCode < 300;
+          if (ok) return resolve({ status: res.statusCode, body: data });
+          return reject(new Error(`JPush error ${res.statusCode}: ${data}`));
+        });
+      }
+    );
+
+    req.on('timeout', () => {
+      req.destroy(new Error('JPush request timeout'));
+    });
+    req.on('error', (e) => reject(e));
+    req.write(body);
+    req.end();
+  });
+}
+
+async function sendJPushToRegistrationIds(registrationIds, extras, title, alert) {
+  const ids = (registrationIds || []).filter((x) => typeof x === 'string' && x.trim()).map((x) => x.trim());
+  if (!ids.length) return { ok: true, sent: 0 };
+
+  const batches = chunkArray(ids, 1000);
+  for (const batch of batches) {
+    await jpushRequest('/v3/push', {
+      platform: 'android',
+      audience: { registration_id: batch },
+      notification: {
+        android: {
+          alert: String(alert || ''),
+          title: String(title || ''),
+          extras: extras || {},
+        },
+      },
+      options: {
+        time_to_live: 60,
+      },
+    });
+  }
+
+  return { ok: true, sent: ids.length };
+}
+
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
@@ -56,14 +134,17 @@ app.post('/api/devices/register', async (req, res) => {
     const {
       user_id,
       role,
+      jpush_id,
       fcm_token,
       is_available,
       latitude,
       longitude,
     } = req.body || {};
 
-    if (!user_id || !role || !fcm_token) {
-      return res.status(400).json({ error: 'user_id, role, fcm_token are required' });
+    const pushId = typeof jpush_id === 'string' && jpush_id.trim() ? jpush_id.trim() : (typeof fcm_token === 'string' ? fcm_token.trim() : '');
+
+    if (!user_id || !role || !pushId) {
+      return res.status(400).json({ error: 'user_id, role, jpush_id are required' });
     }
 
     const docId = `${role}_${user_id}`;
@@ -73,7 +154,7 @@ app.post('/api/devices/register', async (req, res) => {
       {
         userId: Number(user_id),
         role: String(role),
-        fcmToken: String(fcm_token),
+        jpushId: String(pushId),
         isAvailable: Boolean(is_available),
         latitude: typeof latitude === 'number' ? latitude : null,
         longitude: typeof longitude === 'number' ? longitude : null,
@@ -94,7 +175,7 @@ app.post('/api/volunteers/availability', async (req, res) => {
     initFirebase();
     const db = admin.firestore();
 
-    const { volunteer_id, is_available, latitude, longitude, fcm_token } = req.body || {};
+    const { volunteer_id, is_available, latitude, longitude, jpush_id, fcm_token } = req.body || {};
     if (!volunteer_id) {
       return res.status(400).json({ error: 'volunteer_id is required' });
     }
@@ -112,7 +193,8 @@ app.post('/api/volunteers/availability', async (req, res) => {
 
     if (typeof latitude === 'number') patch.latitude = latitude;
     if (typeof longitude === 'number') patch.longitude = longitude;
-    if (typeof fcm_token === 'string' && fcm_token.trim()) patch.fcmToken = fcm_token.trim();
+    const pushId = typeof jpush_id === 'string' && jpush_id.trim() ? jpush_id.trim() : (typeof fcm_token === 'string' ? fcm_token.trim() : '');
+    if (pushId) patch.jpushId = pushId;
 
     await db.collection('devices').doc(docId).set(patch, { merge: true });
 
@@ -168,7 +250,7 @@ app.post('/api/emergencies', async (req, res) => {
       const d = doc.data();
       const lastSeenAt = typeof d.lastSeenAt === 'number' ? d.lastSeenAt : 0;
       const maxAgeMs = 10 * 60 * 1000;
-      if (!d.fcmToken) return;
+      if (!d.jpushId) return;
       if (now - lastSeenAt > maxAgeMs) return;
 
       let distanceKm = null;
@@ -178,7 +260,7 @@ app.post('/api/emergencies', async (req, res) => {
 
       volunteers.push({
         userId: d.userId,
-        fcmToken: d.fcmToken,
+        jpushId: d.jpushId,
         distanceKm,
       });
     });
@@ -190,27 +272,40 @@ app.post('/api/emergencies', async (req, res) => {
       return a.distanceKm - b.distanceKm;
     });
 
-    const top = volunteers.slice(0, 10);
-    const tokens = top.map((v) => v.fcmToken).filter(Boolean);
+    const tokens = volunteers.map((v) => v.jpushId).filter(Boolean);
+    const notifiedIds = volunteers.map((v) => v.userId).filter((x) => typeof x === 'number');
 
     if (tokens.length) {
-      await admin.messaging().sendEachForMulticast({
-        tokens,
-        data: {
-          type: 'emergency_new',
-          emergency_id: String(emergencyId),
-          elderly_id: String(elderly_id),
-          latitude: String(latitude),
-          longitude: String(longitude),
-        },
-      });
+      try {
+        await sendJPushToRegistrationIds(
+          tokens,
+          {
+            type: 'emergency_new',
+            emergency_id: String(emergencyId),
+            elderly_id: String(elderly_id),
+            latitude: String(latitude),
+            longitude: String(longitude),
+          },
+          'HarmonyCare SOS',
+          'New Emergency Request'
+        );
+      } catch (pushErr) {
+        await db.collection('audit_logs').add({
+          emergencyId,
+          action: 'push_failed_to_volunteers',
+          actorRole: 'system',
+          actorUserId: null,
+          error: String(pushErr && pushErr.message ? pushErr.message : pushErr),
+          createdAt: Date.now(),
+        });
+      }
 
       await db.collection('audit_logs').add({
         emergencyId,
         action: 'pushed_to_volunteers',
         actorRole: 'system',
         actorUserId: null,
-        notifiedVolunteerUserIds: top.map((v) => v.userId).filter((x) => typeof x === 'number'),
+        notifiedVolunteerUserIds: notifiedIds,
         createdAt: Date.now(),
       });
     }
@@ -321,16 +416,29 @@ app.put('/api/emergencies/:id', async (req, res) => {
       const emergency = (await ref.get()).data();
       if (emergency && emergency.elderlyId != null) {
         const elderlyDevice = await db.collection('devices').doc(`elderly_${emergency.elderlyId}`).get();
-        const elderlyToken = elderlyDevice.exists ? elderlyDevice.data().fcmToken : null;
-        if (elderlyToken) {
-          await admin.messaging().send({
-            token: elderlyToken,
-            data: {
-              type: 'emergency_accepted',
-              emergency_id: String(emergencyId),
-              volunteer_id: String(volunteer_id),
-            },
-          });
+        const elderlyPushId = elderlyDevice.exists ? elderlyDevice.data().jpushId : null;
+        if (elderlyPushId) {
+          try {
+            await sendJPushToRegistrationIds(
+              [String(elderlyPushId)],
+              {
+                type: 'emergency_accepted',
+                emergency_id: String(emergencyId),
+                volunteer_id: String(volunteer_id),
+              },
+              'HarmonyCare SOS',
+              'Emergency Accepted'
+            );
+          } catch (pushErr) {
+            await db.collection('audit_logs').add({
+              emergencyId,
+              action: 'push_failed_to_elderly',
+              actorRole: 'system',
+              actorUserId: null,
+              error: String(pushErr && pushErr.message ? pushErr.message : pushErr),
+              createdAt: Date.now(),
+            });
+          }
         }
       }
 

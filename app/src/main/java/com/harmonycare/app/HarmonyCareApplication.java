@@ -3,6 +3,8 @@ package com.harmonycare.app;
 import android.app.Application;
 import android.content.Context;
 
+import cn.jpush.android.api.JPushInterface;
+
 import com.harmonycare.app.data.database.AppDatabase;
 
 import org.osmdroid.config.Configuration;
@@ -21,6 +23,9 @@ public class HarmonyCareApplication extends Application {
         
         // Initialize AMap privacy compliance FIRST (before any AMap SDK calls)
         initializeAMapPrivacy();
+
+        JPushInterface.setDebugMode(BuildConfig.DEBUG);
+        JPushInterface.init(this);
         
         database = AppDatabase.getInstance(this);
         

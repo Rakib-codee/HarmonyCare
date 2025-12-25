@@ -50,7 +50,7 @@ public class DeviceApiHelper {
                 JSONObject json = new JSONObject();
                 json.put("user_id", userId);
                 json.put("role", role);
-                json.put("fcm_token", fcmToken);
+                json.put("jpush_id", fcmToken);
                 if (isAvailable != null) json.put("is_available", isAvailable);
                 if (latitude != null) json.put("latitude", latitude);
                 if (longitude != null) json.put("longitude", longitude);
@@ -98,7 +98,7 @@ public class DeviceApiHelper {
                 json.put("volunteer_id", volunteerId);
                 json.put("is_available", isAvailable);
                 if (fcmToken != null && !fcmToken.isEmpty()) {
-                    json.put("fcm_token", fcmToken);
+                    json.put("jpush_id", fcmToken);
                 }
                 if (latitude != null) json.put("latitude", latitude);
                 if (longitude != null) json.put("longitude", longitude);

@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.location.Location;
 import android.util.Log;
 
-import com.google.firebase.messaging.FirebaseMessaging;
+import cn.jpush.android.api.JPushInterface;
 
 public class FcmTokenRegistrar {
     private static final String TAG = "FcmTokenRegistrar";
@@ -23,77 +23,73 @@ public class FcmTokenRegistrar {
             return;
         }
 
-        FirebaseMessaging.getInstance().getToken()
-                .addOnSuccessListener(token -> {
-                    if (token == null || token.isEmpty()) {
-                        return;
+        String token = JPushInterface.getRegistrationID(context.getApplicationContext());
+        if (token == null || token.isEmpty()) {
+            Log.w(TAG, "JPush registrationId is empty");
+            return;
+        }
+
+        DeviceApiHelper api = new DeviceApiHelper(context.getApplicationContext());
+        if (!api.isApiAvailable() || !Constants.API_ENABLED) {
+            return;
+        }
+
+        api.registerDevice(
+                userId,
+                role,
+                token,
+                null,
+                null,
+                null,
+                new EmergencyApiHelper.ApiCallback<Void>() {
+                    @Override
+                    public void onSuccess(Void result) {
+                        Log.d(TAG, "Device registered for push");
                     }
 
-                    DeviceApiHelper api = new DeviceApiHelper(context.getApplicationContext());
-                    if (!api.isApiAvailable() || !Constants.API_ENABLED) {
-                        return;
+                    @Override
+                    public void onError(Exception error) {
+                        Log.w(TAG, "Device register failed", error);
                     }
-
-                    api.registerDevice(
-                            userId,
-                            role,
-                            token,
-                            null,
-                            null,
-                            null,
-                            new EmergencyApiHelper.ApiCallback<Void>() {
-                                @Override
-                                public void onSuccess(Void result) {
-                                    Log.d(TAG, "Device registered for push");
-                                }
-
-                                @Override
-                                public void onError(Exception error) {
-                                    Log.w(TAG, "Device register failed", error);
-                                }
-                            }
-                    );
-                })
-                .addOnFailureListener(e -> Log.w(TAG, "FCM token fetch failed", e));
+                }
+        );
     }
 
     public static void updateVolunteerAvailability(Context context, int volunteerId, boolean isAvailable, Location location) {
         if (context == null) return;
         if (!Constants.API_ENABLED) return;
 
-        FirebaseMessaging.getInstance().getToken()
-                .addOnSuccessListener(token -> {
-                    DeviceApiHelper api = new DeviceApiHelper(context.getApplicationContext());
-                    if (!api.isApiAvailable()) {
-                        return;
+        String token = JPushInterface.getRegistrationID(context.getApplicationContext());
+
+        DeviceApiHelper api = new DeviceApiHelper(context.getApplicationContext());
+        if (!api.isApiAvailable()) {
+            return;
+        }
+
+        Double lat = null;
+        Double lon = null;
+        if (location != null) {
+            lat = location.getLatitude();
+            lon = location.getLongitude();
+        }
+
+        api.updateVolunteerAvailability(
+                volunteerId,
+                isAvailable,
+                token,
+                lat,
+                lon,
+                new EmergencyApiHelper.ApiCallback<Void>() {
+                    @Override
+                    public void onSuccess(Void result) {
+                        Log.d(TAG, "Volunteer availability synced");
                     }
 
-                    Double lat = null;
-                    Double lon = null;
-                    if (location != null) {
-                        lat = location.getLatitude();
-                        lon = location.getLongitude();
+                    @Override
+                    public void onError(Exception error) {
+                        Log.w(TAG, "Volunteer availability sync failed", error);
                     }
-
-                    api.updateVolunteerAvailability(
-                            volunteerId,
-                            isAvailable,
-                            token,
-                            lat,
-                            lon,
-                            new EmergencyApiHelper.ApiCallback<Void>() {
-                                @Override
-                                public void onSuccess(Void result) {
-                                    Log.d(TAG, "Volunteer availability synced");
-                                }
-
-                                @Override
-                                public void onError(Exception error) {
-                                    Log.w(TAG, "Volunteer availability sync failed", error);
-                                }
-                            }
-                    );
-                })
-                .addOnFailureListener(e -> Log.w(TAG, "FCM token fetch failed", e));
+                }
+        );
     }
 }

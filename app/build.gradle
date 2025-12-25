@@ -13,6 +13,16 @@ android {
         versionCode 1
         versionName "1.0"
 
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "9e31b7511631a2622d41c5f5",
+                JPUSH_CHANNEL: "developer-default"
+        ]
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         
         vectorDrawables {
@@ -52,7 +62,7 @@ dependencies {
     annotationProcessor 'androidx.room:room-compiler:2.6.1'
     implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'com.google.firebase:firebase-messaging:24.0.2'
+    implementation 'cn.jiguang.sdk:jpush:5.8.0'
     
     // Location Services (kept for location functionality)
     implementation 'com.google.android.gms:play-services-location:21.0.1'
@@ -69,6 +79,3 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
-
-apply plugin: 'com.google.gms.google-services'
-

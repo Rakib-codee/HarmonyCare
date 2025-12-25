@@ -1,29 +1,39 @@
 package com.harmonycare.app.service;
 
+import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
-import com.google.firebase.messaging.FirebaseMessagingService;
-import com.google.firebase.messaging.RemoteMessage;
+import com.harmonycare.app.view.SplashActivity;
 import com.harmonycare.app.util.NotificationHelper;
 
-import java.util.Map;
+import org.json.JSONObject;
 
-public class HarmonyFirebaseMessagingService extends FirebaseMessagingService {
-    private static final String TAG = "HarmonyFCM";
+import cn.jpush.android.api.CustomMessage;
+import cn.jpush.android.api.NotificationMessage;
+import cn.jpush.android.service.JPushMessageReceiver;
+
+public class HarmonyFirebaseMessagingService extends JPushMessageReceiver {
+    private static final String TAG = "HarmonyJPush";
 
     @Override
-    public void onMessageReceived(RemoteMessage message) {
+    public void onNotifyMessageArrived(Context context, NotificationMessage message) {
+        super.onNotifyMessageArrived(context, message);
         try {
-            Map<String, String> data = message.getData();
-            if (data == null || data.isEmpty()) {
-                return;
+            if (context == null || message == null) return;
+
+            String type = null;
+            String emergencyId = null;
+
+            if (message.notificationExtras != null && !message.notificationExtras.isEmpty()) {
+                JSONObject extras = new JSONObject(message.notificationExtras);
+                type = extras.optString("type", null);
+                emergencyId = extras.optString("emergency_id", null);
             }
 
-            String type = data.get("type");
-            NotificationHelper notificationHelper = new NotificationHelper(getApplicationContext());
+            NotificationHelper notificationHelper = new NotificationHelper(context.getApplicationContext());
 
             if ("emergency_new".equals(type)) {
-                String emergencyId = data.get("emergency_id");
                 notificationHelper.showEmergencyNotification(
                         "New Emergency Request",
                         "Tap to view emergency" + (emergencyId != null ? (" (#" + emergencyId + ")") : "")
@@ -35,14 +45,25 @@ public class HarmonyFirebaseMessagingService extends FirebaseMessagingService {
                 );
             }
         } catch (Exception e) {
-            Log.e(TAG, "Error handling FCM message", e);
+            Log.e(TAG, "Error handling JPush notification", e);
         }
     }
 
     @Override
-    public void onNewToken(String token) {
-        super.onNewToken(token);
-        Log.d(TAG, "New FCM token received");
-        // Token is registered when user logs in (see FcmTokenRegistrar)
+    public void onNotifyMessageOpened(Context context, NotificationMessage message) {
+        super.onNotifyMessageOpened(context, message);
+        try {
+            if (context == null) return;
+            Intent i = new Intent(context.getApplicationContext(), SplashActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            context.getApplicationContext().startActivity(i);
+        } catch (Exception e) {
+            Log.e(TAG, "Error opening from JPush notification", e);
+        }
+    }
+
+    @Override
+    public void onMessage(Context context, CustomMessage customMessage) {
+        super.onMessage(context, customMessage);
     }
 }
