@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.harmonycare.app-mergeDebugResources-45:/values-ja/values-ja.xml",
+            "outputFile": "com.harmonycare.app-mergeDebugResources-44:/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "/Users/rakib/.gradle/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/res/values-ja/values.xml",

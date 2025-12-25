@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.harmonycare.app-mergeDebugResources-45:/values-de/values-de.xml",
+            "outputFile": "com.harmonycare.app-mergeDebugResources-44:/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/rakib/.gradle/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/res/values-de/values-de.xml",

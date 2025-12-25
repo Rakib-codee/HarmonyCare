@@ -1,6 +1,8 @@
 package com.harmonycare.app.service;
 
-import cn.jpush.android.service.JCommonService;
-
-public class JPushCommonService extends JCommonService {
+/**
+ * JPush has been removed for offline/local-only demo mode.
+ * This stub is kept to avoid compile errors from old references.
+ */
+public class JPushCommonService {
 }

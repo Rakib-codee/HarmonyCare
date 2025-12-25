@@ -3334,15 +3334,6 @@ drawable ic_search_black_24
 drawable ic_settings
 drawable ic_stats
 drawable icon_background_circle
-drawable jpush_btn_blue_bg
-drawable jpush_btn_grey_bg
-drawable jpush_cancel_btn_bg
-drawable jpush_close
-drawable jpush_ic_richpush_actionbar_back
-drawable jpush_ic_richpush_actionbar_divider
-drawable jpush_interstitial_bg
-drawable jpush_richpush_btn_selector
-drawable jpush_richpush_progressbar
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3519,7 +3510,6 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
-id actionbarLayoutId
 id actions
 id activity_chooser_view_content
 id add
@@ -3542,14 +3532,11 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id banner
-id banner_content
 id barrier
 id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
-id bg_view
 id blocking
 id bottom
 id bounce
@@ -3580,10 +3567,6 @@ id btnStartNavigation
 id btnStopNavigation
 id btnSubmit
 id btnToggle
-id btn_countdown
-id btn_one
-id btn_parent_view
-id btn_two
 id bubble_description
 id bubble_image
 id bubble_moreinfo
@@ -3629,12 +3612,10 @@ id constraint
 id container
 id content
 id contentPanel
-id content_view
 id contiguous
 id continuousVelocity
 id coordinator
 id cos
-id countdown_container
 id counterclockwise
 id cradle
 id currentState
@@ -3715,7 +3696,6 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
-id frame
 id frost
 id fullscreen_header
 id ghost_view
@@ -3740,13 +3720,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id image_close
-id image_only
-id image_small
-id imgRichpushBtnBack
-id imgView
-id img_bottom_close
-id img_top_close
 id immediateStop
 id included
 id indeterminate
@@ -3773,7 +3746,6 @@ id locale
 id ltr
 id m3_side_sheet
 id map
-id margeview
 id marquee
 id masked
 id match_constraint
@@ -3884,7 +3856,6 @@ id pathRelative
 id peekHeight
 id percent
 id pin
-id popLayoutId
 id position
 id postLayout
 id preferences_detail
@@ -3894,7 +3865,6 @@ id pressed
 id progressBar
 id progress_circular
 id progress_horizontal
-id pushPrograssBar
 id radio
 id ratingBar
 id ratio
@@ -3910,7 +3880,6 @@ id right
 id rightToLeft
 id right_icon
 id right_side
-id rlRichpushTitleBar
 id rounded
 id row_index_key
 id rtl
@@ -4009,11 +3978,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id text_content
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_title
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -4058,7 +4025,6 @@ id tvPrimary
 id tvRegister
 id tvRelationship
 id tvRepeat
-id tvRichpushTitle
 id tvRole
 id tvStatus
 id tvStatusBadge
@@ -4094,7 +4060,6 @@ id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
-id wvPopwin
 id x_left
 id x_right
 integer abc_config_activityDefaultDur
@@ -4256,11 +4221,6 @@ layout item_emergency_history
 layout item_message
 layout item_reminder
 layout item_volunteer_emergency
-layout jpush_banner
-layout jpush_full
-layout jpush_interstitial
-layout jpush_popwin_layout
-layout jpush_webview_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4460,10 +4420,6 @@ string hills
 string history
 string icon_content_description
 string item_view_role_description
-string jg_channel_name_p_default
-string jg_channel_name_p_high
-string jg_channel_name_p_low
-string jg_channel_name_p_min
 string language
 string language_bengali
 string language_english
@@ -4932,8 +4888,6 @@ style BasePreferenceThemeOverlay
 style CardView
 style CardView_Dark
 style CardView_Light
-style JPushDialogStyle
-style JPushTheme
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text
