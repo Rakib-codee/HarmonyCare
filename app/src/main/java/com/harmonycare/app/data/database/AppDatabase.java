@@ -18,7 +18,7 @@ import com.harmonycare.app.data.model.VolunteerStatus;
 /**
  * Room Database for HarmonyCare app
  */
-@Database(entities = {User.class, Emergency.class, VolunteerStatus.class, EmergencyContact.class, Message.class, Rating.class, Reminder.class, PendingOperation.class}, version = 9, exportSchema = false)
+@Database(entities = {User.class, Emergency.class, VolunteerStatus.class, EmergencyContact.class, Message.class, Rating.class, Reminder.class, PendingOperation.class}, version = 10, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase instance;
     

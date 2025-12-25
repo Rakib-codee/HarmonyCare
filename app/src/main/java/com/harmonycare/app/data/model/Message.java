@@ -17,9 +17,15 @@ public class Message {
     
     @ColumnInfo(name = "sender_id")
     private int senderId;
+
+    @ColumnInfo(name = "sender_contact")
+    private String senderContact;
     
     @ColumnInfo(name = "receiver_id")
     private int receiverId;
+
+    @ColumnInfo(name = "receiver_contact")
+    private String receiverContact;
     
     private String message;
     private long timestamp;
@@ -58,6 +64,14 @@ public class Message {
     public void setSenderId(int senderId) {
         this.senderId = senderId;
     }
+
+    public String getSenderContact() {
+        return senderContact;
+    }
+
+    public void setSenderContact(String senderContact) {
+        this.senderContact = senderContact;
+    }
     
     public int getReceiverId() {
         return receiverId;
@@ -65,6 +79,14 @@ public class Message {
     
     public void setReceiverId(int receiverId) {
         this.receiverId = receiverId;
+    }
+
+    public String getReceiverContact() {
+        return receiverContact;
+    }
+
+    public void setReceiverContact(String receiverContact) {
+        this.receiverContact = receiverContact;
     }
     
     public String getMessage() {

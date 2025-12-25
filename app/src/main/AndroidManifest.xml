@@ -131,6 +131,11 @@
             android:exported="false"
             android:foregroundServiceType="health" />
 
+        <service
+            android:name=".service.JPushCommonService"
+            android:enabled="true"
+            android:exported="false" />
+
         <receiver
             android:name=".service.HarmonyFirebaseMessagingService"
             android:enabled="true"

@@ -43,19 +43,19 @@ public final class AppDatabase_Impl extends AppDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(9) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(10) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `contact` TEXT, `role` TEXT, `password` TEXT, `photo_path` TEXT, `address` TEXT, `medical_info` TEXT)");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `emergencies` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `elderly_id` INTEGER NOT NULL, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `status` TEXT, `volunteer_id` INTEGER, `timestamp` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `emergencies` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `elderly_id` INTEGER NOT NULL, `elderly_name` TEXT, `elderly_contact` TEXT, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `status` TEXT, `volunteer_id` INTEGER, `volunteer_name` TEXT, `volunteer_contact` TEXT, `timestamp` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `volunteer_status` (`volunteer_id` INTEGER NOT NULL, `is_available` INTEGER NOT NULL, PRIMARY KEY(`volunteer_id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `emergency_contacts` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `name` TEXT, `phone_number` TEXT, `relationship` TEXT, `is_primary` INTEGER NOT NULL, `notification_enabled` INTEGER NOT NULL, `notification_method` TEXT)");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `messages` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `emergency_id` INTEGER NOT NULL, `sender_id` INTEGER NOT NULL, `receiver_id` INTEGER NOT NULL, `message` TEXT, `timestamp` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `messages` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `emergency_id` INTEGER NOT NULL, `sender_id` INTEGER NOT NULL, `sender_contact` TEXT, `receiver_id` INTEGER NOT NULL, `receiver_contact` TEXT, `message` TEXT, `timestamp` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `ratings` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `emergency_id` INTEGER NOT NULL, `volunteer_id` INTEGER NOT NULL, `elderly_id` INTEGER NOT NULL, `rating` INTEGER NOT NULL, `feedback` TEXT, `timestamp` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `reminders` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `title` TEXT, `description` TEXT, `reminder_time` INTEGER NOT NULL, `repeat_type` TEXT, `is_active` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `pending_operations` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `operation_type` TEXT, `data_json` TEXT, `timestamp` INTEGER NOT NULL, `retry_count` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'dc7d0a6863c425d3ca2f5d1649c38a74')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3f9530c5e6e311cd826046230c187440')");
       }
 
       @Override
@@ -129,13 +129,17 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoUsers + "\n"
                   + " Found:\n" + _existingUsers);
         }
-        final HashMap<String, TableInfo.Column> _columnsEmergencies = new HashMap<String, TableInfo.Column>(7);
+        final HashMap<String, TableInfo.Column> _columnsEmergencies = new HashMap<String, TableInfo.Column>(11);
         _columnsEmergencies.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEmergencies.put("elderly_id", new TableInfo.Column("elderly_id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEmergencies.put("elderly_name", new TableInfo.Column("elderly_name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEmergencies.put("elderly_contact", new TableInfo.Column("elderly_contact", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEmergencies.put("latitude", new TableInfo.Column("latitude", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEmergencies.put("longitude", new TableInfo.Column("longitude", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEmergencies.put("status", new TableInfo.Column("status", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEmergencies.put("volunteer_id", new TableInfo.Column("volunteer_id", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEmergencies.put("volunteer_name", new TableInfo.Column("volunteer_name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEmergencies.put("volunteer_contact", new TableInfo.Column("volunteer_contact", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEmergencies.put("timestamp", new TableInfo.Column("timestamp", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysEmergencies = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesEmergencies = new HashSet<TableInfo.Index>(0);
@@ -176,11 +180,13 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoEmergencyContacts + "\n"
                   + " Found:\n" + _existingEmergencyContacts);
         }
-        final HashMap<String, TableInfo.Column> _columnsMessages = new HashMap<String, TableInfo.Column>(6);
+        final HashMap<String, TableInfo.Column> _columnsMessages = new HashMap<String, TableInfo.Column>(8);
         _columnsMessages.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMessages.put("emergency_id", new TableInfo.Column("emergency_id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMessages.put("sender_id", new TableInfo.Column("sender_id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMessages.put("sender_contact", new TableInfo.Column("sender_contact", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMessages.put("receiver_id", new TableInfo.Column("receiver_id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMessages.put("receiver_contact", new TableInfo.Column("receiver_contact", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMessages.put("message", new TableInfo.Column("message", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMessages.put("timestamp", new TableInfo.Column("timestamp", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysMessages = new HashSet<TableInfo.ForeignKey>(0);
@@ -243,7 +249,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "dc7d0a6863c425d3ca2f5d1649c38a74", "231d87ab9e1e82f7fcf9db73e6d5f182");
+    }, "3f9530c5e6e311cd826046230c187440", "b365b85b5900013de445365b32ed5575");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

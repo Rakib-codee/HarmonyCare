@@ -1,9 +1,12 @@
 package com.harmonycare.app.view;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,20 +17,25 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
+import com.harmonycare.app.data.model.User;
 import com.harmonycare.app.util.FcmTokenRegistrar;
 import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
 import com.harmonycare.app.util.OfflineSyncHelper;
 import com.harmonycare.app.util.NetworkHelper;
 import com.harmonycare.app.util.LocationHelper;
 import com.harmonycare.app.data.model.Emergency;
+import com.harmonycare.app.data.repository.UserRepository;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 import com.harmonycare.app.viewmodel.VolunteerViewModel;
+
+import java.io.File;
 
 /**
  * Volunteer Dashboard Activity
  */
 public class VolunteerDashboardActivity extends BaseActivity {
     private TextView tvWelcome;
+    private ImageView ivProfilePhoto;
     private TextView tvAvailabilityStatus;
     private View viewStatusIndicator;
     private Switch switchAvailability;
@@ -40,6 +48,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
     private AuthViewModel authViewModel;
     private VolunteerViewModel volunteerViewModel;
     private int currentUserId;
+    private UserRepository userRepository;
     private LocalNetworkBroadcastHelper networkBroadcastHelper;
     private OfflineSyncHelper offlineSyncHelper;
     private NetworkHelper networkHelper;
@@ -52,6 +61,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
         
         authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
         volunteerViewModel = new ViewModelProvider(this).get(VolunteerViewModel.class);
+        userRepository = new UserRepository(this);
         
         currentUserId = authViewModel.getCurrentUserId();
         if (currentUserId == -1) {
@@ -63,6 +73,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
         loadAvailabilityStatus();
         setupObservers();
         setupSyncAndBroadcast();
+        loadHeaderProfilePhoto();
     }
     
     private void setupSyncAndBroadcast() {
@@ -102,6 +113,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
 
     private void initViews() {
         tvWelcome = findViewById(R.id.tvWelcome);
+        ivProfilePhoto = findViewById(R.id.ivProfilePhoto);
         tvAvailabilityStatus = findViewById(R.id.tvAvailabilityStatus);
         viewStatusIndicator = findViewById(R.id.viewStatusIndicator);
         switchAvailability = findViewById(R.id.switchAvailability);
@@ -152,6 +164,38 @@ public class VolunteerDashboardActivity extends BaseActivity {
             startActivity(intent);
         });
     }
+
+    private void loadHeaderProfilePhoto() {
+        if (ivProfilePhoto == null || userRepository == null || currentUserId <= 0) {
+            return;
+        }
+
+        userRepository.getUserById(currentUserId, new UserRepository.RepositoryCallback<User>() {
+            @Override
+            public void onSuccess(User user) {
+                if (user == null) return;
+                String photoPath = user.getPhotoPath();
+                if (photoPath == null || photoPath.isEmpty()) return;
+
+                try {
+                    File photoFile = new File(photoPath);
+                    if (!photoFile.exists()) return;
+                    Bitmap bitmap = BitmapFactory.decodeFile(photoPath);
+                    if (bitmap == null) return;
+                    runOnUiThread(() -> {
+                        if (ivProfilePhoto != null) {
+                            ivProfilePhoto.setImageBitmap(bitmap);
+                        }
+                    });
+                } catch (Exception ignored) {
+                }
+            }
+
+            @Override
+            public void onError(Exception error) {
+            }
+        });
+    }
     
     private void updateAvailabilityStatus(boolean isAvailable) {
         if (tvAvailabilityStatus != null) {
@@ -183,6 +227,7 @@ public class VolunteerDashboardActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        loadHeaderProfilePhoto();
         // Restart listening when activity resumes
         if (networkBroadcastHelper != null && networkHelper != null && networkHelper.isWifiConnected()) {
             if (!networkBroadcastHelper.isListening()) {

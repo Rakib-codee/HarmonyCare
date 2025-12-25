@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +27,9 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.harmonycare.app.R;
+import com.harmonycare.app.data.model.User;
 import com.harmonycare.app.data.model.Emergency;
+import com.harmonycare.app.data.repository.UserRepository;
 import com.harmonycare.app.util.AnimationHelper;
 import com.harmonycare.app.util.Constants;
 import com.harmonycare.app.util.ErrorHandler;
@@ -38,6 +41,11 @@ import com.harmonycare.app.util.TTSHelper;
 import com.harmonycare.app.util.VoiceCommandHelper;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 import com.harmonycare.app.viewmodel.EmergencyViewModel;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
+import java.io.File;
 
 /**
  * Elderly Dashboard Activity with large SOS button
@@ -53,6 +61,7 @@ public class ElderlyDashboardActivity extends BaseActivity {
     private CardView cardEmergencyContacts;
     private Button btnCancelEmergency;
     private TextView tvWelcome;
+    private ImageView ivProfilePhoto;
     private TextView tvCountdown;
     private TextView tvEmergencyStatus;
     private TextView tvUnreadCount;
@@ -69,6 +78,7 @@ public class ElderlyDashboardActivity extends BaseActivity {
     private NetworkHelper networkHelper;
     private TextView tvOfflineStatus;
     private int currentUserId;
+    private UserRepository userRepository;
     private Handler statusCheckHandler;
     private Runnable statusCheckRunnable;
     private boolean voiceCommandsEnabled = false;
@@ -86,6 +96,7 @@ public class ElderlyDashboardActivity extends BaseActivity {
         ttsHelper = new TTSHelper(this);
         voiceCommandHelper = new VoiceCommandHelper(this);
         networkHelper = new NetworkHelper(this);
+        userRepository = new UserRepository(this);
         
         // Load voice commands setting
         android.content.SharedPreferences prefs = getSharedPreferences("HarmonyCarePrefs", MODE_PRIVATE);
@@ -105,6 +116,7 @@ public class ElderlyDashboardActivity extends BaseActivity {
             setupVoiceCommands();
             checkNetworkStatus();
             setupFallDetectionReceiver();
+            loadHeaderProfilePhoto();
         } catch (Exception e) {
             android.util.Log.e("ElderlyDashboard", "Error in onCreate", e);
             Toast.makeText(this, "Error initializing app. Please restart.", Toast.LENGTH_LONG).show();
@@ -229,6 +241,7 @@ public class ElderlyDashboardActivity extends BaseActivity {
     private void initViews() {
         tvWelcome = findViewById(R.id.tvWelcome);
         tvOfflineStatus = findViewById(R.id.tvOfflineStatus);
+        ivProfilePhoto = findViewById(R.id.ivProfilePhoto);
         btnSOS = findViewById(R.id.btnSOS);
         cardHistory = findViewById(R.id.cardHistory);
         cardSettings = findViewById(R.id.cardSettings);
@@ -329,6 +342,38 @@ public class ElderlyDashboardActivity extends BaseActivity {
         if (cardChatButton != null) {
             cardChatButton.setOnClickListener(v -> openChat());
         }
+    }
+
+    private void loadHeaderProfilePhoto() {
+        if (ivProfilePhoto == null || userRepository == null || currentUserId <= 0) {
+            return;
+        }
+
+        userRepository.getUserById(currentUserId, new UserRepository.RepositoryCallback<User>() {
+            @Override
+            public void onSuccess(User user) {
+                if (user == null) return;
+                String photoPath = user.getPhotoPath();
+                if (photoPath == null || photoPath.isEmpty()) return;
+
+                try {
+                    File photoFile = new File(photoPath);
+                    if (!photoFile.exists()) return;
+                    Bitmap bitmap = BitmapFactory.decodeFile(photoPath);
+                    if (bitmap == null) return;
+                    runOnUiThread(() -> {
+                        if (ivProfilePhoto != null) {
+                            ivProfilePhoto.setImageBitmap(bitmap);
+                        }
+                    });
+                } catch (Exception ignored) {
+                }
+            }
+
+            @Override
+            public void onError(Exception error) {
+            }
+        });
     }
     
     private void openChat() {
@@ -726,6 +771,7 @@ public class ElderlyDashboardActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        loadHeaderProfilePhoto();
         // Reload voice commands setting
         android.content.SharedPreferences prefs = getSharedPreferences("HarmonyCarePrefs", MODE_PRIVATE);
         boolean newVoiceCommandsEnabled = prefs.getBoolean("voice_commands_enabled", false);

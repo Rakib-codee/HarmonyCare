@@ -33,53 +33,93 @@ public final class EmergencyDao_Impl implements EmergencyDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `emergencies` (`id`,`elderly_id`,`latitude`,`longitude`,`status`,`volunteer_id`,`timestamp`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `emergencies` (`id`,`elderly_id`,`elderly_name`,`elderly_contact`,`latitude`,`longitude`,`status`,`volunteer_id`,`volunteer_name`,`volunteer_contact`,`timestamp`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement, final Emergency entity) {
         statement.bindLong(1, entity.getId());
         statement.bindLong(2, entity.getElderlyId());
-        statement.bindDouble(3, entity.getLatitude());
-        statement.bindDouble(4, entity.getLongitude());
-        if (entity.getStatus() == null) {
-          statement.bindNull(5);
+        if (entity.getElderlyName() == null) {
+          statement.bindNull(3);
         } else {
-          statement.bindString(5, entity.getStatus());
+          statement.bindString(3, entity.getElderlyName());
+        }
+        if (entity.getElderlyContact() == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.getElderlyContact());
+        }
+        statement.bindDouble(5, entity.getLatitude());
+        statement.bindDouble(6, entity.getLongitude());
+        if (entity.getStatus() == null) {
+          statement.bindNull(7);
+        } else {
+          statement.bindString(7, entity.getStatus());
         }
         if (entity.getVolunteerId() == null) {
-          statement.bindNull(6);
+          statement.bindNull(8);
         } else {
-          statement.bindLong(6, entity.getVolunteerId());
+          statement.bindLong(8, entity.getVolunteerId());
         }
-        statement.bindLong(7, entity.getTimestamp());
+        if (entity.getVolunteerName() == null) {
+          statement.bindNull(9);
+        } else {
+          statement.bindString(9, entity.getVolunteerName());
+        }
+        if (entity.getVolunteerContact() == null) {
+          statement.bindNull(10);
+        } else {
+          statement.bindString(10, entity.getVolunteerContact());
+        }
+        statement.bindLong(11, entity.getTimestamp());
       }
     };
     this.__updateAdapterOfEmergency = new EntityDeletionOrUpdateAdapter<Emergency>(__db) {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `emergencies` SET `id` = ?,`elderly_id` = ?,`latitude` = ?,`longitude` = ?,`status` = ?,`volunteer_id` = ?,`timestamp` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `emergencies` SET `id` = ?,`elderly_id` = ?,`elderly_name` = ?,`elderly_contact` = ?,`latitude` = ?,`longitude` = ?,`status` = ?,`volunteer_id` = ?,`volunteer_name` = ?,`volunteer_contact` = ?,`timestamp` = ? WHERE `id` = ?";
       }
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement, final Emergency entity) {
         statement.bindLong(1, entity.getId());
         statement.bindLong(2, entity.getElderlyId());
-        statement.bindDouble(3, entity.getLatitude());
-        statement.bindDouble(4, entity.getLongitude());
-        if (entity.getStatus() == null) {
-          statement.bindNull(5);
+        if (entity.getElderlyName() == null) {
+          statement.bindNull(3);
         } else {
-          statement.bindString(5, entity.getStatus());
+          statement.bindString(3, entity.getElderlyName());
+        }
+        if (entity.getElderlyContact() == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.getElderlyContact());
+        }
+        statement.bindDouble(5, entity.getLatitude());
+        statement.bindDouble(6, entity.getLongitude());
+        if (entity.getStatus() == null) {
+          statement.bindNull(7);
+        } else {
+          statement.bindString(7, entity.getStatus());
         }
         if (entity.getVolunteerId() == null) {
-          statement.bindNull(6);
+          statement.bindNull(8);
         } else {
-          statement.bindLong(6, entity.getVolunteerId());
+          statement.bindLong(8, entity.getVolunteerId());
         }
-        statement.bindLong(7, entity.getTimestamp());
-        statement.bindLong(8, entity.getId());
+        if (entity.getVolunteerName() == null) {
+          statement.bindNull(9);
+        } else {
+          statement.bindString(9, entity.getVolunteerName());
+        }
+        if (entity.getVolunteerContact() == null) {
+          statement.bindNull(10);
+        } else {
+          statement.bindString(10, entity.getVolunteerContact());
+        }
+        statement.bindLong(11, entity.getTimestamp());
+        statement.bindLong(12, entity.getId());
       }
     };
   }
@@ -124,10 +164,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Emergency> _result = new ArrayList<Emergency>(_cursor.getCount());
       while (_cursor.moveToNext()) {
@@ -139,6 +183,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _item.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _item.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _item.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _item.setLatitude(_tmpLatitude);
@@ -159,6 +217,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _item.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _item.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _item.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _item.setTimestamp(_tmpTimestamp);
@@ -180,10 +252,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Emergency> _result = new ArrayList<Emergency>(_cursor.getCount());
       while (_cursor.moveToNext()) {
@@ -195,6 +271,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _item.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _item.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _item.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _item.setLatitude(_tmpLatitude);
@@ -215,6 +305,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _item.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _item.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _item.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _item.setTimestamp(_tmpTimestamp);
@@ -238,10 +342,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Emergency> _result = new ArrayList<Emergency>(_cursor.getCount());
       while (_cursor.moveToNext()) {
@@ -253,6 +361,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _item.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _item.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _item.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _item.setLatitude(_tmpLatitude);
@@ -273,6 +395,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _item.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _item.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _item.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _item.setTimestamp(_tmpTimestamp);
@@ -302,10 +438,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final Emergency _result;
       if (_cursor.moveToFirst()) {
@@ -316,6 +456,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _result.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _result.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _result.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _result.setLatitude(_tmpLatitude);
@@ -336,6 +490,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _result.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _result.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _result.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _result.setTimestamp(_tmpTimestamp);
@@ -360,10 +528,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Emergency> _result = new ArrayList<Emergency>(_cursor.getCount());
       while (_cursor.moveToNext()) {
@@ -375,6 +547,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _item.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _item.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _item.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _item.setLatitude(_tmpLatitude);
@@ -395,6 +581,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _item.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _item.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _item.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _item.setTimestamp(_tmpTimestamp);
@@ -418,10 +618,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Emergency> _result = new ArrayList<Emergency>(_cursor.getCount());
       while (_cursor.moveToNext()) {
@@ -433,6 +637,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _item.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _item.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _item.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _item.setLatitude(_tmpLatitude);
@@ -453,6 +671,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _item.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _item.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _item.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _item.setTimestamp(_tmpTimestamp);
@@ -476,10 +708,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Emergency> _result = new ArrayList<Emergency>(_cursor.getCount());
       while (_cursor.moveToNext()) {
@@ -491,6 +727,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _item.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _item.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _item.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _item.setLatitude(_tmpLatitude);
@@ -511,6 +761,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _item.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _item.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _item.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _item.setTimestamp(_tmpTimestamp);
@@ -534,10 +798,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final Emergency _result;
       if (_cursor.moveToFirst()) {
@@ -548,6 +816,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _result.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _result.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _result.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _result.setLatitude(_tmpLatitude);
@@ -568,6 +850,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _result.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _result.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _result.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _result.setTimestamp(_tmpTimestamp);
@@ -590,10 +886,14 @@ public final class EmergencyDao_Impl implements EmergencyDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfElderlyId = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_id");
+      final int _cursorIndexOfElderlyName = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_name");
+      final int _cursorIndexOfElderlyContact = CursorUtil.getColumnIndexOrThrow(_cursor, "elderly_contact");
       final int _cursorIndexOfLatitude = CursorUtil.getColumnIndexOrThrow(_cursor, "latitude");
       final int _cursorIndexOfLongitude = CursorUtil.getColumnIndexOrThrow(_cursor, "longitude");
       final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
       final int _cursorIndexOfVolunteerId = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_id");
+      final int _cursorIndexOfVolunteerName = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_name");
+      final int _cursorIndexOfVolunteerContact = CursorUtil.getColumnIndexOrThrow(_cursor, "volunteer_contact");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Emergency> _result = new ArrayList<Emergency>(_cursor.getCount());
       while (_cursor.moveToNext()) {
@@ -605,6 +905,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
         final int _tmpElderlyId;
         _tmpElderlyId = _cursor.getInt(_cursorIndexOfElderlyId);
         _item.setElderlyId(_tmpElderlyId);
+        final String _tmpElderlyName;
+        if (_cursor.isNull(_cursorIndexOfElderlyName)) {
+          _tmpElderlyName = null;
+        } else {
+          _tmpElderlyName = _cursor.getString(_cursorIndexOfElderlyName);
+        }
+        _item.setElderlyName(_tmpElderlyName);
+        final String _tmpElderlyContact;
+        if (_cursor.isNull(_cursorIndexOfElderlyContact)) {
+          _tmpElderlyContact = null;
+        } else {
+          _tmpElderlyContact = _cursor.getString(_cursorIndexOfElderlyContact);
+        }
+        _item.setElderlyContact(_tmpElderlyContact);
         final double _tmpLatitude;
         _tmpLatitude = _cursor.getDouble(_cursorIndexOfLatitude);
         _item.setLatitude(_tmpLatitude);
@@ -625,6 +939,20 @@ public final class EmergencyDao_Impl implements EmergencyDao {
           _tmpVolunteerId = _cursor.getInt(_cursorIndexOfVolunteerId);
         }
         _item.setVolunteerId(_tmpVolunteerId);
+        final String _tmpVolunteerName;
+        if (_cursor.isNull(_cursorIndexOfVolunteerName)) {
+          _tmpVolunteerName = null;
+        } else {
+          _tmpVolunteerName = _cursor.getString(_cursorIndexOfVolunteerName);
+        }
+        _item.setVolunteerName(_tmpVolunteerName);
+        final String _tmpVolunteerContact;
+        if (_cursor.isNull(_cursorIndexOfVolunteerContact)) {
+          _tmpVolunteerContact = null;
+        } else {
+          _tmpVolunteerContact = _cursor.getString(_cursorIndexOfVolunteerContact);
+        }
+        _item.setVolunteerContact(_tmpVolunteerContact);
         final long _tmpTimestamp;
         _tmpTimestamp = _cursor.getLong(_cursorIndexOfTimestamp);
         _item.setTimestamp(_tmpTimestamp);

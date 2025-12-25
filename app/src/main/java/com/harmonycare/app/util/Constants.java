@@ -8,6 +8,7 @@ public class Constants {
     public static final String PREFS_NAME = "HarmonyCarePrefs";
     public static final String KEY_USER_ID = "user_id";
     public static final String KEY_USER_NAME = "user_name";
+    public static final String KEY_USER_CONTACT = "user_contact";
     public static final String KEY_USER_ROLE = "user_role";
     public static final String KEY_IS_LOGGED_IN = "is_logged_in";
     public static final String KEY_LARGE_TEXT = "large_text_mode";
@@ -61,6 +62,6 @@ public class Constants {
     // API Base URL: https://hermonycare-backend.vercel.app/api
     public static final String API_BASE_URL = "https://hermonycare-backend.vercel.app/api";
     public static final long API_POLL_INTERVAL = 30000; // 30 seconds - Poll for new emergencies
-    public static final boolean API_ENABLED = true; // API enabled - Unlimited range when online
+    public static final boolean API_ENABLED = false; // Local-only mode (no backend)
 }
 

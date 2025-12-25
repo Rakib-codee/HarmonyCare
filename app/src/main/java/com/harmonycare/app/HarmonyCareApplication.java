@@ -6,6 +6,8 @@ import android.content.Context;
 import cn.jpush.android.api.JPushInterface;
 
 import com.harmonycare.app.data.database.AppDatabase;
+import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
+import com.harmonycare.app.util.NetworkHelper;
 
 import org.osmdroid.config.Configuration;
 
@@ -16,6 +18,7 @@ import java.io.File;
  */
 public class HarmonyCareApplication extends Application {
     private AppDatabase database;
+    private LocalNetworkBroadcastHelper localNetworkBroadcastHelper;
     
     @Override
     public void onCreate() {
@@ -24,7 +27,7 @@ public class HarmonyCareApplication extends Application {
         // Initialize AMap privacy compliance FIRST (before any AMap SDK calls)
         initializeAMapPrivacy();
 
-        JPushInterface.setDebugMode(BuildConfig.DEBUG);
+        JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
         
         database = AppDatabase.getInstance(this);
@@ -37,6 +40,24 @@ public class HarmonyCareApplication extends Application {
         
         // Initialize osmdroid configuration
         initializeOsmdroid();
+
+        // Start local network listener for offline two-device Wi-Fi demo
+        ensureLocalNetworkListenerStarted();
+    }
+
+    public void ensureLocalNetworkListenerStarted() {
+        if (localNetworkBroadcastHelper != null && localNetworkBroadcastHelper.isListening()) {
+            return;
+        }
+        try {
+            NetworkHelper networkHelper = new NetworkHelper(this);
+            if (networkHelper.isWifiConnected()) {
+                localNetworkBroadcastHelper = new LocalNetworkBroadcastHelper(getApplicationContext());
+                localNetworkBroadcastHelper.startListening();
+            }
+        } catch (Exception e) {
+            android.util.Log.e("HarmonyCareApplication", "Failed to start local network listener", e);
+        }
     }
     
     /**

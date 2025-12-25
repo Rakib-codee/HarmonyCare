@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.harmonycare.app-mergeDebugResources-3:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.harmonycare.app-mergeDebugResources-2:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f7b23e2390b0efcd2cd3770c8ab6d8b6/transformed/appcompat-1.6.1/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/233e603e2cacb9781d3454f1b710f1a9/transformed/appcompat-1.6.1/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

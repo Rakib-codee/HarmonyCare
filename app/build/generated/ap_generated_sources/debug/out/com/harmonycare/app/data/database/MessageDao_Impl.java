@@ -29,7 +29,7 @@ public final class MessageDao_Impl implements MessageDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR ABORT INTO `messages` (`id`,`emergency_id`,`sender_id`,`receiver_id`,`message`,`timestamp`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `messages` (`id`,`emergency_id`,`sender_id`,`sender_contact`,`receiver_id`,`receiver_contact`,`message`,`timestamp`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -37,13 +37,23 @@ public final class MessageDao_Impl implements MessageDao {
         statement.bindLong(1, entity.getId());
         statement.bindLong(2, entity.getEmergencyId());
         statement.bindLong(3, entity.getSenderId());
-        statement.bindLong(4, entity.getReceiverId());
-        if (entity.getMessage() == null) {
-          statement.bindNull(5);
+        if (entity.getSenderContact() == null) {
+          statement.bindNull(4);
         } else {
-          statement.bindString(5, entity.getMessage());
+          statement.bindString(4, entity.getSenderContact());
         }
-        statement.bindLong(6, entity.getTimestamp());
+        statement.bindLong(5, entity.getReceiverId());
+        if (entity.getReceiverContact() == null) {
+          statement.bindNull(6);
+        } else {
+          statement.bindString(6, entity.getReceiverContact());
+        }
+        if (entity.getMessage() == null) {
+          statement.bindNull(7);
+        } else {
+          statement.bindString(7, entity.getMessage());
+        }
+        statement.bindLong(8, entity.getTimestamp());
       }
     };
   }
@@ -73,7 +83,9 @@ public final class MessageDao_Impl implements MessageDao {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfEmergencyId = CursorUtil.getColumnIndexOrThrow(_cursor, "emergency_id");
       final int _cursorIndexOfSenderId = CursorUtil.getColumnIndexOrThrow(_cursor, "sender_id");
+      final int _cursorIndexOfSenderContact = CursorUtil.getColumnIndexOrThrow(_cursor, "sender_contact");
       final int _cursorIndexOfReceiverId = CursorUtil.getColumnIndexOrThrow(_cursor, "receiver_id");
+      final int _cursorIndexOfReceiverContact = CursorUtil.getColumnIndexOrThrow(_cursor, "receiver_contact");
       final int _cursorIndexOfMessage = CursorUtil.getColumnIndexOrThrow(_cursor, "message");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Message> _result = new ArrayList<Message>(_cursor.getCount());
@@ -89,9 +101,23 @@ public final class MessageDao_Impl implements MessageDao {
         final int _tmpSenderId;
         _tmpSenderId = _cursor.getInt(_cursorIndexOfSenderId);
         _item.setSenderId(_tmpSenderId);
+        final String _tmpSenderContact;
+        if (_cursor.isNull(_cursorIndexOfSenderContact)) {
+          _tmpSenderContact = null;
+        } else {
+          _tmpSenderContact = _cursor.getString(_cursorIndexOfSenderContact);
+        }
+        _item.setSenderContact(_tmpSenderContact);
         final int _tmpReceiverId;
         _tmpReceiverId = _cursor.getInt(_cursorIndexOfReceiverId);
         _item.setReceiverId(_tmpReceiverId);
+        final String _tmpReceiverContact;
+        if (_cursor.isNull(_cursorIndexOfReceiverContact)) {
+          _tmpReceiverContact = null;
+        } else {
+          _tmpReceiverContact = _cursor.getString(_cursorIndexOfReceiverContact);
+        }
+        _item.setReceiverContact(_tmpReceiverContact);
         final String _tmpMessage;
         if (_cursor.isNull(_cursorIndexOfMessage)) {
           _tmpMessage = null;
@@ -127,7 +153,9 @@ public final class MessageDao_Impl implements MessageDao {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfEmergencyId = CursorUtil.getColumnIndexOrThrow(_cursor, "emergency_id");
       final int _cursorIndexOfSenderId = CursorUtil.getColumnIndexOrThrow(_cursor, "sender_id");
+      final int _cursorIndexOfSenderContact = CursorUtil.getColumnIndexOrThrow(_cursor, "sender_contact");
       final int _cursorIndexOfReceiverId = CursorUtil.getColumnIndexOrThrow(_cursor, "receiver_id");
+      final int _cursorIndexOfReceiverContact = CursorUtil.getColumnIndexOrThrow(_cursor, "receiver_contact");
       final int _cursorIndexOfMessage = CursorUtil.getColumnIndexOrThrow(_cursor, "message");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final List<Message> _result = new ArrayList<Message>(_cursor.getCount());
@@ -143,9 +171,23 @@ public final class MessageDao_Impl implements MessageDao {
         final int _tmpSenderId;
         _tmpSenderId = _cursor.getInt(_cursorIndexOfSenderId);
         _item.setSenderId(_tmpSenderId);
+        final String _tmpSenderContact;
+        if (_cursor.isNull(_cursorIndexOfSenderContact)) {
+          _tmpSenderContact = null;
+        } else {
+          _tmpSenderContact = _cursor.getString(_cursorIndexOfSenderContact);
+        }
+        _item.setSenderContact(_tmpSenderContact);
         final int _tmpReceiverId;
         _tmpReceiverId = _cursor.getInt(_cursorIndexOfReceiverId);
         _item.setReceiverId(_tmpReceiverId);
+        final String _tmpReceiverContact;
+        if (_cursor.isNull(_cursorIndexOfReceiverContact)) {
+          _tmpReceiverContact = null;
+        } else {
+          _tmpReceiverContact = _cursor.getString(_cursorIndexOfReceiverContact);
+        }
+        _item.setReceiverContact(_tmpReceiverContact);
         final String _tmpMessage;
         if (_cursor.isNull(_cursorIndexOfMessage)) {
           _tmpMessage = null;
@@ -177,7 +219,9 @@ public final class MessageDao_Impl implements MessageDao {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfEmergencyId = CursorUtil.getColumnIndexOrThrow(_cursor, "emergency_id");
       final int _cursorIndexOfSenderId = CursorUtil.getColumnIndexOrThrow(_cursor, "sender_id");
+      final int _cursorIndexOfSenderContact = CursorUtil.getColumnIndexOrThrow(_cursor, "sender_contact");
       final int _cursorIndexOfReceiverId = CursorUtil.getColumnIndexOrThrow(_cursor, "receiver_id");
+      final int _cursorIndexOfReceiverContact = CursorUtil.getColumnIndexOrThrow(_cursor, "receiver_contact");
       final int _cursorIndexOfMessage = CursorUtil.getColumnIndexOrThrow(_cursor, "message");
       final int _cursorIndexOfTimestamp = CursorUtil.getColumnIndexOrThrow(_cursor, "timestamp");
       final Message _result;
@@ -192,9 +236,23 @@ public final class MessageDao_Impl implements MessageDao {
         final int _tmpSenderId;
         _tmpSenderId = _cursor.getInt(_cursorIndexOfSenderId);
         _result.setSenderId(_tmpSenderId);
+        final String _tmpSenderContact;
+        if (_cursor.isNull(_cursorIndexOfSenderContact)) {
+          _tmpSenderContact = null;
+        } else {
+          _tmpSenderContact = _cursor.getString(_cursorIndexOfSenderContact);
+        }
+        _result.setSenderContact(_tmpSenderContact);
         final int _tmpReceiverId;
         _tmpReceiverId = _cursor.getInt(_cursorIndexOfReceiverId);
         _result.setReceiverId(_tmpReceiverId);
+        final String _tmpReceiverContact;
+        if (_cursor.isNull(_cursorIndexOfReceiverContact)) {
+          _tmpReceiverContact = null;
+        } else {
+          _tmpReceiverContact = _cursor.getString(_cursorIndexOfReceiverContact);
+        }
+        _result.setReceiverContact(_tmpReceiverContact);
         final String _tmpMessage;
         if (_cursor.isNull(_cursorIndexOfMessage)) {
           _tmpMessage = null;

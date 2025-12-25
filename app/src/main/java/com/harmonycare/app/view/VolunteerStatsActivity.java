@@ -10,6 +10,7 @@ import com.harmonycare.app.data.model.Emergency;
 import com.harmonycare.app.data.repository.EmergencyRepository;
 import com.harmonycare.app.util.AnalyticsHelper;
 import com.harmonycare.app.viewmodel.AuthViewModel;
+import com.harmonycare.app.viewmodel.EmergencyViewModel;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -27,6 +28,8 @@ public class VolunteerStatsActivity extends BaseActivity {
     private EmergencyRepository emergencyRepository;
     private AnalyticsHelper analyticsHelper;
     private int currentUserId;
+
+    private EmergencyViewModel emergencyViewModel;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class VolunteerStatsActivity extends BaseActivity {
         setContentView(R.layout.activity_volunteer_stats);
         
         authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
+        emergencyViewModel = new ViewModelProvider(this).get(EmergencyViewModel.class);
         emergencyRepository = new EmergencyRepository(this);
         analyticsHelper = new AnalyticsHelper(this);
         
@@ -44,7 +48,18 @@ public class VolunteerStatsActivity extends BaseActivity {
         }
         
         initViews();
+        setupObservers();
         loadStatistics();
+    }
+
+    private void setupObservers() {
+        if (emergencyViewModel == null) return;
+        emergencyViewModel.getEmergencyStatusUpdateEvent().observe(this, eventTs -> {
+            if (eventTs == null) return;
+            if (currentUserId > 0) {
+                loadStatistics();
+            }
+        });
     }
     
     @Override

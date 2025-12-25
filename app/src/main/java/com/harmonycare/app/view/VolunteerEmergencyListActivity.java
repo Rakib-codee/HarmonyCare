@@ -76,9 +76,34 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
         
         initViews();
         checkLocationPermission();
+        setupObservers();
         loadEmergencies();
         setupNetworkBroadcast();
         startPollingForEmergencies();
+    }
+
+    private void setupObservers() {
+        emergencyViewModel.getVolunteerFeedEmergencies().observe(this, emergencies -> {
+            swipeRefreshLayout.setRefreshing(false);
+            if (emergencies != null) {
+                emergencyList = emergencies;
+                // Preload users for the adapter
+                List<Integer> userIds = new java.util.ArrayList<>();
+                for (Emergency emergency : emergencies) {
+                    userIds.add(emergency.getElderlyId());
+                }
+                if (!userIds.isEmpty()) {
+                    userRepository.preloadUsers(userIds, null);
+                }
+                adapter.notifyDataSetChanged();
+                updateEmptyState();
+            }
+        });
+
+        emergencyViewModel.getEmergencyStatusUpdateEvent().observe(this, eventTs -> {
+            if (eventTs == null) return;
+            loadEmergencies();
+        });
     }
     
     private void setupNetworkBroadcast() {
@@ -206,22 +231,6 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
         // This allows volunteers to see new emergencies and complete their accepted ones
         int volunteerId = authViewModel.getCurrentUserId();
         emergencyViewModel.loadActiveAndAcceptedEmergencies(volunteerId);
-        emergencyViewModel.getActiveEmergencies().observe(this, emergencies -> {
-            swipeRefreshLayout.setRefreshing(false);
-            if (emergencies != null) {
-                emergencyList = emergencies;
-                // Preload users for the adapter
-                List<Integer> userIds = new java.util.ArrayList<>();
-                for (Emergency emergency : emergencies) {
-                    userIds.add(emergency.getElderlyId());
-                }
-                if (!userIds.isEmpty()) {
-                    userRepository.preloadUsers(userIds, null);
-                }
-                adapter.notifyDataSetChanged();
-                updateEmptyState();
-            }
-        });
     }
     
     private void updateEmptyState() {
@@ -246,7 +255,6 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
         int volunteerId = authViewModel.getCurrentUserId();
         emergencyViewModel.acceptEmergency(emergencyId, volunteerId);
         Toast.makeText(this, "Emergency accepted", Toast.LENGTH_SHORT).show();
-        loadEmergencies();
     }
     
     private class EmergencyAdapter extends RecyclerView.Adapter<EmergencyAdapter.ViewHolder> {
@@ -266,8 +274,12 @@ public class VolunteerEmergencyListActivity extends AppCompatActivity {
                 holder.tvName.setText(user.getName());
                 holder.tvContact.setText(user.getContact());
             } else {
-                holder.tvName.setText("Loading...");
-                holder.tvContact.setText("");
+                if (emergency.getElderlyName() != null && !emergency.getElderlyName().isEmpty()) {
+                    holder.tvName.setText(emergency.getElderlyName());
+                } else {
+                    holder.tvName.setText("Loading...");
+                }
+                holder.tvContact.setText(emergency.getElderlyContact() != null ? emergency.getElderlyContact() : "");
                 // Load user asynchronously
                 userRepository.getUserById(emergency.getElderlyId(), new UserRepository.RepositoryCallback<User>() {
                     @Override

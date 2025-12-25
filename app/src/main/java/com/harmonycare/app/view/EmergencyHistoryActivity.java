@@ -48,7 +48,35 @@ public class EmergencyHistoryActivity extends AppCompatActivity {
         userRepository = new UserRepository(this);
         
         initViews();
+        setupObservers();
         loadHistory();
+    }
+
+    private void setupObservers() {
+        emergencyViewModel.getHistoryEmergencies().observe(this, emergencies -> {
+            if (emergencies != null) {
+                emergencyList = emergencies;
+                // Preload users for the adapter
+                List<Integer> userIds = new java.util.ArrayList<>();
+                for (Emergency emergency : emergencies) {
+                    userIds.add(emergency.getElderlyId());
+                }
+                if (!userIds.isEmpty()) {
+                    userRepository.preloadUsers(userIds, null);
+                }
+                adapter.notifyDataSetChanged();
+                updateEmptyState();
+                // Stop refreshing if active
+                if (swipeRefreshLayout != null) {
+                    swipeRefreshLayout.setRefreshing(false);
+                }
+            }
+        });
+
+        emergencyViewModel.getEmergencyStatusUpdateEvent().observe(this, eventTs -> {
+            if (eventTs == null) return;
+            loadHistory();
+        });
     }
     
     @Override
@@ -90,26 +118,6 @@ public class EmergencyHistoryActivity extends AppCompatActivity {
         } else {
             emergencyViewModel.loadEmergenciesByVolunteer(userId);
         }
-        
-        emergencyViewModel.getActiveEmergencies().observe(this, emergencies -> {
-            if (emergencies != null) {
-                emergencyList = emergencies;
-                // Preload users for the adapter
-                List<Integer> userIds = new java.util.ArrayList<>();
-                for (Emergency emergency : emergencies) {
-                    userIds.add(emergency.getElderlyId());
-                }
-                if (!userIds.isEmpty()) {
-                    userRepository.preloadUsers(userIds, null);
-                }
-                adapter.notifyDataSetChanged();
-                updateEmptyState();
-                // Stop refreshing if active
-                if (swipeRefreshLayout != null) {
-                    swipeRefreshLayout.setRefreshing(false);
-                }
-            }
-        });
     }
     
     private void updateEmptyState() {

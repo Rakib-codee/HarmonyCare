@@ -176,6 +176,9 @@ public class UserRepository {
         executorService.execute(() -> {
             try {
                 userDao.updateUser(user);
+                if (user != null) {
+                    userCache.put(user.getId(), user);
+                }
                 if (finalCallback != null) {
                     mainHandler.post(() -> finalCallback.onSuccess(null));
                 }

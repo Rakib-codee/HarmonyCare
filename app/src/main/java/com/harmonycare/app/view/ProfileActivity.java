@@ -291,9 +291,15 @@ public class ProfileActivity extends AppCompatActivity {
             userRepository.updateUser(currentUser, new UserRepository.RepositoryCallback<Void>() {
                 @Override
                 public void onSuccess(Void result) {
-                    // Update SharedPreferences name only (keep existing session)
-                    android.content.SharedPreferences prefs = getSharedPreferences("HarmonyCarePrefs", MODE_PRIVATE);
-                    prefs.edit().putString("user_name", name).apply();
+                    // Update SharedPreferences (keep existing session)
+                    android.content.SharedPreferences prefs = getSharedPreferences(Constants.PREFS_NAME, MODE_PRIVATE);
+                    android.content.SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString(Constants.KEY_USER_NAME, name);
+                    editor.putString(Constants.KEY_USER_CONTACT, contact);
+                    if (currentPhotoPath != null && !currentPhotoPath.isEmpty()) {
+                        editor.putString("photo_path", currentPhotoPath);
+                    }
+                    editor.apply();
                     hideLoading();
                     Toast.makeText(ProfileActivity.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
                     finish();

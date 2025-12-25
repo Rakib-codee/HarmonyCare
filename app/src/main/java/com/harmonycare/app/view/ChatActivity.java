@@ -1,6 +1,7 @@
 package com.harmonycare.app.view;
 
 import android.os.Bundle;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
@@ -24,6 +25,7 @@ import com.harmonycare.app.data.model.Message;
 import com.harmonycare.app.data.model.User;
 import com.harmonycare.app.data.repository.MessageRepository;
 import com.harmonycare.app.data.repository.UserRepository;
+import com.harmonycare.app.util.LocalNetworkBroadcastHelper;
 import com.harmonycare.app.util.NotificationHelper;
 import com.harmonycare.app.viewmodel.AuthViewModel;
 import com.harmonycare.app.viewmodel.EmergencyViewModel;
@@ -55,6 +57,7 @@ public class ChatActivity extends BaseActivity {
     private int emergencyId;
     private int currentUserId;
     private int otherUserId;
+    private String currentUserContact;
     private String currentEmergencyStatus = "";
     private boolean isChatEnabled = true;
     private List<Message> messageList = new ArrayList<>();
@@ -81,6 +84,11 @@ public class ChatActivity extends BaseActivity {
         notificationHelper = new NotificationHelper(this);
         
         currentUserId = authViewModel.getCurrentUserId();
+        try {
+            SharedPreferences prefs = getSharedPreferences(com.harmonycare.app.util.Constants.PREFS_NAME, MODE_PRIVATE);
+            currentUserContact = prefs.getString(com.harmonycare.app.util.Constants.KEY_USER_CONTACT, null);
+        } catch (Exception ignored) {
+        }
         if (currentUserId == -1) {
             finish();
             return;
@@ -141,49 +149,31 @@ public class ChatActivity extends BaseActivity {
                     enableChat();
                 }
                 
-                // Determine other user (elderly or volunteer)
-                if (currentUserId == emergency.getElderlyId()) {
-                    // Current user is elderly, other is volunteer
+                // Determine other user using contact first (cross-device safe)
+                boolean isCurrentElderly = currentUserContact != null
+                        && emergency.getElderlyContact() != null
+                        && currentUserContact.equals(emergency.getElderlyContact());
+
+                if (isCurrentElderly) {
                     otherUserId = emergency.getVolunteerId() != null ? emergency.getVolunteerId() : -1;
-                    
-                    // If emergency is accepted but volunteer_id is not set yet, wait a bit
                     if ("accepted".equalsIgnoreCase(emergency.getStatus()) && otherUserId <= 0) {
-                        // Retry after a delay to get updated volunteer_id
-                        new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                            loadEmergencyDetails();
-                        }, 2000);
+                        new Handler(Looper.getMainLooper()).postDelayed(this::loadEmergencyDetails, 2000);
                         return;
                     }
                 } else {
-                    // Current user is volunteer, other is elderly
                     otherUserId = emergency.getElderlyId();
                 }
                 
-                // Load other user's name
-                if (otherUserId > 0) {
-                    userRepository.getUserById(otherUserId, new UserRepository.RepositoryCallback<User>() {
-                        @Override
-                        public void onSuccess(User user) {
-                            if (user != null && tvElderlyName != null) {
-                                tvElderlyName.setText("Chat with " + user.getName());
-                            } else if (tvElderlyName != null) {
-                                tvElderlyName.setText("Chat");
-                            }
-                        }
-                        
-                        @Override
-                        public void onError(Exception error) {
-                            if (tvElderlyName != null) {
-                                tvElderlyName.setText("Chat");
-                            }
-                        }
-                    });
-                } else {
-                    if (tvElderlyName != null) {
-                        tvElderlyName.setText("Chat - Waiting for connection...");
+                // Load other user's name (fallback to broadcasted names)
+                if (tvElderlyName != null) {
+                    String fallbackName = isCurrentElderly ? emergency.getVolunteerName() : emergency.getElderlyName();
+                    if (fallbackName != null && !fallbackName.isEmpty()) {
+                        tvElderlyName.setText("Chat with " + fallbackName);
+                    } else {
+                        tvElderlyName.setText("Chat");
                     }
                 }
-                
+
                 // Always reload messages after emergency details are loaded
                 // This ensures we have the latest messages even if emergency status changed
                 loadMessages();
@@ -248,15 +238,14 @@ public class ChatActivity extends BaseActivity {
                 return;
             }
             
+            boolean isCurrentElderly = currentUserContact != null
+                    && emergency.getElderlyContact() != null
+                    && currentUserContact.equals(emergency.getElderlyContact());
+
             // Re-determine other user ID from latest emergency data
-            int finalOtherUserId;
-            if (currentUserId == emergency.getElderlyId()) {
-                // Current user is elderly, other is volunteer
-                finalOtherUserId = emergency.getVolunteerId() != null ? emergency.getVolunteerId() : -1;
-            } else {
-                // Current user is volunteer, other is elderly
-                finalOtherUserId = emergency.getElderlyId();
-            }
+            int finalOtherUserId = isCurrentElderly
+                    ? (emergency.getVolunteerId() != null ? emergency.getVolunteerId() : -1)
+                    : emergency.getElderlyId();
             
             // Update otherUserId
             otherUserId = finalOtherUserId;
@@ -271,6 +260,10 @@ public class ChatActivity extends BaseActivity {
             
             // Create and send message with current emergency_id
             Message message = new Message(emergencyId, currentUserId, otherUserId, messageText);
+
+            // Add contact fields for cross-device routing/notifications
+            message.setSenderContact(currentUserContact);
+            message.setReceiverContact(isCurrentElderly ? emergency.getVolunteerContact() : emergency.getElderlyContact());
             
             // Double-check emergency_id is valid
             if (message.getEmergencyId() <= 0) {
@@ -291,6 +284,10 @@ public class ChatActivity extends BaseActivity {
                         
                         // Notify the receiver (other user) about the new message
                         notifyReceiverAboutMessage(messageText);
+
+                        // Broadcast message to local network for offline 2-device demo
+                        LocalNetworkBroadcastHelper broadcastHelper = new LocalNetworkBroadcastHelper(getApplicationContext());
+                        broadcastHelper.broadcastMessage(message);
                     } else {
                         showToast("Failed to save message. Please try again.");
                     }

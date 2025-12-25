@@ -67,12 +67,15 @@
                         android:shadowRadius="2" />
                 </LinearLayout>
 
-                <View
+                <ImageView
+                    android:id="@+id/ivProfilePhoto"
                     android:layout_width="@dimen/elderly_avatar_size_medium"
                     android:layout_height="@dimen/elderly_avatar_size_medium"
                     android:background="@drawable/icon_background_circle"
-                    android:gravity="center"
-                    android:padding="@dimen/elderly_spacing_small" />
+                    android:contentDescription="Profile Photo"
+                    android:padding="@dimen/elderly_spacing_small"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_gallery" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

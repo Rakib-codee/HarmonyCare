@@ -33,6 +33,7 @@ public class EmergencyDetailsActivity extends AppCompatActivity {
     private UserRepository userRepository;
     private Emergency emergency;
     private int emergencyId;
+    private boolean isCompleting = false;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -230,9 +231,21 @@ public class EmergencyDetailsActivity extends AppCompatActivity {
     }
     
     private void markAsCompleted() {
+        if (isCompleting) {
+            return;
+        }
+        isCompleting = true;
+        if (btnMarkCompleted != null) {
+            btnMarkCompleted.setEnabled(false);
+        }
+
+        emergencyViewModel.getEmergencyStatusUpdateEvent().observe(this, eventTs -> {
+            if (eventTs == null) return;
+            Toast.makeText(this, "Emergency marked as completed", Toast.LENGTH_SHORT).show();
+            finish();
+        });
+
         emergencyViewModel.completeEmergency(emergencyId);
-        Toast.makeText(this, "Emergency marked as completed", Toast.LENGTH_SHORT).show();
-        finish();
     }
     
     private void openRating() {

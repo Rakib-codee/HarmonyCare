@@ -59,490 +59,580 @@
 28    <uses-permission android:name="android.permission.VIBRATE" />
 28-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:20:5-66
 28-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:20:22-63
-29    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-29-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:24:5-68
-29-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:24:22-65
-30    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-30-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:26:5-82
-30-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:26:22-79
-31
-32    <permission
-32-->[androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-33        android:name="com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-33-->[androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-34        android:protectionLevel="signature" />
-34-->[androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-35
-36    <uses-permission android:name="com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-36-->[androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-36-->[androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-37
-38    <supports-screens
-38-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:9:5-12:40
-39        android:anyDensity="true"
-39-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:10:9-34
-40        android:largeScreens="true"
-40-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:11:9-36
-41        android:normalScreens="true" />
-41-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:12:9-37
-42
-43    <uses-feature
-43-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:14:5-16:36
-44        android:name="android.hardware.location.network"
-44-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:15:9-57
-45        android:required="false" />
-45-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:16:9-33
-46    <uses-feature
-46-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:17:5-19:36
-47        android:name="android.hardware.location.gps"
-47-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:18:9-53
-48        android:required="false" />
-48-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:19:9-33
+29
+30    <permission
+30-->[androidx.core:core:1.9.0] /Users/rakib/.gradle/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+31        android:name="com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.9.0] /Users/rakib/.gradle/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.9.0] /Users/rakib/.gradle/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="com.harmonycare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Required -->
+34-->[androidx.core:core:1.9.0] /Users/rakib/.gradle/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.9.0] /Users/rakib/.gradle/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+35    <permission
+35-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:11:5-13:47
+36        android:name="com.harmonycare.app.permission.JPUSH_MESSAGE"
+36-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:12:9-65
+37        android:protectionLevel="signature" /> <!-- Required -->
+37-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:13:9-44
+38    <uses-permission android:name="com.harmonycare.app.permission.JPUSH_MESSAGE" />
+38-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:15:5-81
+38-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:15:22-78
+39    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+39-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:22:5-85
+39-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:22:22-82
+40    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+40-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:23:5-75
+40-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:23:22-72
+41    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+41-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:24:5-77
+41-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:24:22-74
+42    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+42-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:25:5-76
+42-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:25:22-73
+43
+44    <supports-screens
+44-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:9:5-12:40
+45        android:anyDensity="true"
+45-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:10:9-34
+46        android:largeScreens="true"
+46-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:11:9-36
+47        android:normalScreens="true" />
+47-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:12:9-37
+48
 49    <uses-feature
-49-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:20:5-22:36
-50        android:name="android.hardware.telephony"
-50-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:21:9-50
+49-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:14:5-16:36
+50        android:name="android.hardware.location.network"
+50-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:15:9-57
 51        android:required="false" />
-51-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:22:9-33
+51-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:16:9-33
 52    <uses-feature
-52-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:23:5-25:36
-53        android:name="android.hardware.wifi"
-53-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:24:9-45
+52-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:17:5-19:36
+53        android:name="android.hardware.location.gps"
+53-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:18:9-53
 54        android:required="false" />
-54-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/89ac8605ece460c1ff92f6f9ea868a9e/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:25:9-33
-55
-56    <application
-56-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:22:5-139:19
-57        android:name="com.harmonycare.app.HarmonyCareApplication"
-57-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:23:9-47
-58        android:allowBackup="true"
-58-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:24:9-35
-59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-59-->[androidx.core:core:1.9.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dcee09234d31af46b111084ac3fd79b1/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-60        android:debuggable="true"
-61        android:extractNativeLibs="false"
-62        android:icon="@mipmap/ic_launcher"
-62-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:25:9-43
-63        android:label="@string/app_name"
-63-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:26:9-41
-64        android:roundIcon="@mipmap/ic_launcher_round"
-64-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:27:9-54
-65        android:supportsRtl="true"
-65-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:28:9-35
-66        android:testOnly="true"
-67        android:theme="@style/Theme.HarmonyCare" >
-67-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:29:9-49
-68        <provider
-69            android:name="androidx.core.content.FileProvider"
-69-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:33:13-62
-70            android:authorities="com.harmonycare.app.fileprovider"
-70-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:34:13-64
-71            android:exported="false"
-71-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:35:13-37
-72            android:grantUriPermissions="true" >
-72-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:36:13-47
-73            <meta-data
-73-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:37:13-39:63
-74                android:name="android.support.FILE_PROVIDER_PATHS"
-74-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:38:17-67
-75                android:resource="@xml/file_provider_paths" />
-75-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:39:17-60
-76        </provider>
-77
-78        <activity
-78-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:42:9-50:20
-79            android:name="com.harmonycare.app.view.SplashActivity"
-79-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:43:13-48
-80            android:exported="true"
-80-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:44:13-36
-81            android:theme="@style/Theme.HarmonyCare.Splash" >
-81-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:45:13-60
-82            <intent-filter>
-82-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:46:13-49:29
-83                <action android:name="android.intent.action.MAIN" />
-83-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:47:17-69
-83-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:47:25-66
-84
-85                <category android:name="android.intent.category.LAUNCHER" />
-85-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:48:17-77
-85-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:48:27-74
-86            </intent-filter>
-87        </activity>
-88        <activity
-88-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:52:9-55:56
-89            android:name="com.harmonycare.app.view.LoginActivity"
-89-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:53:13-47
-90            android:exported="false"
-90-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:54:13-37
-91            android:theme="@style/Theme.HarmonyCare" />
-91-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:55:13-53
-92        <activity
-92-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:57:9-59:40
-93            android:name="com.harmonycare.app.view.RegisterActivity"
-93-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:58:13-50
-94            android:exported="false" />
-94-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:59:13-37
-95        <activity
-95-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:61:9-63:40
-96            android:name="com.harmonycare.app.view.ElderlyDashboardActivity"
-96-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:62:13-58
-97            android:exported="false" />
-97-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:63:13-37
-98        <activity
-98-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:65:9-67:40
-99            android:name="com.harmonycare.app.view.VolunteerDashboardActivity"
-99-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:66:13-60
-100            android:exported="false" />
-100-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:67:13-37
-101        <activity
-101-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:69:9-71:40
-102            android:name="com.harmonycare.app.view.EmergencyHistoryActivity"
-102-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:70:13-58
-103            android:exported="false" />
-103-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:71:13-37
+54-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:19:9-33
+55    <uses-feature
+55-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:20:5-22:36
+56        android:name="android.hardware.telephony"
+56-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:21:9-50
+57        android:required="false" />
+57-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:22:9-33
+58    <uses-feature
+58-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:23:5-25:36
+59        android:name="android.hardware.wifi"
+59-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:24:9-45
+60        android:required="false" />
+60-->[org.osmdroid:osmdroid-android:6.1.16] /Users/rakib/.gradle/caches/8.8/transforms/b0f96dc25f10223258d3a5ca0476f544/transformed/jetified-osmdroid-android-6.1.16/AndroidManifest.xml:25:9-33
+61
+62    <application
+62-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:22:5-154:19
+63        android:name="com.harmonycare.app.HarmonyCareApplication"
+63-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:23:9-47
+64        android:allowBackup="true"
+64-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:24:9-35
+65        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+65-->[androidx.core:core:1.9.0] /Users/rakib/.gradle/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+66        android:debuggable="true"
+67        android:extractNativeLibs="false"
+68        android:icon="@mipmap/ic_launcher"
+68-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:25:9-43
+69        android:label="@string/app_name"
+69-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:26:9-41
+70        android:roundIcon="@mipmap/ic_launcher_round"
+70-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:27:9-54
+71        android:supportsRtl="true"
+71-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:28:9-35
+72        android:theme="@style/Theme.HarmonyCare" >
+72-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:29:9-49
+73        <meta-data
+74            android:name="JPUSH_APPKEY"
+74-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:33:13-40
+75            android:value="9e31b7511631a2622d41c5f5" />
+75-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:34:13-44
+76        <meta-data
+77            android:name="JPUSH_CHANNEL"
+77-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:37:13-41
+78            android:value="developer-default" />
+78-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:38:13-45
+79
+80        <provider
+81            android:name="androidx.core.content.FileProvider"
+81-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:41:13-62
+82            android:authorities="com.harmonycare.app.fileprovider"
+82-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:42:13-64
+83            android:exported="false"
+83-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:43:13-37
+84            android:grantUriPermissions="true" >
+84-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:44:13-47
+85            <meta-data
+85-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:45:13-47:63
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:46:17-67
+87                android:resource="@xml/file_provider_paths" />
+87-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:47:17-60
+88        </provider>
+89
+90        <activity
+90-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:50:9-58:20
+91            android:name="com.harmonycare.app.view.SplashActivity"
+91-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:51:13-48
+92            android:exported="true"
+92-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:52:13-36
+93            android:theme="@style/Theme.HarmonyCare.Splash" >
+93-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:53:13-60
+94            <intent-filter>
+94-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:54:13-57:29
+95                <action android:name="android.intent.action.MAIN" />
+95-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:55:17-69
+95-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:55:25-66
+96
+97                <category android:name="android.intent.category.LAUNCHER" />
+97-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:56:17-77
+97-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:56:27-74
+98            </intent-filter>
+99        </activity>
+100        <activity
+100-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:60:9-63:56
+101            android:name="com.harmonycare.app.view.LoginActivity"
+101-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:61:13-47
+102            android:exported="false"
+102-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:62:13-37
+103            android:theme="@style/Theme.HarmonyCare" />
+103-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:63:13-53
 104        <activity
-104-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:73:9-75:40
-105            android:name="com.harmonycare.app.view.VolunteerEmergencyListActivity"
-105-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:74:13-64
+104-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:65:9-67:40
+105            android:name="com.harmonycare.app.view.RegisterActivity"
+105-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:66:13-50
 106            android:exported="false" />
-106-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:75:13-37
+106-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:67:13-37
 107        <activity
-107-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:77:9-79:40
-108            android:name="com.harmonycare.app.view.EmergencyDetailsActivity"
-108-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:78:13-58
+107-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:69:9-71:40
+108            android:name="com.harmonycare.app.view.ElderlyDashboardActivity"
+108-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:70:13-58
 109            android:exported="false" />
-109-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:79:13-37
+109-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:71:13-37
 110        <activity
-110-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:81:9-83:40
-111            android:name="com.harmonycare.app.view.SettingsActivity"
-111-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:82:13-50
+110-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:73:9-75:40
+111            android:name="com.harmonycare.app.view.VolunteerDashboardActivity"
+111-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:74:13-60
 112            android:exported="false" />
-112-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:83:13-37
+112-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:75:13-37
 113        <activity
-113-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:85:9-87:40
-114            android:name="com.harmonycare.app.view.ProfileActivity"
-114-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:86:13-49
+113-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:77:9-79:40
+114            android:name="com.harmonycare.app.view.EmergencyHistoryActivity"
+114-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:78:13-58
 115            android:exported="false" />
-115-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:87:13-37
+115-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:79:13-37
 116        <activity
-116-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:89:9-91:40
-117            android:name="com.harmonycare.app.view.VolunteerStatsActivity"
-117-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:90:13-56
+116-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:81:9-83:40
+117            android:name="com.harmonycare.app.view.VolunteerEmergencyListActivity"
+117-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:82:13-64
 118            android:exported="false" />
-118-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:91:13-37
+118-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:83:13-37
 119        <activity
-119-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:93:9-95:40
-120            android:name="com.harmonycare.app.view.ChatActivity"
-120-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:94:13-46
+119-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:85:9-87:40
+120            android:name="com.harmonycare.app.view.EmergencyDetailsActivity"
+120-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:86:13-58
 121            android:exported="false" />
-121-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:95:13-37
+121-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:87:13-37
 122        <activity
-122-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:97:9-99:40
-123            android:name="com.harmonycare.app.view.EmergencyContactsActivity"
-123-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:98:13-59
+122-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:89:9-91:40
+123            android:name="com.harmonycare.app.view.SettingsActivity"
+123-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:90:13-50
 124            android:exported="false" />
-124-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:99:13-37
+124-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:91:13-37
 125        <activity
-125-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:101:9-105:77
-126            android:name="com.harmonycare.app.view.VolunteerMapActivity"
-126-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:102:13-54
-127            android:configChanges="orientation|screenSize|keyboardHidden"
-127-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:105:13-74
-128            android:exported="false"
-128-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:103:13-37
-129            android:hardwareAccelerated="true" />
-129-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:104:13-47
-130        <activity
-130-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:107:9-109:40
-131            android:name="com.harmonycare.app.view.RatingActivity"
-131-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:108:13-48
-132            android:exported="false" />
-132-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:109:13-37
-133        <activity
-133-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:111:9-113:40
-134            android:name="com.harmonycare.app.view.RemindersActivity"
-134-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:112:13-51
-135            android:exported="false" />
-135-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:113:13-37
-136
-137        <receiver
-137-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:115:9-118:38
-138            android:name="com.harmonycare.app.util.ReminderReceiver"
-138-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:116:13-50
-139            android:enabled="true"
-139-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:118:13-35
-140            android:exported="false" />
-140-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:117:13-37
-141
-142        <service
-142-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:120:9-124:54
-143            android:name="com.harmonycare.app.service.FallDetectionService"
-143-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:121:13-57
-144            android:enabled="true"
-144-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:122:13-35
-145            android:exported="false"
-145-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:123:13-37
-146            android:foregroundServiceType="health" />
-146-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:124:13-51
-147        <service
-147-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:126:9-132:19
-148            android:name="com.harmonycare.app.service.HarmonyFirebaseMessagingService"
-148-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:127:13-68
-149            android:exported="false" >
-149-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:128:13-37
-150            <intent-filter>
-150-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:129:13-131:29
-151                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-151-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:130:17-78
-151-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:130:25-75
-152            </intent-filter>
-153        </service>
-154
-155        <!-- AMap (高德地图) API Key -->
-156        <meta-data
-156-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:135:9-137:64
-157            android:name="com.amap.api.v2.apikey"
-157-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:136:13-50
-158            android:value="23a959db2562029719293a9d2561d9c7" />
-158-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:137:13-61
-159
-160        <provider
-160-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-161            android:name="androidx.startup.InitializationProvider"
-161-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-162            android:authorities="com.harmonycare.app.androidx-startup"
-162-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-163            android:exported="false" >
-163-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-164            <meta-data
-164-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-165                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-165-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-166                android:value="androidx.startup" />
-166-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/e75479d8903bfb2197494ba91e80cd2a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-167            <meta-data
-167-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-168                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-168-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-169                android:value="androidx.startup" />
-169-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/09596e2121a85869427c18123586e8ed/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-170            <meta-data
-170-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-171                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-171-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-172                android:value="androidx.startup" />
-172-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-173        </provider>
+125-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:93:9-95:40
+126            android:name="com.harmonycare.app.view.ProfileActivity"
+126-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:94:13-49
+127            android:exported="false" />
+127-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:95:13-37
+128        <activity
+128-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:97:9-99:40
+129            android:name="com.harmonycare.app.view.VolunteerStatsActivity"
+129-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:98:13-56
+130            android:exported="false" />
+130-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:99:13-37
+131        <activity
+131-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:101:9-103:40
+132            android:name="com.harmonycare.app.view.ChatActivity"
+132-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:102:13-46
+133            android:exported="false" />
+133-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:103:13-37
+134        <activity
+134-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:105:9-107:40
+135            android:name="com.harmonycare.app.view.EmergencyContactsActivity"
+135-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:106:13-59
+136            android:exported="false" />
+136-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:107:13-37
+137        <activity
+137-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:109:9-113:77
+138            android:name="com.harmonycare.app.view.VolunteerMapActivity"
+138-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:110:13-54
+139            android:configChanges="orientation|screenSize|keyboardHidden"
+139-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:113:13-74
+140            android:exported="false"
+140-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:111:13-37
+141            android:hardwareAccelerated="true" />
+141-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:112:13-47
+142        <activity
+142-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:115:9-117:40
+143            android:name="com.harmonycare.app.view.RatingActivity"
+143-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:116:13-48
+144            android:exported="false" />
+144-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:117:13-37
+145        <activity
+145-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:119:9-121:40
+146            android:name="com.harmonycare.app.view.RemindersActivity"
+146-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:120:13-51
+147            android:exported="false" />
+147-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:121:13-37
+148
+149        <receiver
+149-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:123:9-126:38
+150            android:name="com.harmonycare.app.util.ReminderReceiver"
+150-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:124:13-50
+151            android:enabled="true"
+151-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:126:13-35
+152            android:exported="false" />
+152-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:125:13-37
+153
+154        <service
+154-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:128:9-132:54
+155            android:name="com.harmonycare.app.service.FallDetectionService"
+155-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:129:13-57
+156            android:enabled="true"
+156-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:130:13-35
+157            android:exported="false"
+157-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:131:13-37
+158            android:foregroundServiceType="health" />
+158-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:132:13-51
+159        <service
+159-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:134:9-137:40
+160            android:name="com.harmonycare.app.service.JPushCommonService"
+160-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:135:13-55
+161            android:enabled="true"
+161-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:136:13-35
+162            android:exported="false" />
+162-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:137:13-37
+163
+164        <receiver
+164-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:139:9-147:20
+165            android:name="com.harmonycare.app.service.HarmonyFirebaseMessagingService"
+165-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:140:13-68
+166            android:enabled="true"
+166-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:141:13-35
+167            android:exported="false" >
+167-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:142:13-37
+168            <intent-filter>
+168-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:143:13-146:29
+169                <action android:name="cn.jpush.android.intent.RECEIVER_MESSAGE" />
+169-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:144:17-83
+169-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:144:25-80
+170
+171                <category android:name="com.harmonycare.app" />
+171-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:145:27-58
+172            </intent-filter>
+173        </receiver>
 174
-175        <receiver
-175-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:29:9-40:20
-176            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-176-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:30:13-78
-177            android:exported="true"
-177-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:31:13-36
-178            android:permission="com.google.android.c2dm.permission.SEND" >
-178-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:32:13-73
-179            <intent-filter>
-179-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:33:13-35:29
-180                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-180-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:34:17-81
-180-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:34:25-78
-181            </intent-filter>
-182
-183            <meta-data
-183-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:37:13-39:40
-184                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
-184-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:38:17-92
-185                android:value="true" />
-185-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:39:17-37
-186        </receiver>
-187        <!--
-188             FirebaseMessagingService performs security checks at runtime,
-189             but set to not exported to explicitly avoid allowing another app to call it.
-190        -->
-191        <service
-191-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:46:9-53:19
-192            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-192-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:47:13-82
-193            android:directBootAware="true"
-193-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:48:13-43
-194            android:exported="false" >
-194-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:49:13-37
-195            <intent-filter android:priority="-500" >
-195-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:129:13-131:29
-196                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-196-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:130:17-78
-196-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:130:25-75
-197            </intent-filter>
-198        </service>
-199        <service
-199-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:54:9-63:19
-200            android:name="com.google.firebase.components.ComponentDiscoveryService"
-200-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:55:13-84
-201            android:directBootAware="true"
-201-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:32:13-43
-202            android:exported="false" >
-202-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:56:13-37
-203            <meta-data
-203-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:57:13-59:85
-204                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
-204-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:58:17-122
-205                android:value="com.google.firebase.components.ComponentRegistrar" />
-205-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:59:17-82
-206            <meta-data
-206-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:60:13-62:85
-207                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-207-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:61:17-119
-208                android:value="com.google.firebase.components.ComponentRegistrar" />
-208-->[com.google.firebase:firebase-messaging:24.0.2] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/bd87b7d691488a0affa58e3fbd65f7eb/transformed/jetified-firebase-messaging-24.0.2/AndroidManifest.xml:62:17-82
-209            <meta-data
-209-->[com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:15:13-17:85
-210                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
-210-->[com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:16:17-130
-211                android:value="com.google.firebase.components.ComponentRegistrar" />
-211-->[com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:17:17-82
-212            <meta-data
-212-->[com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:18:13-20:85
-213                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-213-->[com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:19:17-127
-214                android:value="com.google.firebase.components.ComponentRegistrar" />
-214-->[com.google.firebase:firebase-installations:17.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/dad3f1fe2e6307b24095c3a1058752ce/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:20:17-82
-215            <meta-data
-215-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
-216                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-216-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
-217                android:value="com.google.firebase.components.ComponentRegistrar" />
-217-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/d55395b1cb36877fae75d981aa2beecd/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
-218            <meta-data
-218-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
-219                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-219-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:36:17-109
-220                android:value="com.google.firebase.components.ComponentRegistrar" />
-220-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:37:17-82
-221            <meta-data
-221-->[com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:25:13-27:85
-222                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-222-->[com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:26:17-115
-223                android:value="com.google.firebase.components.ComponentRegistrar" />
-223-->[com.google.firebase:firebase-datatransport:18.2.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/649f77a8a5deae237af4b37db4828285/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:27:17-82
-224        </service>
-225
-226        <activity
-226-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-227            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-227-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-228            android:exported="false"
-228-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-229            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-229-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/b3245a2162442fe8c39ce19f62a1841c/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-230
-231        <provider
-231-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
-232            android:name="com.google.firebase.provider.FirebaseInitProvider"
-232-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:24:13-77
-233            android:authorities="com.harmonycare.app.firebaseinitprovider"
-233-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:25:13-72
-234            android:directBootAware="true"
-234-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:26:13-43
-235            android:exported="false"
-235-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:27:13-37
-236            android:initOrder="100" />
-236-->[com.google.firebase:firebase-common:21.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/fd41617f38f11d4837370862e97f2b3d/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:28:13-36
-237
-238        <uses-library
-238-->[androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
-239            android:name="androidx.window.extensions"
-239-->[androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
-240            android:required="false" />
-240-->[androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
-241        <uses-library
-241-->[androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
-242            android:name="androidx.window.sidecar"
-242-->[androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
-243            android:required="false" />
-243-->[androidx.window:window:1.0.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/6ff7f3f74f17272464fae9ae21940aed/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
-244
-245        <meta-data
-245-->[com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
-246            android:name="com.google.android.gms.version"
-246-->[com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
-247            android:value="@integer/google_play_services_version" />
-247-->[com.google.android.gms:play-services-basement:18.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c5e8efa107203ab4bad0fa369b4908e3/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
-248
-249        <service
-249-->[androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
-250            android:name="androidx.room.MultiInstanceInvalidationService"
-250-->[androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
-251            android:directBootAware="true"
-251-->[androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
-252            android:exported="false" />
-252-->[androidx.room:room-runtime:2.6.1] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f0db4409d03a7b33ac1a9e9931c940a5/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
-253        <service
-253-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
-254            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-254-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+175        <!-- AMap (高德地图) API Key -->
+176        <meta-data
+176-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:150:9-152:64
+177            android:name="com.amap.api.v2.apikey"
+177-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:151:13-50
+178            android:value="23a959db2562029719293a9d2561d9c7" />
+178-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:152:13-61
+179
+180        <provider
+180-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/.gradle/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+181            android:name="androidx.startup.InitializationProvider"
+181-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/.gradle/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+182            android:authorities="com.harmonycare.app.androidx-startup"
+182-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/.gradle/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+183            android:exported="false" >
+183-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/.gradle/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+184            <meta-data
+184-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/.gradle/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+185                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+185-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/.gradle/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+186                android:value="androidx.startup" />
+186-->[androidx.emoji2:emoji2:1.2.0] /Users/rakib/.gradle/caches/8.8/transforms/4581d9a87b94183d4db53af9484406d9/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+187            <meta-data
+187-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/.gradle/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+188                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+188-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/.gradle/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+189                android:value="androidx.startup" />
+189-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rakib/.gradle/caches/8.8/transforms/64d13e901da03264aa220ac7089a0110/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+190            <meta-data
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+191                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+192                android:value="androidx.startup" />
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+193        </provider>
+194
+195        <activity
+195-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/.gradle/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+196            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+196-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/.gradle/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+197            android:exported="false"
+197-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/.gradle/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+198            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+198-->[com.google.android.gms:play-services-base:18.1.0] /Users/rakib/.gradle/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+199
+200        <meta-data
+200-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/.gradle/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+201            android:name="com.google.android.gms.version"
+201-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/.gradle/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+202            android:value="@integer/google_play_services_version" />
+202-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rakib/.gradle/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+203
+204        <uses-library
+204-->[androidx.window:window:1.0.0] /Users/rakib/.gradle/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+205            android:name="androidx.window.extensions"
+205-->[androidx.window:window:1.0.0] /Users/rakib/.gradle/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+206            android:required="false" />
+206-->[androidx.window:window:1.0.0] /Users/rakib/.gradle/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+207        <uses-library
+207-->[androidx.window:window:1.0.0] /Users/rakib/.gradle/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+208            android:name="androidx.window.sidecar"
+208-->[androidx.window:window:1.0.0] /Users/rakib/.gradle/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+209            android:required="false" />
+209-->[androidx.window:window:1.0.0] /Users/rakib/.gradle/caches/8.8/transforms/927345e5a3a5ac8cfc8c9640fdb396bf/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+210
+211        <service
+211-->[androidx.room:room-runtime:2.6.1] /Users/rakib/.gradle/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+212            android:name="androidx.room.MultiInstanceInvalidationService"
+212-->[androidx.room:room-runtime:2.6.1] /Users/rakib/.gradle/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+213            android:directBootAware="true"
+213-->[androidx.room:room-runtime:2.6.1] /Users/rakib/.gradle/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+214            android:exported="false" /> <!-- Rich push 核心功能 since 2.0.6 -->
+214-->[androidx.room:room-runtime:2.6.1] /Users/rakib/.gradle/caches/8.8/transforms/dbf4bb827ad07e6d7d8d8b33bd671c6f/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+215        <activity
+215-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:32:9-43:20
+216            android:name="cn.jpush.android.ui.PopWinActivity"
+216-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:33:13-62
+217            android:exported="true"
+217-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:34:13-36
+218            android:theme="@style/JPushDialogStyle" >
+218-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:35:13-52
+219            <intent-filter>
+219-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:36:13-42:29
+220                <category android:name="android.intent.category.DEFAULT" />
+220-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:17-76
+220-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:27-73
+221
+222                <action android:name="cn.jpush.android.ui.PopWinActivity" />
+222-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:39:17-77
+222-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:39:25-74
+223
+224                <category android:name="com.harmonycare.app" />
+224-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:145:27-58
+225            </intent-filter>
+226        </activity> <!-- Required SDK核心功能 -->
+227        <activity
+227-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:46:9-57:20
+228            android:name="cn.jpush.android.ui.PushActivity"
+228-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:47:13-60
+229            android:configChanges="orientation|keyboardHidden"
+229-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:48:13-63
+230            android:exported="true"
+230-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:49:13-36
+231            android:theme="@android:style/Theme.NoTitleBar" >
+231-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:50:13-60
+232            <intent-filter>
+232-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:51:13-56:29
+233                <action android:name="cn.jpush.android.ui.PushActivity" />
+233-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:52:17-75
+233-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:52:25-72
+234
+235                <category android:name="android.intent.category.DEFAULT" />
+235-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:17-76
+235-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:27-73
+236                <category android:name="com.harmonycare.app" />
+236-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:145:27-58
+237            </intent-filter>
+238        </activity> <!-- Required SDK 核心功能 -->
+239        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+240        <service
+240-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:60:9-71:19
+241            android:name="cn.jpush.android.service.PushService"
+241-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:61:13-64
+242            android:enabled="true"
+242-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:62:13-35
+243            android:exported="false"
+243-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:63:13-37
+244            android:process=":pushcore" >
+244-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:64:13-40
+245            <intent-filter>
+245-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:65:13-70:29
+246                <action android:name="cn.jpush.android.intent.REGISTER" />
+246-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:66:17-75
+246-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:66:25-72
+247                <action android:name="cn.jpush.android.intent.REPORT" />
+247-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:67:17-73
+247-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:67:25-70
+248                <action android:name="cn.jpush.android.intent.PushService" />
+248-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:68:17-78
+248-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:68:25-75
+249                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+249-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:69:17-76
+249-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:69:25-73
+250            </intent-filter>
+251        </service> <!-- Required SDK核心功能 -->
+252        <receiver
+252-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:74:9-82:20
+253            android:name="cn.jpush.android.service.PushReceiver"
+253-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:75:13-65
+254            android:enabled="true"
+254-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:76:13-35
 255            android:exported="false" >
-255-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
-256            <meta-data
-256-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
-257                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-257-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
-258                android:value="cct" />
-258-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/c387b11c24a5d07f62c883367b9cee54/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
-259        </service>
-260        <service
-260-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
-261            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-261-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
-262            android:exported="false"
-262-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
-263            android:permission="android.permission.BIND_JOB_SERVICE" >
-263-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
-264        </service>
-265
-266        <receiver
-266-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
-267            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-267-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
-268            android:exported="false" />
-268-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/4475f7e8effefaf1471d424891b47919/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
-269        <receiver
-269-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-270            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-270-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-271            android:directBootAware="false"
-271-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-272            android:enabled="true"
-272-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-273            android:exported="true"
-273-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-274            android:permission="android.permission.DUMP" >
-274-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-275            <intent-filter>
-275-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-276                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-276-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-276-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-277            </intent-filter>
+255-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:77:13-37
+256            <intent-filter android:priority="1000" >
+256-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:78:13-81:29
+256-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:78:28-51
+257                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+257-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:79:17-94
+257-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:79:25-91
+258                <category android:name="com.harmonycare.app" />
+258-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:145:27-58
+259            </intent-filter>
+260        </receiver> <!-- Required SDK核心功能 -->
+261        <receiver
+261-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:85:9-87:40
+262            android:name="cn.jpush.android.service.AlarmReceiver"
+262-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:86:13-66
+263            android:exported="false" /> <!-- since 3.5.0 Required SDK 核心功能 -->
+263-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:87:13-37
+264        <!-- 3.5.0新增，用于定时展示功能 -->
+265        <receiver
+265-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:91:9-93:40
+266            android:name="cn.jpush.android.service.SchedulerReceiver"
+266-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:92:13-70
+267            android:exported="false" /> <!-- since 3.0.9 Required SDK 核心功能 -->
+267-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:93:13-37
+268        <provider
+268-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:96:9-100:43
+269            android:name="cn.jpush.android.service.DataProvider"
+269-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:97:13-65
+270            android:authorities="com.harmonycare.app.DataProvider"
+270-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:98:13-64
+271            android:exported="false"
+271-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:99:13-37
+272            android:process=":pushcore" /> <!-- since 3.3.0 Required SDK核心功能 -->
+272-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:100:13-40
+273        <activity
+273-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:103:9-114:20
+274            android:name="cn.jpush.android.service.JNotifyActivity"
+274-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:104:13-68
+275            android:exported="true"
+275-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:105:13-36
+276            android:taskAffinity=""
+276-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:106:13-36
+277            android:theme="@style/JPushTheme" >
+277-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:107:13-46
 278            <intent-filter>
-278-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-279                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-279-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-279-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-280            </intent-filter>
-281            <intent-filter>
-281-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-282                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-282-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-282-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+278-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:108:13-113:29
+279                <action android:name="cn.jpush.android.intent.JNotifyActivity" />
+279-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:109:17-82
+279-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:109:25-79
+280
+281                <category android:name="android.intent.category.DEFAULT" />
+281-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:17-76
+281-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:27-73
+282                <category android:name="com.harmonycare.app" />
+282-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:145:27-58
 283            </intent-filter>
-284            <intent-filter>
-284-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-285                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-285-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-285-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f9d891c19dfdd2807afa8c4ee0646fd6/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-286            </intent-filter>
-287        </receiver>
-288    </application>
-289
-290</manifest>
+284        </activity> <!-- since 4.6.0 Required SDK核心功能 -->
+285        <activity
+285-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:116:9-127:20
+286            android:name="cn.android.service.JTransitActivity"
+286-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:117:13-63
+287            android:exported="true"
+287-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:118:13-36
+288            android:taskAffinity=""
+288-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:119:13-36
+289            android:theme="@style/JPushTheme" >
+289-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:120:13-46
+290            <intent-filter>
+290-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:121:13-126:29
+291                <action android:name="cn.android.service.JTransitActivity" />
+291-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:122:17-78
+291-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:122:25-75
+292
+293                <category android:name="android.intent.category.DEFAULT" />
+293-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:17-76
+293-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:37:27-73
+294                <category android:name="com.harmonycare.app" />
+294-->/Users/rakib/Documents/MP FINAL/app/src/main/AndroidManifest.xml:145:27-58
+295            </intent-filter>
+296        </activity> <!-- since 3.5.6 新增华硕通道 -->
+297        <receiver
+297-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:129:9-131:40
+298            android:name="cn.jpush.android.asus.AsusPushMessageReceiver"
+298-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:130:13-73
+299            android:exported="false" /> <!-- </>值来自开发者平台取得的AppKey -->
+299-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:131:13-37
+300        <!-- since 5.0.0 -->
+301        <provider
+301-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:140:9-145:83
+302            android:name="cn.jpush.android.service.InitProvider"
+302-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:141:13-65
+303            android:authorities="com.harmonycare.app.jiguang.InitProvider"
+303-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:142:13-72
+304            android:exported="false"
+304-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:143:13-37
+305            android:readPermission="com.harmonycare.app.permission.JPUSH_MESSAGE"
+305-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:144:13-79
+306            android:writePermission="com.harmonycare.app.permission.JPUSH_MESSAGE" />
+306-->[cn.jiguang.sdk:jpush:5.8.0] /Users/rakib/.gradle/caches/8.8/transforms/71e37ec3a36a4590cb8b75fe20f6ab4a/transformed/jetified-jpush-5.8.0/AndroidManifest.xml:145:13-80
+307
+308        <receiver
+308-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+309            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+309-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+310            android:directBootAware="false"
+310-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+311            android:enabled="true"
+311-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+312            android:exported="true"
+312-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+313            android:permission="android.permission.DUMP" >
+313-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+314            <intent-filter>
+314-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+315                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+315-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+315-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+316            </intent-filter>
+317            <intent-filter>
+317-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+318                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+318-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+318-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+319            </intent-filter>
+320            <intent-filter>
+320-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+321                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+321-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+321-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+322            </intent-filter>
+323            <intent-filter>
+323-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+324                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+324-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+324-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rakib/.gradle/caches/8.8/transforms/4dd4a7d277fe63cf1ae9ada424bcbd5c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+325            </intent-filter>
+326        </receiver>
+327
+328        <meta-data
+328-->[cn.jiguang.sdk:jcore:5.2.5] /Users/rakib/.gradle/caches/8.8/transforms/f6cce6470e56e3033b61a0c448121332/transformed/jetified-jcore-5.2.5/AndroidManifest.xml:12:9-14:37
+329            android:name="JCORE_VT"
+329-->[cn.jiguang.sdk:jcore:5.2.5] /Users/rakib/.gradle/caches/8.8/transforms/f6cce6470e56e3033b61a0c448121332/transformed/jetified-jcore-5.2.5/AndroidManifest.xml:13:13-36
+330            android:value="r5250" />
+330-->[cn.jiguang.sdk:jcore:5.2.5] /Users/rakib/.gradle/caches/8.8/transforms/f6cce6470e56e3033b61a0c448121332/transformed/jetified-jcore-5.2.5/AndroidManifest.xml:14:13-34
+331    </application>
+332
+333</manifest>

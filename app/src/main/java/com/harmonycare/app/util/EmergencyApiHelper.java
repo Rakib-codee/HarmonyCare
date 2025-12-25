@@ -30,8 +30,10 @@ public class EmergencyApiHelper {
     // Update Constants.API_BASE_URL with your server URL
     private static final String API_CREATE_EMERGENCY = "/emergencies";
     private static final String API_GET_ACTIVE_EMERGENCIES = "/emergencies/active";
-    private static final int CONNECTION_TIMEOUT = 7000;
-    private static final int READ_TIMEOUT = 7000;
+    private static final int CONNECTION_TIMEOUT = 15000;
+    private static final int READ_TIMEOUT = 15000;
+    private static final int MAX_RETRIES = 2;
+    private static final long RETRY_BACKOFF_MS = 600;
     
     private Context context;
     private NetworkHelper networkHelper;
@@ -60,79 +62,96 @@ public class EmergencyApiHelper {
         }
         
         new Thread(() -> {
-            try {
-                String baseUrl = Constants.API_BASE_URL;
-                URL url = new URL(baseUrl + API_CREATE_EMERGENCY);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("POST");
-                connection.setRequestProperty("Content-Type", "application/json");
-                connection.setRequestProperty("Accept", "application/json");
-                connection.setConnectTimeout(CONNECTION_TIMEOUT);
-                connection.setReadTimeout(READ_TIMEOUT);
-                connection.setDoOutput(true);
-                connection.setInstanceFollowRedirects(true);
-                connection.setUseCaches(false);
-                
-                // Create JSON payload
-                JSONObject emergencyJson = new JSONObject();
-                emergencyJson.put("elderly_id", emergency.getElderlyId());
-                emergencyJson.put("latitude", emergency.getLatitude());
-                emergencyJson.put("longitude", emergency.getLongitude());
-                emergencyJson.put("timestamp", emergency.getTimestamp());
-                emergencyJson.put("status", emergency.getStatus());
-                
-                // Send request
-                OutputStream os = connection.getOutputStream();
-                os.write(emergencyJson.toString().getBytes(StandardCharsets.UTF_8));
-                os.flush();
-                os.close();
-                
-                // Get response
-                int responseCode = connection.getResponseCode();
-                
-                if (responseCode == HttpURLConnection.HTTP_OK || responseCode == HttpURLConnection.HTTP_CREATED) {
-                    BufferedReader reader = new BufferedReader(
-                            new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while ((line = reader.readLine()) != null) {
-                        response.append(line);
+            for (int attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+                HttpURLConnection connection = null;
+                try {
+                    String baseUrl = Constants.API_BASE_URL;
+                    URL url = new URL(baseUrl + API_CREATE_EMERGENCY);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("POST");
+                    connection.setRequestProperty("Content-Type", "application/json");
+                    connection.setRequestProperty("Accept", "application/json");
+                    connection.setConnectTimeout(CONNECTION_TIMEOUT);
+                    connection.setReadTimeout(READ_TIMEOUT);
+                    connection.setDoOutput(true);
+                    connection.setInstanceFollowRedirects(true);
+                    connection.setUseCaches(false);
+
+                    // Create JSON payload
+                    JSONObject emergencyJson = new JSONObject();
+                    emergencyJson.put("elderly_id", emergency.getElderlyId());
+                    emergencyJson.put("latitude", emergency.getLatitude());
+                    emergencyJson.put("longitude", emergency.getLongitude());
+                    emergencyJson.put("timestamp", emergency.getTimestamp());
+                    emergencyJson.put("status", emergency.getStatus());
+
+                    // Send request
+                    OutputStream os = connection.getOutputStream();
+                    os.write(emergencyJson.toString().getBytes(StandardCharsets.UTF_8));
+                    os.flush();
+                    os.close();
+
+                    // Get response
+                    int responseCode = connection.getResponseCode();
+
+                    if (responseCode == HttpURLConnection.HTTP_OK || responseCode == HttpURLConnection.HTTP_CREATED) {
+                        BufferedReader reader = new BufferedReader(
+                                new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
+                        StringBuilder response = new StringBuilder();
+                        String line;
+                        while ((line = reader.readLine()) != null) {
+                            response.append(line);
+                        }
+                        reader.close();
+
+                        // Parse response
+                        JSONObject responseJson = new JSONObject(response.toString());
+                        Long emergencyId = responseJson.has("id") ? responseJson.getLong("id") : null;
+
+                        Log.d(TAG, "Emergency created on server, ID: " + emergencyId);
+
+                        if (callback != null) {
+                            callback.onSuccess(emergencyId);
+                        }
+                        return;
+                    } else {
+                        String errorMessage = "Server returned error code: " + responseCode;
+                        Log.e(TAG, errorMessage);
+                        if (callback != null) {
+                            callback.onError(new Exception(errorMessage));
+                        }
+                        return;
                     }
-                    reader.close();
-                    
-                    // Parse response
-                    JSONObject responseJson = new JSONObject(response.toString());
-                    Long emergencyId = responseJson.has("id") ? responseJson.getLong("id") : null;
-                    
-                    Log.d(TAG, "Emergency created on server, ID: " + emergencyId);
-                    
+                } catch (java.net.SocketTimeoutException e) {
+                    if (attempt < MAX_RETRIES) {
+                        Log.w(TAG, "Connection timeout creating emergency (attempt " + (attempt + 1) + "). Retrying...", e);
+                        try {
+                            Thread.sleep(RETRY_BACKOFF_MS * (attempt + 1));
+                        } catch (InterruptedException ignored) {
+                        }
+                        continue;
+                    }
+                    Log.w(TAG, "Connection timeout to server (Vercel cold start may be slow). Falling back to local sync.", e);
                     if (callback != null) {
-                        callback.onSuccess(emergencyId);
+                        callback.onError(new Exception("Server connection timeout. Using local sync instead."));
                     }
-                } else {
-                    String errorMessage = "Server returned error code: " + responseCode;
-                    Log.e(TAG, errorMessage);
+                    return;
+                } catch (java.net.UnknownHostException e) {
+                    Log.w(TAG, "Cannot resolve server host. Check internet connection.", e);
                     if (callback != null) {
-                        callback.onError(new Exception(errorMessage));
+                        callback.onError(new Exception("Cannot reach server. Check internet connection."));
                     }
-                }
-                
-                connection.disconnect();
-                
-            } catch (java.net.SocketTimeoutException e) {
-                Log.w(TAG, "Connection timeout to server (Vercel cold start may be slow). Falling back to local sync.", e);
-                if (callback != null) {
-                    callback.onError(new Exception("Server connection timeout. Using local sync instead."));
-                }
-            } catch (java.net.UnknownHostException e) {
-                Log.w(TAG, "Cannot resolve server host. Check internet connection.", e);
-                if (callback != null) {
-                    callback.onError(new Exception("Cannot reach server. Check internet connection."));
-                }
-            } catch (Exception e) {
-                Log.e(TAG, "Error creating emergency on server", e);
-                if (callback != null) {
-                    callback.onError(e);
+                    return;
+                } catch (Exception e) {
+                    Log.e(TAG, "Error creating emergency on server", e);
+                    if (callback != null) {
+                        callback.onError(e);
+                    }
+                    return;
+                } finally {
+                    if (connection != null) {
+                        connection.disconnect();
+                    }
                 }
             }
         }).start();
@@ -157,73 +176,90 @@ public class EmergencyApiHelper {
         }
         
         new Thread(() -> {
-            try {
-                String baseUrl = Constants.API_BASE_URL;
-                String urlStr = baseUrl + API_GET_ACTIVE_EMERGENCIES;
-                if (volunteerId != null && volunteerId > 0) {
-                    urlStr = urlStr + "?volunteer_id=" + volunteerId;
-                }
-                URL url = new URL(urlStr);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-                connection.setRequestProperty("Accept", "application/json");
-                connection.setConnectTimeout(CONNECTION_TIMEOUT);
-                connection.setReadTimeout(READ_TIMEOUT);
-                connection.setInstanceFollowRedirects(true);
-                connection.setUseCaches(false);
-                
-                // Get response
-                int responseCode = connection.getResponseCode();
-                
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    BufferedReader reader = new BufferedReader(
-                            new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while ((line = reader.readLine()) != null) {
-                        response.append(line);
+            for (int attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+                HttpURLConnection connection = null;
+                try {
+                    String baseUrl = Constants.API_BASE_URL;
+                    String urlStr = baseUrl + API_GET_ACTIVE_EMERGENCIES;
+                    if (volunteerId != null && volunteerId > 0) {
+                        urlStr = urlStr + "?volunteer_id=" + volunteerId;
                     }
-                    reader.close();
-                    
-                    // Parse response
-                    JSONArray emergenciesArray = new JSONArray(response.toString());
-                    List<Emergency> emergencies = new ArrayList<>();
-                    
-                    for (int i = 0; i < emergenciesArray.length(); i++) {
-                        JSONObject emergencyJson = emergenciesArray.getJSONObject(i);
-                        Emergency emergency = parseEmergencyFromJson(emergencyJson);
-                        emergencies.add(emergency);
+                    URL url = new URL(urlStr);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setRequestProperty("Accept", "application/json");
+                    connection.setConnectTimeout(CONNECTION_TIMEOUT);
+                    connection.setReadTimeout(READ_TIMEOUT);
+                    connection.setInstanceFollowRedirects(true);
+                    connection.setUseCaches(false);
+
+                    // Get response
+                    int responseCode = connection.getResponseCode();
+
+                    if (responseCode == HttpURLConnection.HTTP_OK) {
+                        BufferedReader reader = new BufferedReader(
+                                new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
+                        StringBuilder response = new StringBuilder();
+                        String line;
+                        while ((line = reader.readLine()) != null) {
+                            response.append(line);
+                        }
+                        reader.close();
+
+                        // Parse response
+                        JSONArray emergenciesArray = new JSONArray(response.toString());
+                        List<Emergency> emergencies = new ArrayList<>();
+
+                        for (int i = 0; i < emergenciesArray.length(); i++) {
+                            JSONObject emergencyJson = emergenciesArray.getJSONObject(i);
+                            Emergency emergency = parseEmergencyFromJson(emergencyJson);
+                            emergencies.add(emergency);
+                        }
+
+                        Log.d(TAG, "Fetched " + emergencies.size() + " active emergencies from server");
+
+                        if (callback != null) {
+                            callback.onSuccess(emergencies);
+                        }
+                        return;
+                    } else {
+                        String errorMessage = "Server returned error code: " + responseCode;
+                        Log.e(TAG, errorMessage);
+                        if (callback != null) {
+                            callback.onError(new Exception(errorMessage));
+                        }
+                        return;
                     }
-                    
-                    Log.d(TAG, "Fetched " + emergencies.size() + " active emergencies from server");
-                    
+                } catch (java.net.SocketTimeoutException e) {
+                    if (attempt < MAX_RETRIES) {
+                        Log.w(TAG, "Connection timeout fetching emergencies (attempt " + (attempt + 1) + "). Retrying...", e);
+                        try {
+                            Thread.sleep(RETRY_BACKOFF_MS * (attempt + 1));
+                        } catch (InterruptedException ignored) {
+                        }
+                        continue;
+                    }
+                    Log.w(TAG, "Connection timeout fetching emergencies. Server may be slow (Vercel cold start).", e);
                     if (callback != null) {
-                        callback.onSuccess(emergencies);
+                        callback.onError(new Exception("Server connection timeout. Using local database."));
                     }
-                } else {
-                    String errorMessage = "Server returned error code: " + responseCode;
-                    Log.e(TAG, errorMessage);
+                    return;
+                } catch (java.net.UnknownHostException e) {
+                    Log.w(TAG, "Cannot resolve server host. Check internet connection.", e);
                     if (callback != null) {
-                        callback.onError(new Exception(errorMessage));
+                        callback.onError(new Exception("Cannot reach server. Check internet connection."));
                     }
-                }
-                
-                connection.disconnect();
-                
-            } catch (java.net.SocketTimeoutException e) {
-                Log.w(TAG, "Connection timeout fetching emergencies. Server may be slow (Vercel cold start).", e);
-                if (callback != null) {
-                    callback.onError(new Exception("Server connection timeout. Using local database."));
-                }
-            } catch (java.net.UnknownHostException e) {
-                Log.w(TAG, "Cannot resolve server host. Check internet connection.", e);
-                if (callback != null) {
-                    callback.onError(new Exception("Cannot reach server. Check internet connection."));
-                }
-            } catch (Exception e) {
-                Log.e(TAG, "Error fetching emergencies from server", e);
-                if (callback != null) {
-                    callback.onError(e);
+                    return;
+                } catch (Exception e) {
+                    Log.e(TAG, "Error fetching emergencies from server", e);
+                    if (callback != null) {
+                        callback.onError(e);
+                    }
+                    return;
+                } finally {
+                    if (connection != null) {
+                        connection.disconnect();
+                    }
                 }
             }
         }).start();
@@ -241,76 +277,95 @@ public class EmergencyApiHelper {
         }
         
         new Thread(() -> {
-            try {
-                String baseUrl = Constants.API_BASE_URL;
-                URL url = new URL(baseUrl + API_CREATE_EMERGENCY + "/" + emergencyId);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("PUT");
-                connection.setRequestProperty("Content-Type", "application/json");
-                connection.setRequestProperty("Accept", "application/json");
-                connection.setConnectTimeout(CONNECTION_TIMEOUT);
-                connection.setReadTimeout(READ_TIMEOUT);
-                connection.setDoOutput(true);
-                connection.setInstanceFollowRedirects(true);
-                connection.setUseCaches(false);
-                
-                // Create JSON payload
-                JSONObject updateJson = new JSONObject();
-                updateJson.put("status", status);
-                if (volunteerId != null) {
-                    updateJson.put("volunteer_id", volunteerId);
-                }
-                
-                // Send request
-                OutputStream os = connection.getOutputStream();
-                os.write(updateJson.toString().getBytes(StandardCharsets.UTF_8));
-                os.flush();
-                os.close();
-                
-                // Get response
-                int responseCode = connection.getResponseCode();
-                
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    Log.d(TAG, "Emergency status updated on server");
-                    if (callback != null) {
-                        callback.onSuccess(null);
+            for (int attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+                HttpURLConnection connection = null;
+                try {
+                    String baseUrl = Constants.API_BASE_URL;
+                    URL url = new URL(baseUrl + API_CREATE_EMERGENCY + "/" + emergencyId);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("PUT");
+                    connection.setRequestProperty("Content-Type", "application/json");
+                    connection.setRequestProperty("Accept", "application/json");
+                    connection.setConnectTimeout(CONNECTION_TIMEOUT);
+                    connection.setReadTimeout(READ_TIMEOUT);
+                    connection.setDoOutput(true);
+                    connection.setInstanceFollowRedirects(true);
+                    connection.setUseCaches(false);
+
+                    // Create JSON payload
+                    JSONObject updateJson = new JSONObject();
+                    updateJson.put("status", status);
+                    if (volunteerId != null) {
+                        updateJson.put("volunteer_id", volunteerId);
                     }
-                } else if (responseCode == HttpURLConnection.HTTP_CONFLICT) {
-                    String errorMessage = "Emergency already accepted";
-                    Log.w(TAG, errorMessage);
-                    if (callback != null) {
-                        callback.onError(new Exception(errorMessage));
+
+                    // Send request
+                    OutputStream os = connection.getOutputStream();
+                    os.write(updateJson.toString().getBytes(StandardCharsets.UTF_8));
+                    os.flush();
+                    os.close();
+
+                    // Get response
+                    int responseCode = connection.getResponseCode();
+
+                    if (responseCode == HttpURLConnection.HTTP_OK) {
+                        Log.d(TAG, "Emergency status updated on server");
+                        if (callback != null) {
+                            callback.onSuccess(null);
+                        }
+                        return;
+                    } else if (responseCode == HttpURLConnection.HTTP_CONFLICT) {
+                        String errorMessage = "Emergency already accepted";
+                        Log.w(TAG, errorMessage);
+                        if (callback != null) {
+                            callback.onError(new Exception(errorMessage));
+                        }
+                        return;
+                    } else if (responseCode == HttpURLConnection.HTTP_NOT_FOUND) {
+                        String errorMessage = "Emergency not found";
+                        Log.w(TAG, errorMessage);
+                        if (callback != null) {
+                            callback.onError(new Exception(errorMessage));
+                        }
+                        return;
+                    } else {
+                        String errorMessage = "Server returned error code: " + responseCode;
+                        Log.e(TAG, errorMessage);
+                        if (callback != null) {
+                            callback.onError(new Exception(errorMessage));
+                        }
+                        return;
                     }
-                } else if (responseCode == HttpURLConnection.HTTP_NOT_FOUND) {
-                    String errorMessage = "Emergency not found";
-                    Log.w(TAG, errorMessage);
-                    if (callback != null) {
-                        callback.onError(new Exception(errorMessage));
+                } catch (java.net.SocketTimeoutException e) {
+                    if (attempt < MAX_RETRIES) {
+                        Log.w(TAG, "Connection timeout updating emergency (attempt " + (attempt + 1) + "). Retrying...", e);
+                        try {
+                            Thread.sleep(RETRY_BACKOFF_MS * (attempt + 1));
+                        } catch (InterruptedException ignored) {
+                        }
+                        continue;
                     }
-                } else {
-                    String errorMessage = "Server returned error code: " + responseCode;
-                    Log.e(TAG, errorMessage);
+                    Log.w(TAG, "Connection timeout updating emergency. Server may be slow.", e);
                     if (callback != null) {
-                        callback.onError(new Exception(errorMessage));
+                        callback.onError(new Exception("Server connection timeout."));
                     }
-                }
-                
-                connection.disconnect();
-                
-            } catch (java.net.SocketTimeoutException e) {
-                Log.w(TAG, "Connection timeout updating emergency. Server may be slow.", e);
-                if (callback != null) {
-                    callback.onError(new Exception("Server connection timeout."));
-                }
-            } catch (java.net.UnknownHostException e) {
-                Log.w(TAG, "Cannot resolve server host. Check internet connection.", e);
-                if (callback != null) {
-                    callback.onError(new Exception("Cannot reach server. Check internet connection."));
-                }
-            } catch (Exception e) {
-                Log.e(TAG, "Error updating emergency on server", e);
-                if (callback != null) {
-                    callback.onError(e);
+                    return;
+                } catch (java.net.UnknownHostException e) {
+                    Log.w(TAG, "Cannot resolve server host. Check internet connection.", e);
+                    if (callback != null) {
+                        callback.onError(new Exception("Cannot reach server. Check internet connection."));
+                    }
+                    return;
+                } catch (Exception e) {
+                    Log.e(TAG, "Error updating emergency on server", e);
+                    if (callback != null) {
+                        callback.onError(e);
+                    }
+                    return;
+                } finally {
+                    if (connection != null) {
+                        connection.disconnect();
+                    }
                 }
             }
         }).start();

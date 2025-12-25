@@ -105,11 +105,12 @@ public class AuthViewModel extends AndroidViewModel {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt(Constants.KEY_USER_ID, user.getId());
             editor.putString(Constants.KEY_USER_NAME, user.getName());
+            editor.putString(Constants.KEY_USER_CONTACT, user.getContact());
             editor.putString(Constants.KEY_USER_ROLE, user.getRole());
             editor.putBoolean(Constants.KEY_IS_LOGGED_IN, true);
             editor.apply();
         } catch (Exception e) {
-            Log.e("AuthViewModel", "Error saving session", e);
+            Log.e("AuthViewModel", "Error saving login session", e);
         }
     }
     
