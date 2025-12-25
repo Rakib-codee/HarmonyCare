@@ -1,310 +1,314 @@
 [
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_volunteer_stats.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_volunteer_stats.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_login.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_login.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_card_fade_in.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/card_fade_in.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_neumorphism_button.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/neumorphism_button.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_modern_shadow.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/modern_shadow.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_volunteer_emergency_list.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_volunteer_emergency_list.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_item_message.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/item_message.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/xml_file_provider_paths.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/xml/file_provider_paths.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.harmonycare.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_dialog_add_reminder.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/dialog_add_reminder.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_chat.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_chat.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_settings.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_settings.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_reminders.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_reminders.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_volunteer_stats.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_volunteer_stats.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_card_primary.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_card_primary.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_status_indicator_available.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/status_indicator_available.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_card_success.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_card_success.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_card_background.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/card_background.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_volunteer_emergency_list.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_volunteer_emergency_list.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_card_background_modern.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/card_background_modern.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_item_reminder.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/item_reminder.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_item_emergency_contact.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/item_emergency_contact.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_info.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_info.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_card_success.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_card_success.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_elderly_dashboard.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_elderly_dashboard.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_slide_in_from_bottom.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/slide_in_from_bottom.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.harmonycare.app-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_button_primary.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/button_primary.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_rating.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_rating.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_rating.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_rating.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_emergency_details.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_emergency_details.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_slide_in_from_top.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/slide_in_from_top.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_sos_button_pulse.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/sos_button_pulse.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_profile.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_profile.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_item_emergency_history.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/item_emergency_history.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_info.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_info.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_success.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_success.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_button_scale_press.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/button_scale_press.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_button_press.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/button_press.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ic_emergency.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ic_emergency.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_status_badge_active.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/status_badge_active.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ic_settings.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ic_settings.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_settings.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_settings.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_status_badge_active.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/status_badge_active.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_login.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_login.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_status_indicator_unavailable.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/status_indicator_unavailable.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_dialog_add_contact.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/dialog_add_contact.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_scale_in.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/scale_in.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_volunteer_dashboard.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_volunteer_dashboard.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_message_input_background.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/message_input_background.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_pulse.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/pulse.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_item_volunteer_emergency.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/item_volunteer_emergency.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_primary.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_primary.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_primary.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_primary.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ic_notification.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ic_notification.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_splash.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_splash.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_sos_button_background.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/sos_button_background.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_button_press.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/button_press.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/xml_file_provider_paths.xml.flat",
-        "source": "com.harmonycare.app-main-6:/xml/file_provider_paths.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_pulse.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/pulse.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_notification_badge.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/notification_badge.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ic_map.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ic_map.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_icon_background_circle.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/icon_background_circle.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_card_background_modern.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/card_background_modern.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ic_history.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ic_history.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_fade_out.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/fade_out.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_notification_badge.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/notification_badge.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_status_badge_accepted.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/status_badge_accepted.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_sos_button_background.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/sos_button_background.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_slide_in_from_bottom.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/slide_in_from_bottom.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_message_sent_background.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/message_sent_background.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_card_secondary.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_card_secondary.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_button_release.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/button_release.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_splash.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_splash.xml"
+        "merged": "com.harmonycare.app-debug-47:/layout_activity_elderly_dashboard.xml.flat",
+        "source": "com.harmonycare.app-main-49:/layout/activity_elderly_dashboard.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_fade_in.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/fade_in.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_card_warm.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_card_warm.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_slide_in_from_top.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/slide_in_from_top.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_emergency_contacts.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_emergency_contacts.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_scale_in.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/scale_in.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_message_received_background.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/message_received_background.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_button_scale_press.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/button_scale_press.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_sos_button_pulse.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/sos_button_pulse.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_volunteer_map.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_volunteer_map.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_emergency_details.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_emergency_details.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_sos.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_sos.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_sos.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_sos.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ic_map.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ic_map.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_elderly_sos_button.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/elderly_sos_button.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_elderly_sos_button_modern.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/elderly_sos_button_modern.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_badge_background.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/badge_background.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_card_background_elevated.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/card_background_elevated.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_success.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_success.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_item_emergency_contact.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/item_emergency_contact.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ic_notification.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ic_notification.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_status_indicator_unavailable.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/status_indicator_unavailable.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_icon_background_circle.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/icon_background_circle.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_neumorphism_button.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/neumorphism_button.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_status_badge_accepted.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/status_badge_accepted.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ic_launcher_foreground.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_sos_button_pressed.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/sos_button_pressed.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_dialog_add_reminder.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/dialog_add_reminder.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_item_emergency_history.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/item_emergency_history.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_button_primary.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/button_primary.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_volunteer_map.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_volunteer_map.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_emergency_history.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_emergency_history.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_elderly_dashboard.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_elderly_dashboard.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_item_volunteer_emergency.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/item_volunteer_emergency.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_item_reminder.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/item_reminder.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_sos_button_pressed.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/sos_button_pressed.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_profile.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_profile.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ic_stats.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ic_stats.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_modern_shadow.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/modern_shadow.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_message_input_background.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/message_input_background.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_glassmorphism_card.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/glassmorphism_card.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_message_sent_background.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/message_sent_background.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_reminders.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_reminders.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_emergency_contacts.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_emergency_contacts.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_item_message.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/item_message.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_message_received_background.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/message_received_background.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_card_primary.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_card_primary.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ic_emergency.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ic_emergency.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_dialog_add_contact.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/dialog_add_contact.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/layout_activity_register.xml.flat",
-        "source": "com.harmonycare.app-main-6:/layout/activity_register.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_elderly_sos_button_modern.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/elderly_sos_button_modern.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_button_scale_release.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/button_scale_release.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_card_accent.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_card_accent.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_button_release.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/button_release.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_volunteer_dashboard.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_volunteer_dashboard.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ripple_primary.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ripple_primary.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ic_stats.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ic_stats.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_card_accent.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_card_accent.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_gradient_card_secondary.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/gradient_card_secondary.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_gradient_card_warm.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/gradient_card_warm.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_register.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_register.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/anim_card_slide_in.xml.flat",
-        "source": "com.harmonycare.app-main-6:/anim/card_slide_in.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_emergency_history.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_emergency_history.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_glassmorphism_card.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/glassmorphism_card.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/layout_activity_chat.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/layout/activity_chat.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_card_background.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/card_background.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_card_slide_in.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/card_slide_in.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ic_settings.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ic_settings.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_button_scale_release.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/button_scale_release.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_status_indicator_available.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/status_indicator_available.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_ripple_primary.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/ripple_primary.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_ic_history.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/ic_history.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_fade_in.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/fade_in.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_elderly_sos_button.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/elderly_sos_button.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/drawable_card_background_elevated.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/drawable/card_background_elevated.xml"
     },
     {
-        "merged": "com.harmonycare.app-debug-4:/drawable_badge_background.xml.flat",
-        "source": "com.harmonycare.app-main-6:/drawable/badge_background.xml"
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_card_fade_in.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/card_fade_in.xml"
+    },
+    {
+        "merged": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-debug-47:/anim_fade_out.xml.flat",
+        "source": "/Users/rakib/.gradle/daemon/8.8/com.harmonycare.app-main-49:/anim/fade_out.xml"
     }
 ]

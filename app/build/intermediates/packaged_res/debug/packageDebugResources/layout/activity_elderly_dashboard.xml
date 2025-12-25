@@ -155,13 +155,15 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/elderly_sos_button_size"
-                android:minHeight="180dp">
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/elderly_spacing_large"
+                android:foregroundGravity="center">
 
                 <Button
                     android:id="@+id/btnSOS"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="@dimen/elderly_sos_button_size"
+                    android:layout_height="@dimen/elderly_sos_button_size"
+                    android:layout_gravity="center"
                     android:text="@string/sos_button"
                     android:textSize="@dimen/elderly_sos_text_size"
                     android:textStyle="bold"
@@ -195,16 +197,30 @@
         </androidx.cardview.widget.CardView>
 
         <!-- Instruction Text - Larger and Clearer -->
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hold the SOS button for 3 seconds to send emergency"
-            android:textSize="@dimen/elderly_text_size_body"
-            android:textColor="@color/elderly_text_secondary"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/elderly_spacing_small"
-            android:lineSpacingMultiplier="1.5"
-            android:paddingHorizontal="@dimen/elderly_spacing_medium" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/elderly_spacing_medium">
+
+            <ImageView
+                android:layout_width="@dimen/elderly_icon_size_medium"
+                android:layout_height="@dimen/elderly_icon_size_medium"
+                android:layout_marginEnd="@dimen/elderly_spacing_small"
+                android:src="@drawable/ic_emergency"
+                android:tint="@color/elderly_text_secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hold SOS for 3 seconds to send emergency"
+                android:textSize="@dimen/elderly_text_size_body"
+                android:textColor="@color/elderly_text_secondary"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5" />
+        </LinearLayout>
 
         <!-- Chat Button - Larger -->
         <androidx.cardview.widget.CardView
@@ -214,7 +230,7 @@
             android:layout_marginBottom="@dimen/elderly_spacing_small"
             android:elevation="@dimen/elevation_medium"
             app:cardCornerRadius="@dimen/elderly_card_corner_radius"
-            android:foreground="@drawable/ripple_primary"
+            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
             android:minHeight="@dimen/elderly_touch_target_min"
@@ -244,7 +260,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💬 Chat with Volunteer"
+                        android:text="Chat with Volunteer"
                         android:textSize="@dimen/elderly_text_size_title"
                         android:textStyle="bold"
                         android:textColor="@android:color/white" />
@@ -284,17 +300,23 @@
             app:cardBackgroundColor="@color/elderly_card_background_soft"
             android:visibility="gone">
 
-            <Button
-                android:id="@+id/btnCancelEmergency"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/elderly_button_height"
-                android:text="Cancel Emergency"
-                android:textSize="@dimen/elderly_text_size_title"
-                android:textColor="@color/elderly_text_primary"
-                android:background="@color/elderly_card_background_soft"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:paddingHorizontal="@dimen/elderly_button_padding_horizontal"
-                android:paddingVertical="@dimen/elderly_button_padding_vertical" />
+                android:layout_height="wrap_content"
+                android:padding="@dimen/elderly_card_padding">
+
+                <Button
+                    android:id="@+id/btnCancelEmergency"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/elderly_button_height"
+                    android:text="Cancel Emergency"
+                    android:textSize="@dimen/elderly_text_size_title"
+                    android:textColor="@color/elderly_text_primary"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:paddingHorizontal="@dimen/elderly_button_padding_horizontal"
+                    android:paddingVertical="@dimen/elderly_button_padding_vertical" />
+            </FrameLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Menu Buttons Grid - Vertical Layout -->

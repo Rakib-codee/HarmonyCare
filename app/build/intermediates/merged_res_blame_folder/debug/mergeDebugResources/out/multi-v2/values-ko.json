@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.harmonycare.app-mergeDebugResources-2:/values-ko/values-ko.xml",
+            "outputFile": "com.harmonycare.app-mergeDebugResources-45:/values-ko/values-ko.xml",
             "map": [
                 {
-                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/res/values-ko/values-ko.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "124",
-                        "startColumns": "4",
-                        "startOffsets": "10094",
-                        "endColumns": "100",
-                        "endOffsets": "10190"
-                    }
-                },
-                {
-                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/043dd15505088d162cf7de87d5e08f16/transformed/preference-1.2.1/res/values-ko/values-ko.xml",
+                    "source": "/Users/rakib/.gradle/caches/8.8/transforms/043dd15505088d162cf7de87d5e08f16/transformed/preference-1.2.1/res/values-ko/values-ko.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/res/values-ko/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,293,428,540,638,749,862,965,1056,1197,1296,1428,1542,1656,1771,1826,1880",
-                        "endColumns": "99,134,111,97,110,112,102,90,140,98,131,113,113,114,54,53,70",
-                        "endOffsets": "292,427,539,637,748,861,964,1055,1196,1295,1427,1541,1655,1770,1825,1879,1950"
-                    },
-                    "to": {
-                        "startLines": "41,42,43,44,45,46,47,48,50,51,52,53,54,55,56,57,58",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3494,3598,3737,3853,3955,4070,4187,4294,4510,4655,4758,4894,5012,5130,5249,5308,5366",
-                        "endColumns": "103,138,115,101,114,116,106,94,144,102,135,117,117,118,58,57,74",
-                        "endOffsets": "3593,3732,3848,3950,4065,4182,4289,4384,4650,4753,4889,5007,5125,5244,5303,5361,5436"
-                    }
-                },
-                {
-                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/res/values-ko/values.xml",
+                    "source": "/Users/rakib/.gradle/caches/8.8/transforms/db3c79eedfa5a973b76cbb9b5049125d/transformed/jetified-play-services-basement-18.1.0/res/values-ko/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -72,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/233e603e2cacb9781d3454f1b710f1a9/transformed/appcompat-1.6.1/res/values-ko/values-ko.xml",
+                    "source": "/Users/rakib/.gradle/caches/8.8/transforms/f857b91086ce6aa63d58e949aa74e781/transformed/core-1.9.0/res/values-ko/values-ko.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "124",
+                        "startColumns": "4",
+                        "startOffsets": "10094",
+                        "endColumns": "100",
+                        "endOffsets": "10190"
+                    }
+                },
+                {
+                    "source": "/Users/rakib/.gradle/caches/8.8/transforms/233e603e2cacb9781d3454f1b710f1a9/transformed/appcompat-1.6.1/res/values-ko/values-ko.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -89,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "/Users/rakib/Downloads/gradle-9.0-milestone-1/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/res/values-ko/values-ko.xml",
+                    "source": "/Users/rakib/.gradle/caches/8.8/transforms/1405416b45c1de74d5c26a0a9e8ad8c1/transformed/material-1.10.0/res/values-ko/values-ko.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -105,6 +88,23 @@
                         "endLines": "5,33,34,35,36,37,38,39,40,60,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,121",
                         "endColumns": "12,64,63,68,73,78,82,105,74,61,80,61,56,86,59,57,57,58,56,53,94,55,56,53,65,103,74,76,120,64,64,99,78,74,49,50,65,63,69,76,70,67,70,66,69,92,79,73,79,81,71,64,71,47,72,63,74,76,61,63,62,66,83,77,79,77,53,54,71",
                         "endOffsets": "294,2939,3003,3072,3146,3225,3308,3414,3489,5564,5726,5788,5845,5932,5992,6050,6108,6167,6224,6278,6373,6429,6486,6540,6606,6710,6785,6862,6983,7048,7113,7213,7292,7367,7417,7468,7534,7598,7668,7745,7816,7884,7955,8022,8092,8185,8265,8339,8419,8501,8573,8638,8710,8758,8831,8895,8970,9047,9109,9173,9236,9303,9387,9465,9545,9623,9677,9732,9878"
+                    }
+                },
+                {
+                    "source": "/Users/rakib/.gradle/caches/8.8/transforms/f8d6888d1766bc8efa3c6413ca229c4b/transformed/jetified-play-services-base-18.1.0/res/values-ko/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,293,428,540,638,749,862,965,1056,1197,1296,1428,1542,1656,1771,1826,1880",
+                        "endColumns": "99,134,111,97,110,112,102,90,140,98,131,113,113,114,54,53,70",
+                        "endOffsets": "292,427,539,637,748,861,964,1055,1196,1295,1427,1541,1655,1770,1825,1879,1950"
+                    },
+                    "to": {
+                        "startLines": "41,42,43,44,45,46,47,48,50,51,52,53,54,55,56,57,58",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3494,3598,3737,3853,3955,4070,4187,4294,4510,4655,4758,4894,5012,5130,5249,5308,5366",
+                        "endColumns": "103,138,115,101,114,116,106,94,144,102,135,117,117,118,58,57,74",
+                        "endOffsets": "3593,3732,3848,3950,4065,4182,4289,4384,4650,4753,4889,5007,5125,5244,5303,5361,5436"
                     }
                 }
             ]
